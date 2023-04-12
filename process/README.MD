@@ -6,9 +6,14 @@ Actions JS contains all the actions formated as [ {actions: [] , prefix: string}
 
 ```Javascript
 JSON.stringify(
-   Object.values(app.PolicyEditorConfig.serviceMap).map((ac) => ({
+   Object.keys(app.PolicyEditorConfig.serviceMap).map((key) => {
+   const ac = app.PolicyEditorConfig.serviceMap[key]
+   return {
+    name: key,
+    arn_format: ac.ARNFormat,
+    arn_regex: ac.ARNRegex,
     actions: ac.Actions,
      prefix: ac.StringPrefix,
-   }))
+   }})
 );
 ```

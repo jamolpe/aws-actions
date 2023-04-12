@@ -7,8 +7,11 @@ import (
 )
 
 type ActionObject struct {
-	Actions []string `json:"actions"`
-	Prefix  string   `json:"prefix"`
+	Name      string   `json:"name"`
+	Actions   []string `json:"actions"`
+	Prefix    string   `json:"prefix"`
+	ARNFormat string   `json:"arn_format"`
+	ARNRegex  string   `json:"arn_regex"`
 }
 
 type OutputObject struct {
@@ -16,6 +19,9 @@ type OutputObject struct {
 	WriteActions []string `json:"writeActions"`
 	ListActions  []string `json:"listActions"`
 	Prefix       string   `json:"prefix"`
+	ARNFormat    string   `json:"arn_format"`
+	ARNRegex     string   `json:"arn_regex"`
+	Name         string   `json:"name"`
 }
 
 func main() {
@@ -58,6 +64,9 @@ func main() {
 			WriteActions: writeActions,
 			ListActions:  listActions,
 			Prefix:       obj.Prefix,
+			ARNFormat:    obj.ARNFormat,
+			ARNRegex:     obj.ARNRegex,
+			Name:         obj.Name,
 		}
 	}
 

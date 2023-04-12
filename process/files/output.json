@@ -9,7 +9,10 @@
       "StartDeploymentJob"
     ],
     "listActions": [],
-    "prefix": "a2c"
+    "prefix": "a2c",
+    "arn_format": "arn:${Partition}:a2c:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:a2c:.+:.+:.+",
+    "name": "AWS App2Container"
   },
   "a4b": {
     "readActions": [
@@ -114,7 +117,10 @@
       "ListSmartHomeAppliances",
       "ListTags"
     ],
-    "prefix": "a4b"
+    "prefix": "a4b",
+    "arn_format": "arn:aws:a4b:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:a4b:.+:.+:.+",
+    "name": "Alexa for Business"
   },
   "access-analyzer": {
     "readActions": [
@@ -151,7 +157,10 @@
       "ListPolicyGenerations",
       "ListTagsForResource"
     ],
-    "prefix": "access-analyzer"
+    "prefix": "access-analyzer",
+    "arn_format": "arn:aws:access-analyzer:${Region}:${Account}:analyzer/${AnalyzerName}",
+    "arn_regex": "^arn:aws:access-analyzer:.+",
+    "name": "AWS IAM Access Analyzer"
   },
   "account": {
     "readActions": [
@@ -173,7 +182,10 @@
     "listActions": [
       "ListRegions"
     ],
-    "prefix": "account"
+    "prefix": "account",
+    "arn_format": "arn:aws:account::${Account}:account",
+    "arn_regex": "^arn:aws:account::.+:account",
+    "name": "AWS Account Management"
   },
   "acm": {
     "readActions": [
@@ -197,7 +209,10 @@
       "ListCertificates",
       "ListTagsForCertificate"
     ],
-    "prefix": "acm"
+    "prefix": "acm",
+    "arn_format": "arn:aws:acm:${Region}:${AccountId}:${ArnType}/${ResourceId}",
+    "arn_regex": "^arn:aws:acm:.+:[0-9]+:.+",
+    "name": "AWS Certificate Manager"
   },
   "acm-pca": {
     "readActions": [
@@ -229,7 +244,10 @@
       "ListPermissions",
       "ListTags"
     ],
-    "prefix": "acm-pca"
+    "prefix": "acm-pca",
+    "arn_format": "arn:aws:acm-pca:${Region}:${Account}:${ARNType}/${ResourceId}",
+    "arn_regex": "^arn:aws:acm-pca:.+:[0-9]+:.+",
+    "name": "AWS Private Certificate Authority"
   },
   "activate": {
     "readActions": [
@@ -245,7 +263,10 @@
       "PutMemberInfo"
     ],
     "listActions": [],
-    "prefix": "activate"
+    "prefix": "activate",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Activate"
   },
   "airflow": {
     "readActions": [
@@ -265,7 +286,10 @@
       "ListEnvironments",
       "ListTagsForResource"
     ],
-    "prefix": "airflow"
+    "prefix": "airflow",
+    "arn_format": "arn:aws:airflow:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:airflow:.+:.+:.+",
+    "name": "Amazon Managed Workflows for Apache Airflow"
   },
   "amplify": {
     "readActions": [
@@ -311,7 +335,10 @@
       "ListTagsForResource",
       "ListWebHooks"
     ],
-    "prefix": "amplify"
+    "prefix": "amplify",
+    "arn_format": "arn:aws:amplify:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:amplify:.+:.+:.+",
+    "name": "AWS Amplify"
   },
   "amplifybackend": {
     "readActions": [
@@ -351,7 +378,10 @@
       "ListBackendJobs",
       "ListS3Buckets"
     ],
-    "prefix": "amplifybackend"
+    "prefix": "amplifybackend",
+    "arn_format": "arn:aws:amplifybackend:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:amplifybackend:.+:.+:.+",
+    "name": "AWS Amplify Admin"
   },
   "amplifyuibuilder": {
     "readActions": [
@@ -381,7 +411,10 @@
       "ListForms",
       "ListThemes"
     ],
-    "prefix": "amplifyuibuilder"
+    "prefix": "amplifyuibuilder",
+    "arn_format": "arn:aws:amplifyuibuilder:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:amplifyuibuilder:.+:.+:.+",
+    "name": "AWS Amplify UI Builder"
   },
   "aoss": {
     "readActions": [
@@ -421,7 +454,10 @@
       "ListTagsForResource",
       "ListVpcEndpoints"
     ],
-    "prefix": "aoss"
+    "prefix": "aoss",
+    "arn_format": "arn:aws:aoss:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:aoss:.+",
+    "name": "Amazon OpenSearch Serverless"
   },
   "apigateway": {
     "readActions": [],
@@ -437,7 +473,10 @@
       "UpdateRestApiPolicy"
     ],
     "listActions": [],
-    "prefix": "apigateway"
+    "prefix": "apigateway",
+    "arn_format": "arn:aws:apigateway:${Region}::${ApiGatewayResourcePath}",
+    "arn_regex": "^arn:aws:apigateway:.+",
+    "name": "Amazon API Gateway Management"
   },
   "app-integrations": {
     "readActions": [
@@ -465,7 +504,10 @@
       "ListEventIntegrations",
       "ListTagsForResource"
     ],
-    "prefix": "app-integrations"
+    "prefix": "app-integrations",
+    "arn_format": "arn:aws:app-integrations:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:app-integrations:.+:.+:.+",
+    "name": "Amazon AppIntegrations"
   },
   "appconfig": {
     "readActions": [
@@ -519,7 +561,10 @@
       "ListHostedConfigurationVersions",
       "ListTagsForResource"
     ],
-    "prefix": "appconfig"
+    "prefix": "appconfig",
+    "arn_format": "arn:aws:appconfig:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:appconfig:.+",
+    "name": "AWS AppConfig"
   },
   "appflow": {
     "readActions": [
@@ -557,7 +602,10 @@
       "ListFlows",
       "ListTagsForResource"
     ],
-    "prefix": "appflow"
+    "prefix": "appflow",
+    "arn_format": "arn:aws:appflow:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:appflow:.+:.+:.+",
+    "name": "Amazon AppFlow"
   },
   "application-autoscaling": {
     "readActions": [
@@ -579,7 +627,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "application-autoscaling"
+    "prefix": "application-autoscaling",
+    "arn_format": "arn:aws:application-autoscaling:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:application-autoscaling:.+:.+:.+",
+    "name": "AWS Application Auto Scaling"
   },
   "application-cost-profiler": {
     "readActions": [
@@ -594,7 +645,10 @@
     "listActions": [
       "ListReportDefinitions"
     ],
-    "prefix": "application-cost-profiler"
+    "prefix": "application-cost-profiler",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Application Cost Profiler Service"
   },
   "applicationinsights": {
     "readActions": [
@@ -631,7 +685,10 @@
       "ListProblems",
       "ListTagsForResource"
     ],
-    "prefix": "applicationinsights"
+    "prefix": "applicationinsights",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon CloudWatch Application Insights"
   },
   "appmesh": {
     "readActions": [
@@ -679,7 +736,10 @@
       "ListVirtualRouters",
       "ListVirtualServices"
     ],
-    "prefix": "appmesh"
+    "prefix": "appmesh",
+    "arn_format": "arn:aws:appmesh:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:appmesh:.+:.+:.+",
+    "name": "AWS App Mesh"
   },
   "appmesh-preview": {
     "readActions": [
@@ -724,7 +784,10 @@
       "ListVirtualRouters",
       "ListVirtualServices"
     ],
-    "prefix": "appmesh-preview"
+    "prefix": "appmesh-preview",
+    "arn_format": "arn:aws:appmesh-preview:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:appmesh-preview:.+:.+:.+",
+    "name": "AWS App Mesh Preview"
   },
   "apprunner": {
     "readActions": [
@@ -773,7 +836,10 @@
       "ListVpcConnectors",
       "ListVpcIngressConnections"
     ],
-    "prefix": "apprunner"
+    "prefix": "apprunner",
+    "arn_format": "arn:aws:apprunner:${Region}:${Account}:${ResourceType}/${PathToResource}",
+    "arn_regex": "^arn:aws:apprunner:.+",
+    "name": "AWS App Runner"
   },
   "appstream": {
     "readActions": [
@@ -848,7 +914,10 @@
       "ListEntitledApplications",
       "ListTagsForResource"
     ],
-    "prefix": "appstream"
+    "prefix": "appstream",
+    "arn_format": "arn:aws:appstream:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:appstream:.+",
+    "name": "Amazon AppStream 2.0"
   },
   "appsync": {
     "readActions": [
@@ -910,7 +979,10 @@
       "ListTagsForResource",
       "ListTypes"
     ],
-    "prefix": "appsync"
+    "prefix": "appsync",
+    "arn_format": "arn:aws:appsync:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:appsync:.+",
+    "name": "AWS AppSync"
   },
   "aps": {
     "readActions": [
@@ -956,7 +1028,10 @@
       "ListTagsForResource",
       "ListWorkspaces"
     ],
-    "prefix": "aps"
+    "prefix": "aps",
+    "arn_format": "arn:aws:aps:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:aps:.+:.+:.+",
+    "name": "Amazon Managed Service for Prometheus"
   },
   "arc-zonal-shift": {
     "readActions": [
@@ -971,7 +1046,10 @@
       "ListManagedResources",
       "ListZonalShifts"
     ],
-    "prefix": "arc-zonal-shift"
+    "prefix": "arc-zonal-shift",
+    "arn_format": "arn:aws:arc-zonal-shift:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:arc-zonal-shift:.+:.+:.+",
+    "name": "Amazon Route 53 Application Recovery Controller - Zonal Shift"
   },
   "arsenal": {
     "readActions": [],
@@ -979,7 +1057,10 @@
       "RegisterOnPremisesAgent"
     ],
     "listActions": [],
-    "prefix": "arsenal"
+    "prefix": "arsenal",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Application Discovery Arsenal"
   },
   "artifact": {
     "readActions": [
@@ -996,7 +1077,10 @@
     "listActions": [
       "ListReports"
     ],
-    "prefix": "artifact"
+    "prefix": "artifact",
+    "arn_format": "arn:aws:artifact:::${Resource}",
+    "arn_regex": "^arn:aws:artifact::.+",
+    "name": "AWS Artifact"
   },
   "athena": {
     "readActions": [
@@ -1066,7 +1150,10 @@
       "ListTagsForResource",
       "ListWorkGroups"
     ],
-    "prefix": "athena"
+    "prefix": "athena",
+    "arn_format": "arn:aws:athena:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:athena:.+",
+    "name": "Amazon Athena"
   },
   "auditmanager": {
     "readActions": [
@@ -1136,7 +1223,10 @@
       "ListNotifications",
       "ListTagsForResource"
     ],
-    "prefix": "auditmanager"
+    "prefix": "auditmanager",
+    "arn_format": "arn:aws:auditmanager:::${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:auditmanager::.+",
+    "name": "AWS Audit Manager"
   },
   "autoscaling": {
     "readActions": [
@@ -1209,7 +1299,10 @@
       "UpdateAutoScalingGroup"
     ],
     "listActions": [],
-    "prefix": "autoscaling"
+    "prefix": "autoscaling",
+    "arn_format": "arn:aws:autoscaling:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:autoscaling:.+:.+:.+",
+    "name": "Amazon EC2 Auto Scaling"
   },
   "autoscaling-plans": {
     "readActions": [
@@ -1223,7 +1316,10 @@
       "UpdateScalingPlan"
     ],
     "listActions": [],
-    "prefix": "autoscaling-plans"
+    "prefix": "autoscaling-plans",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Auto Scaling"
   },
   "aws-marketplace": {
     "readActions": [
@@ -1250,7 +1346,10 @@
       "ListAgreementRequests",
       "ListEntitlementDetails"
     ],
-    "prefix": "aws-marketplace"
+    "prefix": "aws-marketplace",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Marketplace"
   },
   "aws-marketplace-management": {
     "readActions": [],
@@ -1262,21 +1361,30 @@
       "viewSupport"
     ],
     "listActions": [],
-    "prefix": "aws-marketplace-management"
+    "prefix": "aws-marketplace-management",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Marketplace Management Portal"
   },
   "aws-portal": {
-    "readActions": [],
+    "readActions": [
+      "GetConsoleActionSetEnforced"
+    ],
     "writeActions": [
       "ModifyAccount",
       "ModifyBilling",
       "ModifyPaymentMethods",
+      "UpdateConsoleActionSetEnforced",
       "ViewAccount",
       "ViewBilling",
       "ViewPaymentMethods",
       "ViewUsage"
     ],
     "listActions": [],
-    "prefix": "aws-portal"
+    "prefix": "aws-portal",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Billing Console"
   },
   "awsconnector": {
     "readActions": [
@@ -1287,7 +1395,10 @@
       "ValidateConnectorId"
     ],
     "listActions": [],
-    "prefix": "awsconnector"
+    "prefix": "awsconnector",
+    "arn_format": "arn:aws:\u003cserviceName\u003e:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+    "arn_regex": "^arn:aws:\u003cserviceName\u003e:.+:.+:.+",
+    "name": "AWS Connector Service"
   },
   "backup": {
     "readActions": [
@@ -1370,7 +1481,10 @@
       "ListRestoreJobs",
       "ListTags"
     ],
-    "prefix": "backup"
+    "prefix": "backup",
+    "arn_format": "arn:aws:backup:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:backup:.+:.+:.+",
+    "name": "AWS Backup"
   },
   "backup-gateway": {
     "readActions": [
@@ -1406,7 +1520,10 @@
       "ListTagsForResource",
       "ListVirtualMachines"
     ],
-    "prefix": "backup-gateway"
+    "prefix": "backup-gateway",
+    "arn_format": "arn:aws:backup-gateway:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:*:backup-gateway:.+:.+:.+",
+    "name": "AWS Backup Gateway"
   },
   "backup-storage": {
     "readActions": [
@@ -1430,7 +1547,10 @@
       "ListChunks",
       "ListObjects"
     ],
-    "prefix": "backup-storage"
+    "prefix": "backup-storage",
+    "arn_format": "arn:${Partition}:backup-storage:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^^arn:aws:backup-storage:.+:.+:.+",
+    "name": "AWS Backup storage"
   },
   "batch": {
     "readActions": [
@@ -1463,7 +1583,10 @@
       "ListSchedulingPolicies",
       "ListTagsForResource"
     ],
-    "prefix": "batch"
+    "prefix": "batch",
+    "arn_format": "arn:aws:batch:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:batch:.+",
+    "name": "AWS Batch"
   },
   "billing": {
     "readActions": [
@@ -1485,7 +1608,10 @@
     "listActions": [
       "ListBillingViews"
     ],
-    "prefix": "billing"
+    "prefix": "billing",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Billing "
   },
   "billingconductor": {
     "readActions": [],
@@ -1524,7 +1650,10 @@
       "ListResourcesAssociatedToCustomLineItem",
       "ListTagsForResource"
     ],
-    "prefix": "billingconductor"
+    "prefix": "billingconductor",
+    "arn_format": "arn:aws:billingconductor::${Account}:${ResourceType}",
+    "arn_regex": "^arn:aws:billingconductor:.+",
+    "name": "AWS Billing Conductor"
   },
   "braket": {
     "readActions": [
@@ -1546,7 +1675,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "braket"
+    "prefix": "braket",
+    "arn_format": "arn:aws:braket:{$Region}:{$AccountI}\u003e:.+",
+    "arn_regex": "^arn:aws:braket::.+",
+    "name": "Amazon Braket"
   },
   "budgets": {
     "readActions": [
@@ -1564,7 +1696,10 @@
       "ViewBudget"
     ],
     "listActions": [],
-    "prefix": "budgets"
+    "prefix": "budgets",
+    "arn_format": "arn:aws:budgets::${Account}:budget/${BudgetName}",
+    "arn_regex": "^arn:aws:budgets::.+:.+",
+    "name": "AWS Budget Service"
   },
   "bugbust": {
     "readActions": [
@@ -1590,7 +1725,10 @@
       "ListPullRequests",
       "ListTagsForResource"
     ],
-    "prefix": "bugbust"
+    "prefix": "bugbust",
+    "arn_format": "arn:aws:bugbust:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:bugbust:.+:.+:.+",
+    "name": "AWS BugBust"
   },
   "cases": {
     "readActions": [
@@ -1629,7 +1767,10 @@
       "ListTagsForResource",
       "ListTemplates"
     ],
-    "prefix": "cases"
+    "prefix": "cases",
+    "arn_format": "arn:aws:cases:${Region}:${Account}:domain/${DomainId}",
+    "arn_regex": "^arn:aws:cases:.+",
+    "name": "Amazon Connect Cases"
   },
   "cassandra": {
     "readActions": [],
@@ -1645,7 +1786,10 @@
       "UpdatePartitioner"
     ],
     "listActions": [],
-    "prefix": "cassandra"
+    "prefix": "cassandra",
+    "arn_format": "arn:aws:cassandra:${Region}:${Account}:/${ResourceType}/${ResourcePath}/",
+    "arn_regex": "^arn:aws:cassandra:.+",
+    "name": "Amazon Keyspaces (for Apache Cassandra)"
   },
   "ce": {
     "readActions": [
@@ -1703,7 +1847,10 @@
       "ListSavingsPlansPurchaseRecommendationGeneration",
       "ListTagsForResource"
     ],
-    "prefix": "ce"
+    "prefix": "ce",
+    "arn_format": "arn:aws:ce::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:ce::.+:.+",
+    "name": "AWS Cost Explorer Service"
   },
   "chatbot": {
     "readActions": [
@@ -1740,7 +1887,10 @@
       "ListMicrosoftTeamsConfiguredTeams",
       "ListMicrosoftTeamsUserIdentities"
     ],
-    "prefix": "chatbot"
+    "prefix": "chatbot",
+    "arn_format": "arn:aws:chatbot::${Account}:chat-configuration/${ConfigurationType}/${ChatbotConfigurationName}",
+    "arn_regex": "^arn:aws:chatbot:.+",
+    "name": "AWS Chatbot"
   },
   "chime": {
     "readActions": [
@@ -2052,7 +2202,10 @@
       "ListVoiceProfileDomains",
       "ListVoiceProfiles"
     ],
-    "prefix": "chime"
+    "prefix": "chime",
+    "arn_format": "arn:aws:chime:${Region}:${Account}:${ResourceType}/${ResourceID}",
+    "arn_regex": "^arn:aws:chime:.+",
+    "name": "Amazon Chime"
   },
   "cleanrooms": {
     "readActions": [
@@ -2098,7 +2251,10 @@
       "ListSchemas",
       "ListTagsForResource"
     ],
-    "prefix": "cleanrooms"
+    "prefix": "cleanrooms",
+    "arn_format": "arn:aws:cleanrooms:${Region}:${Account}:${ResourceType}/${PathToResource}",
+    "arn_regex": "^arn:aws:cleanrooms:.+",
+    "name": "AWS Clean Rooms"
   },
   "cloud9": {
     "readActions": [
@@ -2136,7 +2292,10 @@
       "ListEnvironments",
       "ListTagsForResource"
     ],
-    "prefix": "cloud9"
+    "prefix": "cloud9",
+    "arn_format": "arn:aws:cloud9:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:cloud9:.+:[0-9]+:.+:.+",
+    "name": "AWS Cloud9"
   },
   "clouddirectory": {
     "readActions": [
@@ -2211,7 +2370,10 @@
       "ListTypedLinkFacetAttributes",
       "ListTypedLinkFacetNames"
     ],
-    "prefix": "clouddirectory"
+    "prefix": "clouddirectory",
+    "arn_format": "arn:aws:clouddirectory::${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:clouddirectory:.+:[0-9]+:(directory|schema)/.+",
+    "name": "Amazon Cloud Directory"
   },
   "cloudformation": {
     "readActions": [
@@ -2228,7 +2390,10 @@
       "ListResourceRequests",
       "ListResources"
     ],
-    "prefix": "cloudformation"
+    "prefix": "cloudformation",
+    "arn_format": "arn:aws:cloudformation:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:cloudformation:.+:[0-9]+:.+",
+    "name": "AWS Cloud Control API"
   },
   "cloudfront": {
     "readActions": [
@@ -2349,7 +2514,10 @@
       "ListTagsForResource",
       "ListUsages"
     ],
-    "prefix": "cloudfront"
+    "prefix": "cloudfront",
+    "arn_format": "arn:aws:cloudfront:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:cloudfront:.+:[0-9]+:.+",
+    "name": "Amazon CloudFront"
   },
   "cloudhsm": {
     "readActions": [
@@ -2391,7 +2559,10 @@
       "ListTags",
       "ListTagsForResource"
     ],
-    "prefix": "cloudhsm"
+    "prefix": "cloudhsm",
+    "arn_format": "arn:aws:cloudhsm:${Region}:${Account}:${ResourceName}",
+    "arn_regex": "^arn:aws:cloudhsm:.+",
+    "name": "AWS CloudHSM"
   },
   "cloudsearch": {
     "readActions": [
@@ -2432,7 +2603,10 @@
       "ListDomainNames",
       "ListTags"
     ],
-    "prefix": "cloudsearch"
+    "prefix": "cloudsearch",
+    "arn_format": "arn:aws:cloudsearch:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:cloudsearch:.+:.+:.+",
+    "name": "Amazon CloudSearch"
   },
   "cloudshell": {
     "readActions": [
@@ -2449,7 +2623,10 @@
       "StopEnvironment"
     ],
     "listActions": [],
-    "prefix": "cloudshell"
+    "prefix": "cloudshell",
+    "arn_format": "arn:aws:cloudshell:${Region}:${Account}:environment/${EnvironmentId}",
+    "arn_regex": "^arn:aws:cloudshell:${Region}:${Account}:environment/.+?",
+    "name": "AWS CloudShell"
   },
   "cloudtrail": {
     "readActions": [
@@ -2507,7 +2684,10 @@
       "ListTags",
       "ListTrails"
     ],
-    "prefix": "cloudtrail"
+    "prefix": "cloudtrail",
+    "arn_format": "arn:aws:cloudtrail:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:cloudtrail:.+:[0-9]+:.+",
+    "name": "AWS CloudTrail"
   },
   "cloudtrail-data": {
     "readActions": [],
@@ -2515,7 +2695,10 @@
       "PutAuditEvents"
     ],
     "listActions": [],
-    "prefix": "cloudtrail-data"
+    "prefix": "cloudtrail-data",
+    "arn_format": "arn:aws:cloudtrail:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:cloudtrail:.+:[0-9]+:.+",
+    "name": "AWS CloudTrail Data"
   },
   "cloudwatch": {
     "readActions": [
@@ -2563,7 +2746,10 @@
       "ListMetrics",
       "ListTagsForResource"
     ],
-    "prefix": "cloudwatch"
+    "prefix": "cloudwatch",
+    "arn_format": "arn:aws:cloudwatch:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:cloudwatch:.+",
+    "name": "Amazon CloudWatch"
   },
   "codeartifact": {
     "readActions": [
@@ -2613,7 +2799,10 @@
       "ListRepositoriesInDomain",
       "ListTagsForResource"
     ],
-    "prefix": "codeartifact"
+    "prefix": "codeartifact",
+    "arn_format": "arn:aws:codeartifact:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:codeartifact:.+:[0-9]+:.+/.+",
+    "name": "AWS CodeArtifact"
   },
   "codebuild": {
     "readActions": [
@@ -2675,7 +2864,10 @@
       "ListSharedReportGroups",
       "ListSourceCredentials"
     ],
-    "prefix": "codebuild"
+    "prefix": "codebuild",
+    "arn_format": "arn:aws:codebuild:${Region}:${Account}:build/${BuildId}",
+    "arn_regex": "^arn:aws:codebuild:.+:[0-9]+:.+/.+",
+    "name": "AWS CodeBuild"
   },
   "codecatalyst": {
     "readActions": [
@@ -2698,7 +2890,10 @@
       "ListIamRolesForConnection",
       "ListTagsForResource"
     ],
-    "prefix": "codecatalyst"
+    "prefix": "codecatalyst",
+    "arn_format": "arn:aws:codecatalyst:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:codecatalyst:.+",
+    "name": "Amazon CodeCatalyst"
   },
   "codecommit": {
     "readActions": [
@@ -2795,7 +2990,10 @@
       "ListRepositoriesForApprovalRuleTemplate",
       "ListTagsForResource"
     ],
-    "prefix": "codecommit"
+    "prefix": "codecommit",
+    "arn_format": "arn:aws:codecommit:${Region}:${Account}:${RepositoryName}",
+    "arn_regex": "^arn:aws:codecommit:.+",
+    "name": "AWS CodeCommit"
   },
   "codedeploy": {
     "readActions": [
@@ -2852,7 +3050,10 @@
       "ListOnPremisesInstances",
       "ListTagsForResource"
     ],
-    "prefix": "codedeploy"
+    "prefix": "codedeploy",
+    "arn_format": "arn:aws:codedeploy:${Region}:${Account}:${ResourceType}:${ResourceSpecifier}",
+    "arn_regex": "^arn:aws:codedeploy:.+",
+    "name": "AWS CodeDeploy"
   },
   "codedeploy-commands-secure": {
     "readActions": [
@@ -2864,7 +3065,10 @@
       "PutHostCommandComplete"
     ],
     "listActions": [],
-    "prefix": "codedeploy-commands-secure"
+    "prefix": "codedeploy-commands-secure",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS CodeDeploy secure host commands service"
   },
   "codeguru": {
     "readActions": [
@@ -2872,7 +3076,10 @@
     ],
     "writeActions": [],
     "listActions": [],
-    "prefix": "codeguru"
+    "prefix": "codeguru",
+    "arn_format": "arn:${Partition}:codeguru:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:codeguru:.+:.+:.+",
+    "name": "Amazon CodeGuru"
   },
   "codeguru-profiler": {
     "readActions": [
@@ -2904,7 +3111,10 @@
       "ListProfilingGroups",
       "ListTagsForResource"
     ],
-    "prefix": "codeguru-profiler"
+    "prefix": "codeguru-profiler",
+    "arn_format": "arn:aws:codeguru-profiler:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:codeguru-profiler:.+:.+:.+",
+    "name": "Amazon CodeGuru Profiler"
   },
   "codeguru-reviewer": {
     "readActions": [
@@ -2930,7 +3140,10 @@
       "ListTagsForResource",
       "ListThirdPartyRepositories"
     ],
-    "prefix": "codeguru-reviewer"
+    "prefix": "codeguru-reviewer",
+    "arn_format": "arn:aws:codeguru-reviewer:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:codeguru-reviewer:.+:.+:.+",
+    "name": "Amazon CodeGuru Reviewer"
   },
   "codeguru-security": {
     "readActions": [
@@ -2947,7 +3160,10 @@
       "ListFindings",
       "ListScans"
     ],
-    "prefix": "codeguru-security"
+    "prefix": "codeguru-security",
+    "arn_format": "arn:${Partition}:codeguru-security:${Region}:${Account}:*",
+    "arn_regex": "^arn:${Partition}:codeguru-security:.+:.+:.+",
+    "name": "Amazon CodeGuru Security"
   },
   "codepipeline": {
     "readActions": [
@@ -2995,7 +3211,10 @@
       "ListTagsForResource",
       "ListWebhooks"
     ],
-    "prefix": "codepipeline"
+    "prefix": "codepipeline",
+    "arn_format": "arn:aws:codepipeline:${Region}:${Account}:${PathToPipelineResource}",
+    "arn_regex": "^arn:aws:codepipeline:.+",
+    "name": "AWS CodePipeline"
   },
   "codestar": {
     "readActions": [
@@ -3026,7 +3245,10 @@
       "ListTeamMembers",
       "ListUserProfiles"
     ],
-    "prefix": "codestar"
+    "prefix": "codestar",
+    "arn_format": "arn:aws:codestar:${Region}:${Account}:project/${ResourceId}",
+    "arn_regex": "^arn:aws:codestar:.+:[0-9]+:project/.+",
+    "name": "AWS CodeStar"
   },
   "codestar-connections": {
     "readActions": [
@@ -3056,7 +3278,10 @@
       "ListInstallationTargets",
       "ListTagsForResource"
     ],
-    "prefix": "codestar-connections"
+    "prefix": "codestar-connections",
+    "arn_format": "arn:aws:codestar-connections:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:codestar-connections:.+:.+:.+",
+    "name": "AWS CodeStar Connections"
   },
   "codestar-notifications": {
     "readActions": [
@@ -3078,7 +3303,10 @@
       "ListTagsForResource",
       "ListTargets"
     ],
-    "prefix": "codestar-notifications"
+    "prefix": "codestar-notifications",
+    "arn_format": "arn:aws:codestar-notifications:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:codestar-notifications:.+:.+:.+",
+    "name": "AWS CodeStar Notifications"
   },
   "codewhisperer": {
     "readActions": [],
@@ -3090,7 +3318,10 @@
     "listActions": [
       "ListProfiles"
     ],
-    "prefix": "codewhisperer"
+    "prefix": "codewhisperer",
+    "arn_format": "arn:aws:codewhisperer:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:codewhisperer:.+:[0-9]+:.+",
+    "name": "Amazon CodeWhisperer"
   },
   "cognito-identity": {
     "readActions": [
@@ -3122,7 +3353,10 @@
       "ListIdentityPools",
       "ListTagsForResource"
     ],
-    "prefix": "cognito-identity"
+    "prefix": "cognito-identity",
+    "arn_format": "arn:aws:cognito-identity:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:cognito-identity:.+",
+    "name": "Amazon Cognito Identity"
   },
   "cognito-idp": {
     "readActions": [
@@ -3236,7 +3470,10 @@
       "ListUsers",
       "ListUsersInGroup"
     ],
-    "prefix": "cognito-idp"
+    "prefix": "cognito-idp",
+    "arn_format": "arn:aws:cognito-idp:${Region}:${Account}:${ResourceType}/${ResourcePath}:",
+    "arn_regex": "^arn:aws:cognito-idp:.+",
+    "name": "Amazon Cognito User Pools"
   },
   "cognito-sync": {
     "readActions": [
@@ -3264,7 +3501,10 @@
       "ListIdentityPoolUsage",
       "ListRecords"
     ],
-    "prefix": "cognito-sync"
+    "prefix": "cognito-sync",
+    "arn_format": "arn:aws:cognito-sync:${Region}:${Account}:${ResourceType}/${ResourcePath}:",
+    "arn_regex": "^arn:aws:cognito-sync:.+",
+    "name": "Amazon Cognito Sync"
   },
   "comprehend": {
     "readActions": [
@@ -3357,7 +3597,10 @@
       "ListTargetedSentimentDetectionJobs",
       "ListTopicsDetectionJobs"
     ],
-    "prefix": "comprehend"
+    "prefix": "comprehend",
+    "arn_format": "arn:aws:comprehend:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:comprehend:.+:.+:.+",
+    "name": "Amazon Comprehend"
   },
   "comprehendmedical": {
     "readActions": [
@@ -3391,7 +3634,10 @@
       "ListRxNormInferenceJobs",
       "ListSNOMEDCTInferenceJobs"
     ],
-    "prefix": "comprehendmedical"
+    "prefix": "comprehendmedical",
+    "arn_format": "arn:${Partition}:comprehendmedical:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:comprehendmedical:.+:.+:.+",
+    "name": "Amazon Comprehend Medical"
   },
   "compute-optimizer": {
     "readActions": [
@@ -3420,7 +3666,10 @@
       "UpdateEnrollmentStatus"
     ],
     "listActions": [],
-    "prefix": "compute-optimizer"
+    "prefix": "compute-optimizer",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Compute Optimizer"
   },
   "config": {
     "readActions": [
@@ -3521,7 +3770,10 @@
       "ListStoredQueries",
       "ListTagsForResource"
     ],
-    "prefix": "config"
+    "prefix": "config",
+    "arn_format": "arn:aws:config:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:config:.+",
+    "name": "AWS Config"
   },
   "connect": {
     "readActions": [
@@ -3710,7 +3962,10 @@
       "ListUserHierarchyGroups",
       "ListUsers"
     ],
-    "prefix": "connect"
+    "prefix": "connect",
+    "arn_format": "arn:aws:connect:${Region}:${Account}:instance/${InstanceId}",
+    "arn_regex": "^arn:aws:connect:.+:.+:instance/.+",
+    "name": "Amazon Connect"
   },
   "connect-campaigns": {
     "readActions": [
@@ -3741,7 +3996,10 @@
       "ListCampaigns",
       "ListTagsForResource"
     ],
-    "prefix": "connect-campaigns"
+    "prefix": "connect-campaigns",
+    "arn_format": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+    "arn_regex": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
+    "name": "High-volume outbound communications"
   },
   "consolidatedbilling": {
     "readActions": [
@@ -3751,7 +4009,10 @@
     "listActions": [
       "ListLinkedAccounts"
     ],
-    "prefix": "consolidatedbilling"
+    "prefix": "consolidatedbilling",
+    "arn_format": "arn:${Partition}:consolidatedbilling::${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:${Partition}:consolidatedbilling::.+:.+",
+    "name": "AWS Consolidated Billing"
   },
   "controltower": {
     "readActions": [
@@ -3802,7 +4063,10 @@
       "ListManagedOrganizationalUnits",
       "ListManagedOrganizationalUnitsForGuardrail"
     ],
-    "prefix": "controltower"
+    "prefix": "controltower",
+    "arn_format": "arn:${Partition}:controltower:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:controltower:.+:.+:.+",
+    "name": "AWS Control Tower"
   },
   "cur": {
     "readActions": [
@@ -3819,7 +4083,10 @@
       "ValidateReportDestination"
     ],
     "listActions": [],
-    "prefix": "cur"
+    "prefix": "cur",
+    "arn_format": "arn:aws:cur:${Region}:${Account}:definition/${ResourceName}",
+    "arn_regex": "^arn:aws:cur:.+:.+:.+",
+    "name": "AWS Cost and Usage Report"
   },
   "databrew": {
     "readActions": [
@@ -3872,7 +4139,10 @@
       "ListSchedules",
       "ListTagsForResource"
     ],
-    "prefix": "databrew"
+    "prefix": "databrew",
+    "arn_format": "arn:aws:databrew:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:databrew:.+:.+:.+",
+    "name": "AWS Glue DataBrew"
   },
   "dataexchange": {
     "readActions": [
@@ -3912,7 +4182,10 @@
       "ListRevisionAssets",
       "ListTagsForResource"
     ],
-    "prefix": "dataexchange"
+    "prefix": "dataexchange",
+    "arn_format": "arn:aws:dataexchange:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:dataexchange:.+",
+    "name": "AWS Data Exchange"
   },
   "datapipeline": {
     "readActions": [
@@ -3942,7 +4215,10 @@
     "listActions": [
       "ListPipelines"
     ],
-    "prefix": "datapipeline"
+    "prefix": "datapipeline",
+    "arn_format": "arn:aws:datapipeline:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:datapipeline:.+:.+",
+    "name": "AWS Data Pipeline"
   },
   "datasync": {
     "readActions": [
@@ -3995,7 +4271,10 @@
       "ListTaskExecutions",
       "ListTasks"
     ],
-    "prefix": "datasync"
+    "prefix": "datasync",
+    "arn_format": "arn:aws:datasync:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:datasync:.+",
+    "name": "AWS DataSync"
   },
   "datazone": {
     "readActions": [
@@ -4008,7 +4287,10 @@
       "ListProjects",
       "ListUserProjects"
     ],
-    "prefix": "datazone"
+    "prefix": "datazone",
+    "arn_format": "arn:${Partition}:datazone:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:datazone:.+:.+:.+",
+    "name": "Amazon DataZone"
   },
   "datazonecontrol": {
     "readActions": [
@@ -4046,7 +4328,10 @@
       "ListProjects",
       "ListTagsForResource"
     ],
-    "prefix": "datazonecontrol"
+    "prefix": "datazonecontrol",
+    "arn_format": "arn:aws:datazonecontrol:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:datazonecontrol:.+:.+:.+",
+    "name": "Amazon DataZone Control"
   },
   "dax": {
     "readActions": [
@@ -4085,7 +4370,10 @@
     "listActions": [
       "ListTags"
     ],
-    "prefix": "dax"
+    "prefix": "dax",
+    "arn_format": "arn:aws:dax:${Region}:${Account}:cache/${ClusterName}",
+    "arn_regex": "^arn:aws:dax:.+:[0-9]+:cache/[a-zA-Z0-9_.-]+",
+    "name": "Amazon DynamoDB Accelerator (DAX)"
   },
   "dbqms": {
     "readActions": [
@@ -4106,7 +4394,10 @@
       "UpdateTab"
     ],
     "listActions": [],
-    "prefix": "dbqms"
+    "prefix": "dbqms",
+    "arn_format": "arn:${Partition}:dbqms::",
+    "arn_regex": "^arn:${Partition}:dbqms::.+",
+    "name": "Database Query Metadata Service"
   },
   "deepcomposer": {
     "readActions": [
@@ -4133,7 +4424,10 @@
       "ListTagsForResource",
       "ListTrainingTopics"
     ],
-    "prefix": "deepcomposer"
+    "prefix": "deepcomposer",
+    "arn_format": "arn:aws:deepcomposer:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:deepcomposer:.+:.+:.+",
+    "name": "AWS DeepComposer"
   },
   "deeplens": {
     "readActions": [
@@ -4166,7 +4460,10 @@
       "ListModels",
       "ListProjects"
     ],
-    "prefix": "deeplens"
+    "prefix": "deeplens",
+    "arn_format": "arn:aws:deeplens:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+    "arn_regex": "^arn:aws:deeplens:.+:.+:.+",
+    "name": "AWS DeepLens"
   },
   "deepracer": {
     "readActions": [
@@ -4225,7 +4522,10 @@
       "ListTracks",
       "ListTrainingJobs"
     ],
-    "prefix": "deepracer"
+    "prefix": "deepracer",
+    "arn_format": "arn:aws:deepracer:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:deepracer:.+",
+    "name": "AWS DeepRacer"
   },
   "detective": {
     "readActions": [
@@ -4264,7 +4564,10 @@
       "ListOrganizationAdminAccount",
       "ListTagsForResource"
     ],
-    "prefix": "detective"
+    "prefix": "detective",
+    "arn_format": "arn:aws:detective:${Region}:${Account}:graph:${GraphId}",
+    "arn_regex": "^arn:aws:detective:.+",
+    "name": "Amazon Detective"
   },
   "devicefarm": {
     "readActions": [
@@ -4350,7 +4653,10 @@
       "ListUploads",
       "ListVPCEConfigurations"
     ],
-    "prefix": "devicefarm"
+    "prefix": "devicefarm",
+    "arn_format": "arn:aws:devicefarm:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:devicefarm:.+",
+    "name": "AWS Device Farm"
   },
   "devops-guru": {
     "readActions": [
@@ -4390,7 +4696,10 @@
       "ListOrganizationInsights",
       "ListRecommendations"
     ],
-    "prefix": "devops-guru"
+    "prefix": "devops-guru",
+    "arn_format": "arn:aws:devops-guru:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:devops-guru:.+:.+:.+/.+",
+    "name": "Amazon DevOps Guru"
   },
   "directconnect": {
     "readActions": [
@@ -4462,7 +4771,10 @@
     "listActions": [
       "ListVirtualInterfaceTestHistory"
     ],
-    "prefix": "directconnect"
+    "prefix": "directconnect",
+    "arn_format": "arn:aws:directconnect:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:directconnect:.+",
+    "name": "AWS Direct Connect"
   },
   "discovery": {
     "readActions": [
@@ -4497,7 +4809,10 @@
       "ListConfigurations",
       "ListServerNeighbors"
     ],
-    "prefix": "discovery"
+    "prefix": "discovery",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Application Discovery Service"
   },
   "dlm": {
     "readActions": [
@@ -4514,7 +4829,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "dlm"
+    "prefix": "dlm",
+    "arn_format": "arn:aws:dlm:${Region}:${Account}:policy/${ResourceName}",
+    "arn_regex": "^arn:aws:dlm:.+:.+:.+",
+    "name": "Amazon Data Lifecycle Manager"
   },
   "dms": {
     "readActions": [
@@ -4625,7 +4943,10 @@
       "ListMigrationProjects",
       "ListTagsForResource"
     ],
-    "prefix": "dms"
+    "prefix": "dms",
+    "arn_format": "arn:aws:dms:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:dms:.+",
+    "name": "AWS Database Migration Service"
   },
   "docdb-elastic": {
     "readActions": [
@@ -4647,7 +4968,10 @@
       "ListClusters",
       "ListTagsForResource"
     ],
-    "prefix": "docdb-elastic"
+    "prefix": "docdb-elastic",
+    "arn_format": "arn:aws:docdb-elastic:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:docdb-elastic:.+:.+:.+",
+    "name": "Amazon DocumentDB Elastic Clusters"
   },
   "drs": {
     "readActions": [
@@ -4731,7 +5055,10 @@
       "ListStagingAccounts",
       "ListTagsForResource"
     ],
-    "prefix": "drs"
+    "prefix": "drs",
+    "arn_format": "arn:aws:drs:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:drs:.+",
+    "name": "AWS Elastic Disaster Recovery"
   },
   "ds": {
     "readActions": [
@@ -4813,7 +5140,10 @@
       "ListSchemaExtensions",
       "ListTagsForResource"
     ],
-    "prefix": "ds"
+    "prefix": "ds",
+    "arn_format": "arn:aws:ds:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:ds:.+",
+    "name": "AWS Directory Service"
   },
   "dynamodb": {
     "readActions": [
@@ -4887,7 +5217,10 @@
       "ListTables",
       "ListTagsOfResource"
     ],
-    "prefix": "dynamodb"
+    "prefix": "dynamodb",
+    "arn_format": "arn:aws:dynamodb:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:dynamodb:.+:.+",
+    "name": "Amazon DynamoDB"
   },
   "ebs": {
     "readActions": [
@@ -4902,7 +5235,10 @@
       "ListChangedBlocks",
       "ListSnapshotBlocks"
     ],
-    "prefix": "ebs"
+    "prefix": "ebs",
+    "arn_format": "arn:aws:ebs:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:ebs:.+",
+    "name": "Amazon Elastic Block Store"
   },
   "ec2": {
     "readActions": [
@@ -5510,7 +5846,10 @@
       "ListImagesInRecycleBin",
       "ListSnapshotsInRecycleBin"
     ],
-    "prefix": "ec2"
+    "prefix": "ec2",
+    "arn_format": "arn:aws:ec2:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:ec2:.+",
+    "name": "Amazon EC2"
   },
   "ec2-instance-connect": {
     "readActions": [],
@@ -5519,7 +5858,10 @@
       "SendSerialConsoleSSHPublicKey"
     ],
     "listActions": [],
-    "prefix": "ec2-instance-connect"
+    "prefix": "ec2-instance-connect",
+    "arn_format": "arn:aws:ec2:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cresourcePath\u003e",
+    "arn_regex": "^arn:aws:ec2:.+",
+    "name": "Amazon EC2 Instance Connect"
   },
   "ec2messages": {
     "readActions": [
@@ -5533,7 +5875,10 @@
       "SendReply"
     ],
     "listActions": [],
-    "prefix": "ec2messages"
+    "prefix": "ec2messages",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon Message Delivery Service"
   },
   "ecr": {
     "readActions": [
@@ -5585,7 +5930,10 @@
       "ListImages",
       "ListTagsForResource"
     ],
-    "prefix": "ecr"
+    "prefix": "ecr",
+    "arn_format": "arn:aws:ecr:${Region}:${Account}:repository/${RepositoryName}",
+    "arn_regex": "^arn:aws:ecr:.+",
+    "name": "Amazon Elastic Container Registry"
   },
   "ecr-public": {
     "readActions": [
@@ -5617,7 +5965,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "ecr-public"
+    "prefix": "ecr-public",
+    "arn_format": "arn:aws:ecr-public::${Account}:${RepositoryOrRegistry}/${RepositoryNameOrAccountId}",
+    "arn_regex": "^arn:aws:ecr-public::.+",
+    "name": "Amazon Elastic Container Registry Public"
   },
   "ecs": {
     "readActions": [
@@ -5684,7 +6035,10 @@
       "ListTaskDefinitions",
       "ListTasks"
     ],
-    "prefix": "ecs"
+    "prefix": "ecs",
+    "arn_format": "arn:aws:ecs:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:ecs:.+",
+    "name": "Amazon Elastic Container Service"
   },
   "eks": {
     "readActions": [
@@ -5729,7 +6083,10 @@
       "ListTagsForResource",
       "ListUpdates"
     ],
-    "prefix": "eks"
+    "prefix": "eks",
+    "arn_format": "arn:aws:eks:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:eks:.+",
+    "name": "Amazon Elastic Kubernetes Service"
   },
   "elastic-inference": {
     "readActions": [
@@ -5745,7 +6102,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "elastic-inference"
+    "prefix": "elastic-inference",
+    "arn_format": "arn:aws:elastic-inference:\u003cregion\u003e:\u003caccount-id\u003e:elastic-inference-accelerator/\u003cidentifier\u003e",
+    "arn_regex": "^arn:aws:elastic-inference:.+",
+    "name": "Amazon Elastic Inference"
   },
   "elasticache": {
     "readActions": [
@@ -5820,7 +6180,10 @@
       "ListAllowedNodeTypeModifications",
       "ListTagsForResource"
     ],
-    "prefix": "elasticache"
+    "prefix": "elasticache",
+    "arn_format": "arn:aws:elasticache:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:elasticache:.+:.+:.+",
+    "name": "Amazon ElastiCache"
   },
   "elasticbeanstalk": {
     "readActions": [
@@ -5879,7 +6242,10 @@
       "ListPlatformVersions",
       "ListTagsForResource"
     ],
-    "prefix": "elasticbeanstalk"
+    "prefix": "elasticbeanstalk",
+    "arn_format": "arn:aws:elasticbeanstalk:${Region}:${AccountID}:${ResourceType}/${PathToResource}",
+    "arn_regex": "^arn:aws:elasticbeanstalk:.+:.*:.+/.+",
+    "name": "AWS Elastic Beanstalk"
   },
   "elasticfilesystem": {
     "readActions": [
@@ -5923,7 +6289,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "elasticfilesystem"
+    "prefix": "elasticfilesystem",
+    "arn_format": "arn:aws:elasticfilesystem:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:elasticfilesystem:.+",
+    "name": "Amazon Elastic File System"
   },
   "elasticloadbalancing": {
     "readActions": [
@@ -5966,7 +6335,10 @@
       "SetWebAcl"
     ],
     "listActions": [],
-    "prefix": "elasticloadbalancing"
+    "prefix": "elasticloadbalancing",
+    "arn_format": "arn:aws:elasticloadbalancing:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:elasticloadbalancing:.+",
+    "name": "Elastic Load Balancing V2"
   },
   "elasticmapreduce": {
     "readActions": [
@@ -6054,7 +6426,10 @@
       "ListStudios",
       "ListWorkspaceAccessIdentities"
     ],
-    "prefix": "elasticmapreduce"
+    "prefix": "elasticmapreduce",
+    "arn_format": "arn:aws:elasticmapreduce:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:elasticmapreduce:.+",
+    "name": "Amazon Elastic MapReduce"
   },
   "elastictranscoder": {
     "readActions": [],
@@ -6079,7 +6454,10 @@
       "ListPipelines",
       "ListPresets"
     ],
-    "prefix": "elastictranscoder"
+    "prefix": "elastictranscoder",
+    "arn_format": "arn:aws:elastictranscoder:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:elastictranscoder:.+",
+    "name": "Amazon Elastic Transcoder"
   },
   "elemental-activations": {
     "readActions": [
@@ -6098,7 +6476,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "elemental-activations"
+    "prefix": "elemental-activations",
+    "arn_format": "arn:aws:elemental-activations:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:elemental-activations:.+:.+:.+",
+    "name": "AWS Elemental Appliances and Software Activation Service"
   },
   "elemental-appliances-software": {
     "readActions": [
@@ -6124,7 +6505,10 @@
       "ListQuotes",
       "ListTagsForResource"
     ],
-    "prefix": "elemental-appliances-software"
+    "prefix": "elemental-appliances-software",
+    "arn_format": "arn:aws:elemental-appliances-software:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:elemental-appliances-software:.+:.+:.+",
+    "name": "AWS Elemental Appliances and Software"
   },
   "elemental-support-cases": {
     "readActions": [
@@ -6137,7 +6521,10 @@
       "UpdateCase"
     ],
     "listActions": [],
-    "prefix": "elemental-support-cases"
+    "prefix": "elemental-support-cases",
+    "arn_format": "arn:${Partition}:elemental-support-cases:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:elemental-support-cases:.+:.+:.+",
+    "name": "AWS Elemental Support Cases"
   },
   "elemental-support-content": {
     "readActions": [],
@@ -6145,7 +6532,10 @@
       "Query"
     ],
     "listActions": [],
-    "prefix": "elemental-support-content"
+    "prefix": "elemental-support-content",
+    "arn_format": "arn:${Partition}:elemental-support-content:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:elemental-support-content:.+:.+:.+",
+    "name": "AWS Elemental Support Content"
   },
   "emr-containers": {
     "readActions": [
@@ -6173,7 +6563,10 @@
       "ListTagsForResource",
       "ListVirtualClusters"
     ],
-    "prefix": "emr-containers"
+    "prefix": "emr-containers",
+    "arn_format": "arn:aws:emr-containers:${Region}:${Account}:/${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:emr-containers:.+",
+    "name": "Amazon EMR on EKS (EMR Containers)"
   },
   "emr-serverless": {
     "readActions": [
@@ -6197,7 +6590,10 @@
       "ListJobRuns",
       "ListTagsForResource"
     ],
-    "prefix": "emr-serverless"
+    "prefix": "emr-serverless",
+    "arn_format": "arn:aws:emr-serverless:${Region}:${Account}:/${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:emr-serverless:.+",
+    "name": "Amazon EMR Serverless"
   },
   "es": {
     "readActions": [
@@ -6292,7 +6688,10 @@
       "ListVpcEndpoints",
       "ListVpcEndpointsForDomain"
     ],
-    "prefix": "es"
+    "prefix": "es",
+    "arn_format": "arn:aws:es:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:es:.+",
+    "name": "Amazon OpenSearch Service"
   },
   "events": {
     "readActions": [
@@ -6358,7 +6757,10 @@
       "ListTagsForResource",
       "ListTargetsByRule"
     ],
-    "prefix": "events"
+    "prefix": "events",
+    "arn_format": "arn:aws:events:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:events:.+",
+    "name": "Amazon EventBridge"
   },
   "evidently": {
     "readActions": [
@@ -6405,7 +6807,10 @@
       "ListSegments",
       "ListTagsForResource"
     ],
-    "prefix": "evidently"
+    "prefix": "evidently",
+    "arn_format": "arn:aws:evidently:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:evidently:.+:.+:.+",
+    "name": "Amazon CloudWatch Evidently"
   },
   "execute-api": {
     "readActions": [],
@@ -6415,7 +6820,10 @@
       "ManageConnections"
     ],
     "listActions": [],
-    "prefix": "execute-api"
+    "prefix": "execute-api",
+    "arn_format": "arn:aws:execute-api:\u003cregion\u003e:\u003caccount_id\u003e:\u003capi_id\u003e/\u003cstage\u003e/\u003cmethod\u003e/\u003capi_specific_resource_path\u003e",
+    "arn_regex": "^arn:aws:execute-api:.+",
+    "name": "Amazon API Gateway"
   },
   "finspace": {
     "readActions": [
@@ -6439,7 +6847,10 @@
       "ListTagsForResource",
       "ListUsers"
     ],
-    "prefix": "finspace"
+    "prefix": "finspace",
+    "arn_format": "arn:aws:finspace:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:finspace:.+",
+    "name": "Amazon FinSpace"
   },
   "finspace-api": {
     "readActions": [
@@ -6447,7 +6858,10 @@
     ],
     "writeActions": [],
     "listActions": [],
-    "prefix": "finspace-api"
+    "prefix": "finspace-api",
+    "arn_format": "arn:aws:finspace-api:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:finspace-api:.+",
+    "name": "Amazon FinSpace API"
   },
   "firehose": {
     "readActions": [
@@ -6468,7 +6882,10 @@
       "ListDeliveryStreams",
       "ListTagsForDeliveryStream"
     ],
-    "prefix": "firehose"
+    "prefix": "firehose",
+    "arn_format": "arn:aws:firehose:{Region}:{Account}:deliverystream/${DeliveryStreamName}",
+    "arn_regex": "^arn:aws:firehose:.+:[0-9]+:deliverystream/.+",
+    "name": "Amazon Kinesis Firehose"
   },
   "fis": {
     "readActions": [
@@ -6496,7 +6913,10 @@
       "ListTagsForResource",
       "ListTargetResourceTypes"
     ],
-    "prefix": "fis"
+    "prefix": "fis",
+    "arn_format": "arn:aws:fis:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:fis:.+:.+:.+",
+    "name": "AWS Fault Injection Simulator"
   },
   "fms": {
     "readActions": [
@@ -6543,7 +6963,10 @@
       "ListTagsForResource",
       "ListThirdPartyFirewallFirewallPolicies"
     ],
-    "prefix": "fms"
+    "prefix": "fms",
+    "arn_format": "arn:aws:fms:${Region}:${Account}:${Resource}/${Id}",
+    "arn_regex": "^arn:aws:fms:.+:[0-9]+:.+/.+",
+    "name": "AWS Firewall Manager"
   },
   "forecast": {
     "readActions": [
@@ -6622,7 +7045,10 @@
       "ListWhatIfForecastExports",
       "ListWhatIfForecasts"
     ],
-    "prefix": "forecast"
+    "prefix": "forecast",
+    "arn_format": "arn:aws:forecast:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:forecast:.+:.+:.+",
+    "name": "Amazon Forecast"
   },
   "frauddetector": {
     "readActions": [
@@ -6705,7 +7131,10 @@
       "ListEventPredictions",
       "ListTagsForResource"
     ],
-    "prefix": "frauddetector"
+    "prefix": "frauddetector",
+    "arn_format": "arn:aws:frauddetector:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:frauddetector:.+:.+:.+",
+    "name": "Amazon Fraud Detector"
   },
   "freertos": {
     "readActions": [
@@ -6734,7 +7163,10 @@
       "ListSubscriptionEmails",
       "ListSubscriptions"
     ],
-    "prefix": "freertos"
+    "prefix": "freertos",
+    "arn_format": "arn:aws:freertos:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:freertos:.+:[0-9]+:.+",
+    "name": "Amazon FreeRTOS"
   },
   "freetier": {
     "readActions": [
@@ -6745,7 +7177,10 @@
       "PutFreeTierAlertPreference"
     ],
     "listActions": [],
-    "prefix": "freetier"
+    "prefix": "freetier",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Free Tier"
   },
   "fsx": {
     "readActions": [
@@ -6799,7 +7234,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "fsx"
+    "prefix": "fsx",
+    "arn_format": "arn:aws:fsx:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:fsx:.+",
+    "name": "Amazon FSx"
   },
   "gamelift": {
     "readActions": [
@@ -6912,7 +7350,10 @@
       "ListScripts",
       "ListTagsForResource"
     ],
-    "prefix": "gamelift"
+    "prefix": "gamelift",
+    "arn_format": "arn:aws:gamelift:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:gamelift:.+",
+    "name": "Amazon GameLift"
   },
   "gamesparks": {
     "readActions": [
@@ -6955,7 +7396,10 @@
       "ListStages",
       "ListTagsForResource"
     ],
-    "prefix": "gamesparks"
+    "prefix": "gamesparks",
+    "arn_format": "arn:aws:gamesparks:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:gamesparks:.+:.+:.+",
+    "name": "Amazon GameSparks"
   },
   "geo": {
     "readActions": [
@@ -7022,7 +7466,10 @@
       "ListTrackerConsumers",
       "ListTrackers"
     ],
-    "prefix": "geo"
+    "prefix": "geo",
+    "arn_format": "arn:aws:geo:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:geo:.+",
+    "name": "Amazon Location"
   },
   "glacier": {
     "readActions": [
@@ -7064,7 +7511,10 @@
       "ListTagsForVault",
       "ListVaults"
     ],
-    "prefix": "glacier"
+    "prefix": "glacier",
+    "arn_format": "arn:aws:glacier:${Region}:${Account}:vault/${VaultName}",
+    "arn_regex": "^arn:aws:glacier:.+:.+:.+",
+    "name": "Amazon S3 Glacier"
   },
   "globalaccelerator": {
     "readActions": [
@@ -7122,7 +7572,10 @@
       "ListListeners",
       "ListTagsForResource"
     ],
-    "prefix": "globalaccelerator"
+    "prefix": "globalaccelerator",
+    "arn_format": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+    "arn_regex": "^arn:aws:globalaccelerator::.+:.+",
+    "name": "AWS Global Accelerator"
   },
   "glue": {
     "readActions": [
@@ -7341,7 +7794,10 @@
       "ListTriggers",
       "ListWorkflows"
     ],
-    "prefix": "glue"
+    "prefix": "glue",
+    "arn_format": "arn:aws:glue:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:glue:.+:.+",
+    "name": "AWS Glue"
   },
   "grafana": {
     "readActions": [
@@ -7368,7 +7824,10 @@
       "ListTagsForResource",
       "ListWorkspaces"
     ],
-    "prefix": "grafana"
+    "prefix": "grafana",
+    "arn_format": "arn:aws:grafana:${Region}:${Account}:/${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:grafana:.+:.+:.+",
+    "name": "Amazon Managed Grafana"
   },
   "greengrass": {
     "readActions": [
@@ -7470,7 +7929,10 @@
       "ListSubscriptionDefinitions",
       "ListTagsForResource"
     ],
-    "prefix": "greengrass"
+    "prefix": "greengrass",
+    "arn_format": "arn:aws:greengrass:${Region}:${Account}:/greengrass/${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:greengrass:.+:[0-9]+:.+",
+    "name": "AWS IoT Greengrass"
   },
   "groundstation": {
     "readActions": [
@@ -7512,7 +7974,10 @@
       "ListSatellites",
       "ListTagsForResource"
     ],
-    "prefix": "groundstation"
+    "prefix": "groundstation",
+    "arn_format": "arn:aws:groundstation:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:groundstation:.+",
+    "name": "AWS Ground Station"
   },
   "groundtruthlabeling": {
     "readActions": [
@@ -7526,7 +7991,10 @@
     "listActions": [
       "ListDatasetObjects"
     ],
-    "prefix": "groundtruthlabeling"
+    "prefix": "groundtruthlabeling",
+    "arn_format": "arn:${Partition}:groundtruthlabeling:${region}:${account}:${resourceType}/${resourcePath}",
+    "arn_regex": "^arn:${Partition}:groundtruthlabeling:.+",
+    "name": "Amazon GroundTruth Labeling"
   },
   "guardduty": {
     "readActions": [
@@ -7603,7 +8071,10 @@
       "ListTagsForResource",
       "ListThreatIntelSets"
     ],
-    "prefix": "guardduty"
+    "prefix": "guardduty",
+    "arn_format": "arn:aws:guardduty:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:guardduty:.+",
+    "name": "Amazon GuardDuty"
   },
   "health": {
     "readActions": [
@@ -7624,7 +8095,10 @@
       "EnableHealthServiceAccessForOrganization"
     ],
     "listActions": [],
-    "prefix": "health"
+    "prefix": "health",
+    "arn_format": "arn:aws:health::${Namespace}:${RelativeId}",
+    "arn_regex": "^arn:aws:health:[^:]*:[^:]*:.+",
+    "name": "AWS Health APIs and Notifications"
   },
   "healthlake": {
     "readActions": [
@@ -7653,7 +8127,10 @@
       "ListFHIRImportJobs",
       "ListTagsForResource"
     ],
-    "prefix": "healthlake"
+    "prefix": "healthlake",
+    "arn_format": "arn:aws:healthlake:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:healthlake:.+:.+:.+",
+    "name": "Amazon HealthLake"
   },
   "honeycode": {
     "readActions": [
@@ -7692,7 +8169,10 @@
       "ListTeamAssociations",
       "ListTenants"
     ],
-    "prefix": "honeycode"
+    "prefix": "honeycode",
+    "arn_format": "arn:aws:honeycode:${Region}:${Account}:${ResourceType}:${ResourcePath}",
+    "arn_regex": "^arn:aws:honeycode:.+:.+:.+",
+    "name": "Amazon Honeycode"
   },
   "iam": {
     "readActions": [
@@ -7871,7 +8351,10 @@
       "ListUsers",
       "ListVirtualMFADevices"
     ],
-    "prefix": "iam"
+    "prefix": "iam",
+    "arn_format": "arn:aws:iam::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iam::.+",
+    "name": "AWS Identity and Access Management"
   },
   "identity-sync": {
     "readActions": [
@@ -7892,7 +8375,10 @@
     "listActions": [
       "ListSyncFilters"
     ],
-    "prefix": "identity-sync"
+    "prefix": "identity-sync",
+    "arn_format": "arn:aws:identity-sync:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:identity-sync:.+:.+:.+",
+    "name": "AWS Identity Sync"
   },
   "identitystore": {
     "readActions": [
@@ -7920,7 +8406,10 @@
       "ListGroups",
       "ListUsers"
     ],
-    "prefix": "identitystore"
+    "prefix": "identitystore",
+    "arn_format": "arn:aws:identitystore::${AwsAccountId}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:identitystore:.+",
+    "name": "AWS Identity Store"
   },
   "identitystore-auth": {
     "readActions": [],
@@ -7931,7 +8420,10 @@
     "listActions": [
       "ListSessions"
     ],
-    "prefix": "identitystore-auth"
+    "prefix": "identitystore-auth",
+    "arn_format": "arn:${Partition}:identitystore-auth:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:${Partition}:identitystore-auth:${Region}:.+",
+    "name": "AWS Identity Store Auth"
   },
   "imagebuilder": {
     "readActions": [
@@ -7996,7 +8488,10 @@
       "ListWorkflowExecutions",
       "ListWorkflowStepExecutions"
     ],
-    "prefix": "imagebuilder"
+    "prefix": "imagebuilder",
+    "arn_format": "arn:aws:imagebuilder:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:imagebuilder:.+:.+:.+",
+    "name": "Amazon EC2 Image Builder"
   },
   "importexport": {
     "readActions": [
@@ -8011,7 +8506,10 @@
     "listActions": [
       "ListJobs"
     ],
-    "prefix": "importexport"
+    "prefix": "importexport",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Import Export Disk Service"
   },
   "inspector": {
     "readActions": [
@@ -8057,7 +8555,10 @@
       "ListRulesPackages",
       "ListTagsForResource"
     ],
-    "prefix": "inspector"
+    "prefix": "inspector",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon Inspector"
   },
   "inspector2": {
     "readActions": [
@@ -8099,7 +8600,10 @@
       "ListTagsForResource",
       "ListUsageTotals"
     ],
-    "prefix": "inspector2"
+    "prefix": "inspector2",
+    "arn_format": "arn:aws:inspector2:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:inspector2:.+:.+:.+",
+    "name": "Amazon Inspector2"
   },
   "internetmonitor": {
     "readActions": [
@@ -8118,7 +8622,10 @@
       "ListMonitors",
       "ListTagsForResource"
     ],
-    "prefix": "internetmonitor"
+    "prefix": "internetmonitor",
+    "arn_format": "arn:aws:internetmonitor:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:internetmonitor:.+:.+:.+",
+    "name": "Amazon CloudWatch Internet Monitor"
   },
   "invoicing": {
     "readActions": [
@@ -8131,7 +8638,10 @@
     "listActions": [
       "ListInvoiceSummaries"
     ],
-    "prefix": "invoicing"
+    "prefix": "invoicing",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Invoicing Service"
   },
   "iot": {
     "readActions": [
@@ -8394,7 +8904,10 @@
       "ListV2LoggingLevels",
       "ListViolationEvents"
     ],
-    "prefix": "iot"
+    "prefix": "iot",
+    "arn_format": "arn:aws:iot:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:iot:.+:[0-9]+:.+",
+    "name": "AWS IoT"
   },
   "iot-device-tester": {
     "readActions": [],
@@ -8406,7 +8919,10 @@
       "SupportedVersion"
     ],
     "listActions": [],
-    "prefix": "iot-device-tester"
+    "prefix": "iot-device-tester",
+    "arn_format": "arn:${Partition}:iot-device-tester:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:.+:iot-device-tester:.+:.+:.+",
+    "name": "AWS IoT Device Tester"
   },
   "iot1click": {
     "readActions": [
@@ -8441,7 +8957,10 @@
       "ListProjects",
       "ListTagsForResource"
     ],
-    "prefix": "iot1click"
+    "prefix": "iot1click",
+    "arn_format": "arn:aws:iot1click:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:iot1click:.+:[0-9]+:.+",
+    "name": "AWS IoT 1-Click"
   },
   "iotanalytics": {
     "readActions": [
@@ -8484,7 +9003,10 @@
       "ListPipelines",
       "ListTagsForResource"
     ],
-    "prefix": "iotanalytics"
+    "prefix": "iotanalytics",
+    "arn_format": "arn:aws:iotanalytics:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iotanalytics:.+",
+    "name": "AWS IoT Analytics"
   },
   "iotdeviceadvisor": {
     "readActions": [
@@ -8507,7 +9029,10 @@
       "ListSuiteRuns",
       "ListTagsForResource"
     ],
-    "prefix": "iotdeviceadvisor"
+    "prefix": "iotdeviceadvisor",
+    "arn_format": "arn:aws:iotdeviceadvisor:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iotdeviceadvisor:.+",
+    "name": "AWS IoT Core Device Advisor"
   },
   "iotevents": {
     "readActions": [
@@ -8555,7 +9080,10 @@
       "ListInputs",
       "ListTagsForResource"
     ],
-    "prefix": "iotevents"
+    "prefix": "iotevents",
+    "arn_format": "arn:aws:iotevents:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iotevents:.+",
+    "name": "AWS IoT Events"
   },
   "iotfleethub": {
     "readActions": [
@@ -8572,7 +9100,10 @@
       "ListApplications",
       "ListTagsForResource"
     ],
-    "prefix": "iotfleethub"
+    "prefix": "iotfleethub",
+    "arn_format": "arn:aws:iotfleethub:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iotfleethub:.+:.+:.+",
+    "name": "AWS IoT Fleet Hub for Device Management"
   },
   "iotfleetwise": {
     "readActions": [
@@ -8631,7 +9162,10 @@
       "ListVehicles",
       "ListVehiclesInFleet"
     ],
-    "prefix": "iotfleetwise"
+    "prefix": "iotfleetwise",
+    "arn_format": "arn:aws:iotfleetwise:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:iotfleetwise:.+:[0-9]+:.+",
+    "name": "AWS IoT FleetWise"
   },
   "iotjobsdata": {
     "readActions": [
@@ -8643,7 +9177,10 @@
       "UpdateJobExecution"
     ],
     "listActions": [],
-    "prefix": "iotjobsdata"
+    "prefix": "iotjobsdata",
+    "arn_format": "arn:aws:iot:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:iot:.+:[0-9]+:.+",
+    "name": "AWS IoT Jobs DataPlane"
   },
   "iotroborunner": {
     "readActions": [
@@ -8672,7 +9209,10 @@
       "ListWorkerFleets",
       "ListWorkers"
     ],
-    "prefix": "iotroborunner"
+    "prefix": "iotroborunner",
+    "arn_format": "arn:aws:iotroborunner:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:iotroborunner:.+:.+:.+",
+    "name": "AWS IoT RoboRunner"
   },
   "iotsitewise": {
     "readActions": [
@@ -8755,7 +9295,10 @@
       "ListTagsForResource",
       "ListTimeSeries"
     ],
-    "prefix": "iotsitewise"
+    "prefix": "iotsitewise",
+    "arn_format": "arn:aws:iotsitewise:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:iotsitewise:.+:.+:.+",
+    "name": "AWS IoT SiteWise"
   },
   "iottwinmaker": {
     "readActions": [
@@ -8798,7 +9341,10 @@
       "ListTagsForResource",
       "ListWorkspaces"
     ],
-    "prefix": "iottwinmaker"
+    "prefix": "iottwinmaker",
+    "arn_format": "arn:aws:iottwinmaker:${Region}:${Account}:${ResourceType}/${ResourceTypeId}",
+    "arn_regex": "^arn:aws:iottwinmaker:.+:.+:.+",
+    "name": "AWS IoT TwinMaker"
   },
   "iotwireless": {
     "readActions": [
@@ -8917,7 +9463,10 @@
       "ListWirelessGatewayTaskDefinitions",
       "ListWirelessGateways"
     ],
-    "prefix": "iotwireless"
+    "prefix": "iotwireless",
+    "arn_format": "arn:aws:iotwireless:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:iotwireless:.+",
+    "name": "AWS IoT Wireless"
   },
   "iq": {
     "readActions": [
@@ -8980,7 +9529,10 @@
       "ListRequests",
       "ListReviews"
     ],
-    "prefix": "iq"
+    "prefix": "iq",
+    "arn_format": "arn:aws:iq:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iq:.+",
+    "name": "AWS IQ"
   },
   "iq-permission": {
     "readActions": [
@@ -8997,7 +9549,10 @@
     "listActions": [
       "ListPermissionRequests"
     ],
-    "prefix": "iq-permission"
+    "prefix": "iq-permission",
+    "arn_format": "arn:aws:iq-permission:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iq-permission:.+",
+    "name": "AWS IQ Permissions"
   },
   "ivs": {
     "readActions": [
@@ -9041,7 +9596,10 @@
       "ListStreams",
       "ListTagsForResource"
     ],
-    "prefix": "ivs"
+    "prefix": "ivs",
+    "arn_format": "arn:aws:ivs:${Region}:${Account}:${ArnType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ivs:.+:.+:.+",
+    "name": "Amazon Interactive Video Service"
   },
   "ivschat": {
     "readActions": [
@@ -9067,7 +9625,10 @@
       "ListRooms",
       "ListTagsForResource"
     ],
-    "prefix": "ivschat"
+    "prefix": "ivschat",
+    "arn_format": "arn:aws:ivschat:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ivschat:.+:.+:.+",
+    "name": "Amazon Interactive Video Service Chat"
   },
   "kafka": {
     "readActions": [
@@ -9112,7 +9673,10 @@
       "ListScramSecrets",
       "ListTagsForResource"
     ],
-    "prefix": "kafka"
+    "prefix": "kafka",
+    "arn_format": "arn:aws:kafka:${Region}:${Account}:${ResourceType}/${ResourceName}/${Uuid}",
+    "arn_regex": "^arn:aws:kafka:.+",
+    "name": "Amazon Managed Streaming for Apache Kafka"
   },
   "kafka-cluster": {
     "readActions": [
@@ -9139,7 +9703,10 @@
       "WriteDataIdempotently"
     ],
     "listActions": [],
-    "prefix": "kafka-cluster"
+    "prefix": "kafka-cluster",
+    "arn_format": "arn:aws:kafka:${Region}:${Account}:${ResourceType}/${ResourceDescriptor}",
+    "arn_regex": "^arn:aws:kafka:.+",
+    "name": "Apache Kafka APIs for Amazon MSK clusters"
   },
   "kafkaconnect": {
     "readActions": [
@@ -9160,7 +9727,10 @@
       "ListCustomPlugins",
       "ListWorkerConfigurations"
     ],
-    "prefix": "kafkaconnect"
+    "prefix": "kafkaconnect",
+    "arn_format": "arn:aws:kafkaconnect:${Region}:${Account}:${ResourceType}/${ResourceName}/${UUID}",
+    "arn_regex": "^arn:aws:kafkaconnect:.+",
+    "name": "Amazon Managed Streaming for Kafka Connect"
   },
   "kendra": {
     "readActions": [
@@ -9234,7 +9804,10 @@
       "ListTagsForResource",
       "ListThesauri"
     ],
-    "prefix": "kendra"
+    "prefix": "kendra",
+    "arn_format": "arn:aws:kendra:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:kendra:.+:.+:.+",
+    "name": "Amazon Kendra"
   },
   "kendra-ranking": {
     "readActions": [
@@ -9252,7 +9825,10 @@
       "ListRescoreExecutionPlans",
       "ListTagsForResource"
     ],
-    "prefix": "kendra-ranking"
+    "prefix": "kendra-ranking",
+    "arn_format": "arn:aws:kendra-ranking:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:kendra-ranking:.+:.+:.+",
+    "name": "Amazon Kendra Intelligent Ranking"
   },
   "kinesis": {
     "readActions": [
@@ -9290,7 +9866,10 @@
       "ListStreams",
       "ListTagsForStream"
     ],
-    "prefix": "kinesis"
+    "prefix": "kinesis",
+    "arn_format": "arn:aws:kinesis:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:kinesis:.+",
+    "name": "Amazon Kinesis"
   },
   "kinesisanalytics": {
     "readActions": [
@@ -9316,7 +9895,10 @@
       "ListApplications",
       "ListTagsForResource"
     ],
-    "prefix": "kinesisanalytics"
+    "prefix": "kinesisanalytics",
+    "arn_format": "arn:aws:kinesisanalytics:${Region}:${Account}:application/${ApplicationName}",
+    "arn_regex": "^arn:aws:kinesisanalytics:.+:[0-9]+:application/[a-zA-Z0-9_.-]+",
+    "name": "Amazon Kinesis Analytics"
   },
   "kinesisvideo": {
     "readActions": [
@@ -9366,7 +9948,10 @@
       "ListTagsForResource",
       "ListTagsForStream"
     ],
-    "prefix": "kinesisvideo"
+    "prefix": "kinesisvideo",
+    "arn_format": "arn:aws:kinesisvideo:${Region}:${Account}:${ResourceType}/${ResourceName}/${CreationTime}",
+    "arn_regex": "^arn:aws:kinesisvideo:.+",
+    "name": "Amazon Kinesis Video Streams"
   },
   "kms": {
     "readActions": [
@@ -9427,7 +10012,10 @@
       "ListResourceTags",
       "ListRetirableGrants"
     ],
-    "prefix": "kms"
+    "prefix": "kms",
+    "arn_format": "arn:aws:kms:${Region}:${Account}:${ResourceType}/${Id}",
+    "arn_regex": "^arn:aws:kms:.+",
+    "name": "AWS Key Management Service"
   },
   "lakeformation": {
     "readActions": [
@@ -9481,7 +10069,10 @@
       "ListTableStorageOptimizers",
       "ListTransactions"
     ],
-    "prefix": "lakeformation"
+    "prefix": "lakeformation",
+    "arn_format": "arn:${Partition}:lakeformation:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:lakeformation:.+:.+",
+    "name": "AWS Lake Formation"
   },
   "lambda": {
     "readActions": [
@@ -9558,7 +10149,10 @@
       "ListTags",
       "ListVersionsByFunction"
     ],
-    "prefix": "lambda"
+    "prefix": "lambda",
+    "arn_format": "arn:aws:lambda:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:lambda:.+",
+    "name": "AWS Lambda"
   },
   "launchwizard": {
     "readActions": [
@@ -9575,7 +10169,10 @@
     "listActions": [
       "ListProvisionedApps"
     ],
-    "prefix": "launchwizard"
+    "prefix": "launchwizard",
+    "arn_format": "",
+    "arn_regex": "^arn:aws:launchwizard:.+:.+:.+",
+    "name": "AWS Launch Wizard"
   },
   "lex": {
     "readActions": [
@@ -9631,7 +10228,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "lex"
+    "prefix": "lex",
+    "arn_format": "arn:aws:lex:${Region}:${Account}:${Type}:${Name}",
+    "arn_regex": "^arn:aws:lex:.+:[0-9]+:.+",
+    "name": "Amazon Lex"
   },
   "license-manager": {
     "readActions": [
@@ -9690,7 +10290,10 @@
       "ListTokens",
       "ListUsageForLicenseConfiguration"
     ],
-    "prefix": "license-manager"
+    "prefix": "license-manager",
+    "arn_format": "arn:aws:license-manager:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:license-manager:.+:.+:.+",
+    "name": "AWS License Manager"
   },
   "license-manager-linux-subscriptions": {
     "readActions": [
@@ -9703,7 +10306,10 @@
       "ListLinuxSubscriptionInstances",
       "ListLinuxSubscriptions"
     ],
-    "prefix": "license-manager-linux-subscriptions"
+    "prefix": "license-manager-linux-subscriptions",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS License Manager Linux Subscriptions Manager"
   },
   "license-manager-user-subscriptions": {
     "readActions": [],
@@ -9722,7 +10328,10 @@
       "ListProductSubscriptions",
       "ListUserAssociations"
     ],
-    "prefix": "license-manager-user-subscriptions"
+    "prefix": "license-manager-user-subscriptions",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS License Manager User Subscriptions"
   },
   "lightsail": {
     "readActions": [
@@ -9889,7 +10498,10 @@
       "UpdateRelationalDatabaseParameters"
     ],
     "listActions": [],
-    "prefix": "lightsail"
+    "prefix": "lightsail",
+    "arn_format": "arn:aws:lightsail:${Region}:${Account}:${ResourceType}/${Id}",
+    "arn_regex": "^arn:aws:lightsail:.+",
+    "name": "Amazon Lightsail"
   },
   "logs": {
     "readActions": [
@@ -9953,7 +10565,10 @@
       "ListTagsForResource",
       "ListTagsLogGroup"
     ],
-    "prefix": "logs"
+    "prefix": "logs",
+    "arn_format": "arn:aws:logs:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:logs:.+",
+    "name": "Amazon CloudWatch Logs"
   },
   "lookoutequipment": {
     "readActions": [
@@ -9995,7 +10610,10 @@
       "ListSensorStatistics",
       "ListTagsForResource"
     ],
-    "prefix": "lookoutequipment"
+    "prefix": "lookoutequipment",
+    "arn_format": "arn:aws:lookoutequipment:${Region}:${Account}:${ResourceType}/${ResourceName}/${ResourceId}",
+    "arn_regex": "^arn:aws:lookoutequipment:.+:.+:.+",
+    "name": "Amazon Lookout for Equipment"
   },
   "lookoutmetrics": {
     "readActions": [
@@ -10034,7 +10652,10 @@
       "ListMetricSets",
       "ListTagsForResource"
     ],
-    "prefix": "lookoutmetrics"
+    "prefix": "lookoutmetrics",
+    "arn_format": "arn:aws:lookoutmetrics:${Region}:${AccountId}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:lookoutmetrics:.+:.+:.+",
+    "name": "Amazon Lookout for Metrics"
   },
   "lookoutvision": {
     "readActions": [
@@ -10068,7 +10689,10 @@
       "ListTagsForResource",
       "ListTrialDetections"
     ],
-    "prefix": "lookoutvision"
+    "prefix": "lookoutvision",
+    "arn_format": "arn:aws:lookoutvision:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:lookoutvision:.+:.+:.+",
+    "name": "Amazon Lookout for Vision"
   },
   "m2": {
     "readActions": [
@@ -10109,7 +10733,10 @@
       "ListEnvironments",
       "ListTagsForResource"
     ],
-    "prefix": "m2"
+    "prefix": "m2",
+    "arn_format": "arn:aws:m2:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:m2:${Region}:${Account}:.+",
+    "name": "AWS Mainframe Modernization Service"
   },
   "machinelearning": {
     "readActions": [
@@ -10145,7 +10772,10 @@
       "UpdateMLModel"
     ],
     "listActions": [],
-    "prefix": "machinelearning"
+    "prefix": "machinelearning",
+    "arn_format": "arn:aws:machinelearning:${Region}:${Account}:${ResourceType}/${RelativeID}",
+    "arn_regex": "^arn:aws:machinelearning:.+",
+    "name": "Amazon Machine Learning"
   },
   "macie2": {
     "readActions": [
@@ -10233,7 +10863,10 @@
       "ListSensitivityInspectionTemplates",
       "ListTagsForResource"
     ],
-    "prefix": "macie2"
+    "prefix": "macie2",
+    "arn_format": "arn:aws:macie2:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:macie2:.+:.+:.+",
+    "name": "Amazon Macie"
   },
   "managedblockchain": {
     "readActions": [
@@ -10272,7 +10905,10 @@
       "ListProposals",
       "ListTagsForResource"
     ],
-    "prefix": "managedblockchain"
+    "prefix": "managedblockchain",
+    "arn_format": "arn:aws:managedblockchain:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:managedblockchain:.*:[0-9]*:.+",
+    "name": "Amazon Managed Blockchain"
   },
   "marketplacecommerceanalytics": {
     "readActions": [],
@@ -10281,7 +10917,10 @@
       "StartSupportDataExport"
     ],
     "listActions": [],
-    "prefix": "marketplacecommerceanalytics"
+    "prefix": "marketplacecommerceanalytics",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Marketplace Commerce Analytics Service"
   },
   "mechanicalturk": {
     "readActions": [
@@ -10329,7 +10968,10 @@
       "ListWorkerBlocks",
       "ListWorkersWithQualificationType"
     ],
-    "prefix": "mechanicalturk"
+    "prefix": "mechanicalturk",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon Mechanical Turk"
   },
   "mediaconnect": {
     "readActions": [
@@ -10368,7 +11010,10 @@
       "ListReservations",
       "ListTagsForResource"
     ],
-    "prefix": "mediaconnect"
+    "prefix": "mediaconnect",
+    "arn_format": "arn:aws:mediaconnect:${Region}:${Account}:\u003cnamespace\u003e:\u003crelative-id\u003e:\u003crelative-name\u003e",
+    "arn_regex": "^arn:aws:mediaconnect:.+",
+    "name": "AWS Elemental MediaConnect"
   },
   "mediaconvert": {
     "readActions": [
@@ -10405,7 +11050,10 @@
       "ListQueues",
       "ListTagsForResource"
     ],
-    "prefix": "mediaconvert"
+    "prefix": "mediaconvert",
+    "arn_format": "arn:aws:mediaconvert:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:mediaconvert:.+",
+    "name": "AWS Elemental MediaConvert"
   },
   "mediaimport": {
     "readActions": [],
@@ -10413,7 +11061,10 @@
       "CreateDatabaseBinarySnapshot"
     ],
     "listActions": [],
-    "prefix": "mediaimport"
+    "prefix": "mediaimport",
+    "arn_format": "arn:aws:mediaimport:${Region}:${Account}/*",
+    "arn_regex": "",
+    "name": "AmazonMediaImport"
   },
   "medialive": {
     "readActions": [
@@ -10481,7 +11132,10 @@
       "ListReservations",
       "ListTagsForResource"
     ],
-    "prefix": "medialive"
+    "prefix": "medialive",
+    "arn_format": "arn:aws:medialive:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:medialive:${Region}:${Account}:.+",
+    "name": "AWS Elemental MediaLive"
   },
   "mediapackage": {
     "readActions": [
@@ -10509,7 +11163,10 @@
       "ListOriginEndpoints",
       "ListTagsForResource"
     ],
-    "prefix": "mediapackage"
+    "prefix": "mediapackage",
+    "arn_format": "arn:aws:mediapackage:${Region}:${Account}:${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:mediapackage:.+",
+    "name": "AWS Elemental MediaPackage"
   },
   "mediapackage-vod": {
     "readActions": [
@@ -10535,7 +11192,10 @@
       "ListPackagingGroups",
       "ListTagsForResource"
     ],
-    "prefix": "mediapackage-vod"
+    "prefix": "mediapackage-vod",
+    "arn_format": "arn:aws:mediapackage-vod:${Region}:${Account}:${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:mediapackage-vod:.+:.+:.+",
+    "name": "AWS Elemental MediaPackage VOD"
   },
   "mediastore": {
     "readActions": [
@@ -10570,7 +11230,10 @@
       "ListItems",
       "ListTagsForResource"
     ],
-    "prefix": "mediastore"
+    "prefix": "mediastore",
+    "arn_format": "arn:aws:mediastore:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:mediastore:.+:.+",
+    "name": "AWS Elemental MediaStore"
   },
   "mediatailor": {
     "readActions": [
@@ -10623,7 +11286,10 @@
       "ListTagsForResource",
       "ListVodSources"
     ],
-    "prefix": "mediatailor"
+    "prefix": "mediatailor",
+    "arn_format": "arn:aws:mediatailor:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:mediatailor:.+:.+:.+",
+    "name": "AWS Elemental MediaTailor"
   },
   "memorydb": {
     "readActions": [
@@ -10670,7 +11336,10 @@
       "ListAllowedNodeTypeUpdates",
       "ListTags"
     ],
-    "prefix": "memorydb"
+    "prefix": "memorydb",
+    "arn_format": "arn:aws:memorydb:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:memorydb:.+:.+:.+",
+    "name": "Amazon MemoryDB"
   },
   "mgh": {
     "readActions": [
@@ -10699,7 +11368,10 @@
       "ListMigrationTasks",
       "ListProgressUpdateStreams"
     ],
-    "prefix": "mgh"
+    "prefix": "mgh",
+    "arn_format": "arn:aws:mgh:\u003cregion\u003e:\u003cnamespace\u003e:\u003crelative-id\u003e",
+    "arn_regex": "^arn:aws:mgh:[a-z0-9-]+:[0-9]{12}:.+",
+    "name": "AWS Migration Hub"
   },
   "mgn": {
     "readActions": [
@@ -10803,7 +11475,10 @@
       "ListTemplateActions",
       "ListWaves"
     ],
-    "prefix": "mgn"
+    "prefix": "mgn",
+    "arn_format": "arn:aws:mgn:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:mgn:.+",
+    "name": "AWS Application Migration Service"
   },
   "migrationhub-orchestrator": {
     "readActions": [
@@ -10843,7 +11518,10 @@
       "ListWorkflowSteps",
       "ListWorkflows"
     ],
-    "prefix": "migrationhub-orchestrator"
+    "prefix": "migrationhub-orchestrator",
+    "arn_format": "arn:aws:migrationhub-orchestrator:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:migrationhub-orchestrator:.+:.+:.+",
+    "name": "AWS Migration Hub Orchestrator"
   },
   "migrationhub-strategy": {
     "readActions": [
@@ -10880,7 +11558,10 @@
       "ListJarArtifacts",
       "ListServers"
     ],
-    "prefix": "migrationhub-strategy"
+    "prefix": "migrationhub-strategy",
+    "arn_format": "arn:${Partition}:iam:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:${ServiceName}:.+:.+:.+",
+    "name": "AWS Migration Hub Strategy Recommendations"
   },
   "mobileanalytics": {
     "readActions": [
@@ -10891,7 +11572,10 @@
       "PutEvents"
     ],
     "listActions": [],
-    "prefix": "mobileanalytics"
+    "prefix": "mobileanalytics",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon Mobile Analytics"
   },
   "mobilehub": {
     "readActions": [
@@ -10923,7 +11607,10 @@
       "ListProjectSnapshots",
       "ListProjects"
     ],
-    "prefix": "mobilehub"
+    "prefix": "mobilehub",
+    "arn_format": "arn:aws:mobilehub:\u003cregion\u003e:\u003caws_account_ID\u003e:project/\u003cproject_ID\u003e",
+    "arn_regex": "^arn:aws:mobilehub:.+:[0-9]+:.+",
+    "name": "AWS Mobile Hub"
   },
   "mobiletargeting": {
     "readActions": [
@@ -11055,7 +11742,10 @@
       "ListTemplateVersions",
       "ListTemplates"
     ],
-    "prefix": "mobiletargeting"
+    "prefix": "mobiletargeting",
+    "arn_format": "arn:aws:mobiletargeting:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:mobiletargeting:.+",
+    "name": "Amazon Pinpoint"
   },
   "monitron": {
     "readActions": [
@@ -11076,7 +11766,10 @@
       "ListProjects",
       "ListTagsForResource"
     ],
-    "prefix": "monitron"
+    "prefix": "monitron",
+    "arn_format": "arn:aws:monitron:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:monitron:.+:.+:.+",
+    "name": "Amazon Monitron"
   },
   "mq": {
     "readActions": [
@@ -11107,7 +11800,10 @@
       "ListTags",
       "ListUsers"
     ],
-    "prefix": "mq"
+    "prefix": "mq",
+    "arn_format": "arn:aws:mq:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:mq:.+",
+    "name": "Amazon MQ"
   },
   "neptune-db": {
     "readActions": [
@@ -11149,7 +11845,10 @@
       "ListMLModelTrainingJobs",
       "ListMLModelTransformJobs"
     ],
-    "prefix": "neptune-db"
+    "prefix": "neptune-db",
+    "arn_format": "arn:aws:neptune-db:${Region}:${Account}:${Id}/*",
+    "arn_regex": "^arn:aws:neptune-db:.+",
+    "name": "Amazon Neptune"
   },
   "network-firewall": {
     "readActions": [
@@ -11194,7 +11893,10 @@
       "ListTLSInspectionConfigurations",
       "ListTagsForResource"
     ],
-    "prefix": "network-firewall"
+    "prefix": "network-firewall",
+    "arn_format": "arn:aws:network-firewall:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:network-firewall:.+:.+:.+",
+    "name": "AWS Network Firewall"
   },
   "networkmanager": {
     "readActions": [
@@ -11288,7 +11990,10 @@
       "ListPeerings",
       "ListTagsForResource"
     ],
-    "prefix": "networkmanager"
+    "prefix": "networkmanager",
+    "arn_format": "arn:aws:networkmanager::${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:networkmanager::.+:.+",
+    "name": "AWS Network Manager"
   },
   "nimble": {
     "readActions": [
@@ -11348,7 +12053,10 @@
       "ListStudios",
       "ListTagsForResource"
     ],
-    "prefix": "nimble"
+    "prefix": "nimble",
+    "arn_format": "arn:aws:nimble:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:nimble:.+:.+:.+",
+    "name": "Amazon Nimble Studio"
   },
   "oam": {
     "readActions": [
@@ -11372,7 +12080,10 @@
       "ListSinks",
       "ListTagsForResource"
     ],
-    "prefix": "oam"
+    "prefix": "oam",
+    "arn_format": "arn:aws:oam:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:oam:.+:.+:.+",
+    "name": "Amazon CloudWatch Observability Access Manager"
   },
   "omics": {
     "readActions": [
@@ -11447,7 +12158,10 @@
       "ListVariantStores",
       "ListWorkflows"
     ],
-    "prefix": "omics"
+    "prefix": "omics",
+    "arn_format": "arn:aws:omics:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:omics:${Region}:${Account}:${ResourceType}/.+?",
+    "name": "Amazon Omics"
   },
   "opsworks": {
     "readActions": [
@@ -11530,7 +12244,10 @@
     "listActions": [
       "ListTags"
     ],
-    "prefix": "opsworks"
+    "prefix": "opsworks",
+    "arn_format": "arn:aws:${ServiceName}:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:opsworks:.+",
+    "name": "AWS OpsWorks"
   },
   "opsworks-cm": {
     "readActions": [
@@ -11558,7 +12275,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "opsworks-cm"
+    "prefix": "opsworks-cm",
+    "arn_format": "arn:aws:opsworks-cm:\u003cregion\u003e:\u003caccount\u003e:\u003cresourceType\u003e/\u003cid\u003e",
+    "arn_regex": "^arn:aws:opsworks-cm:.+:[0-9]+:.+",
+    "name": "AWS OpsWorks Configuration Management"
   },
   "organizations": {
     "readActions": [
@@ -11622,7 +12342,10 @@
       "ListTagsForResource",
       "ListTargetsForPolicy"
     ],
-    "prefix": "organizations"
+    "prefix": "organizations",
+    "arn_format": "arn:aws:organizations::${Account}:${Resource}/o-${OrganizationId}(/${ResourceType}/${ResourceId})?",
+    "arn_regex": "^arn:aws:organizations::.+:.+",
+    "name": "AWS Organizations"
   },
   "outposts": {
     "readActions": [
@@ -11659,7 +12382,10 @@
       "ListSites",
       "ListTagsForResource"
     ],
-    "prefix": "outposts"
+    "prefix": "outposts",
+    "arn_format": "arn:aws:outposts:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:outposts:.+:.+:.+",
+    "name": "AWS Outposts"
   },
   "panorama": {
     "readActions": [
@@ -11704,7 +12430,10 @@
       "ListPackages",
       "ListTagsForResource"
     ],
-    "prefix": "panorama"
+    "prefix": "panorama",
+    "arn_format": "arn:aws:panorama:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:panorama:.+:.+:.+",
+    "name": "AWS Panorama"
   },
   "payments": {
     "readActions": [
@@ -11720,7 +12449,10 @@
     "listActions": [
       "ListPaymentPreferences"
     ],
-    "prefix": "payments"
+    "prefix": "payments",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Payments"
   },
   "personalize": {
     "readActions": [
@@ -11800,7 +12532,10 @@
       "ListSolutions",
       "ListTagsForResource"
     ],
-    "prefix": "personalize"
+    "prefix": "personalize",
+    "arn_format": "arn:aws:personalize:${Region}:${Account}:${Resourcename}/${ResourceId}",
+    "arn_regex": "^arn:aws:personalize:.+:.+:.+",
+    "name": "Amazon Personalize"
   },
   "pi": {
     "readActions": [
@@ -11814,7 +12549,10 @@
       "ListAvailableResourceDimensions",
       "ListAvailableResourceMetrics"
     ],
-    "prefix": "pi"
+    "prefix": "pi",
+    "arn_format": "arn:aws:pi:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:pi:.+",
+    "name": "AWS Performance Insights"
   },
   "pipes": {
     "readActions": [
@@ -11833,7 +12571,10 @@
       "ListPipes",
       "ListTagsForResource"
     ],
-    "prefix": "pipes"
+    "prefix": "pipes",
+    "arn_format": "arn:aws:pipes:${Region}:${Account}:pipe/${PipeName}",
+    "arn_regex": "^arn:aws:pipes:.+:.+:.+",
+    "name": "Amazon EventBridge Pipes"
   },
   "polly": {
     "readActions": [
@@ -11851,7 +12592,10 @@
       "ListLexicons",
       "ListSpeechSynthesisTasks"
     ],
-    "prefix": "polly"
+    "prefix": "polly",
+    "arn_format": "arn:aws:polly:${Region}:${Account}:lexicon/${RelativeId}",
+    "arn_regex": "^arn:aws:polly:${Region}:.+",
+    "name": "Amazon Polly"
   },
   "pricing": {
     "readActions": [
@@ -11864,7 +12608,10 @@
     "listActions": [
       "ListPriceLists"
     ],
-    "prefix": "pricing"
+    "prefix": "pricing",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Price List"
   },
   "private-networks": {
     "readActions": [
@@ -11899,7 +12646,10 @@
       "ListOrders",
       "ListTagsForResource"
     ],
-    "prefix": "private-networks"
+    "prefix": "private-networks",
+    "arn_format": "arn:aws:private-networks:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:private-networks:.+",
+    "name": "AWS service providing managed private networks"
   },
   "profile": {
     "readActions": [
@@ -11946,7 +12696,10 @@
       "ListTagsForResource",
       "ListWorkflows"
     ],
-    "prefix": "profile"
+    "prefix": "profile",
+    "arn_format": "arn:aws:profile:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:profile:.+:.+:.+",
+    "name": "Amazon Connect Customer Profiles"
   },
   "proton": {
     "readActions": [
@@ -12063,16 +12816,21 @@
       "ListServices",
       "ListTagsForResource"
     ],
-    "prefix": "proton"
+    "prefix": "proton",
+    "arn_format": "arn:aws:proton:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:proton:.+:.+:.+",
+    "name": "AWS Proton"
   },
   "purchase-orders": {
     "readActions": [
+      "GetConsoleActionSetEnforced",
       "GetPurchaseOrder"
     ],
     "writeActions": [
       "AddPurchaseOrder",
       "DeletePurchaseOrder",
       "ModifyPurchaseOrders",
+      "UpdateConsoleActionSetEnforced",
       "UpdatePurchaseOrder",
       "UpdatePurchaseOrderStatus",
       "ViewPurchaseOrders"
@@ -12081,7 +12839,10 @@
       "ListPurchaseOrderInvoices",
       "ListPurchaseOrders"
     ],
-    "prefix": "purchase-orders"
+    "prefix": "purchase-orders",
+    "arn_format": "arn:${Partition}:purchase-orders::${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:${Partition}:purchase-orders::.+:.+:.+",
+    "name": "AWS Purchase Orders Console"
   },
   "qldb": {
     "readActions": [
@@ -12125,7 +12886,10 @@
       "ListLedgers",
       "ListTagsForResource"
     ],
-    "prefix": "qldb"
+    "prefix": "qldb",
+    "arn_format": "arn:aws:qldb:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:qldb:.+",
+    "name": "Amazon QLDB"
   },
   "quicksight": {
     "readActions": [
@@ -12139,6 +12903,7 @@
       "DescribeDashboardPermissions",
       "DescribeDataSet",
       "DescribeDataSetPermissions",
+      "DescribeDataSetRefreshProperties",
       "DescribeDataSource",
       "DescribeDataSourcePermissions",
       "DescribeEmailCustomizationTemplate",
@@ -12151,6 +12916,7 @@
       "DescribeIngestion",
       "DescribeIpRestriction",
       "DescribeNamespace",
+      "DescribeRefreshSchedule",
       "DescribeTemplate",
       "DescribeTemplateAlias",
       "DescribeTemplatePermissions",
@@ -12184,6 +12950,7 @@
       "CreateIngestion",
       "CreateNamespace",
       "CreateReader",
+      "CreateRefreshSchedule",
       "CreateTemplate",
       "CreateTemplateAlias",
       "CreateTheme",
@@ -12196,6 +12963,7 @@
       "DeleteCustomPermissions",
       "DeleteDashboard",
       "DeleteDataSet",
+      "DeleteDataSetRefreshProperties",
       "DeleteDataSource",
       "DeleteEmailCustomizationTemplate",
       "DeleteFolder",
@@ -12204,6 +12972,7 @@
       "DeleteGroupMembership",
       "DeleteIAMPolicyAssignment",
       "DeleteNamespace",
+      "DeleteRefreshSchedule",
       "DeleteTemplate",
       "DeleteTemplateAlias",
       "DeleteTheme",
@@ -12215,6 +12984,7 @@
       "GenerateEmbedUrlForRegisteredUser",
       "PassDataSet",
       "PassDataSource",
+      "PutDataSetRefreshProperties",
       "RegisterUser",
       "RestoreAnalysis",
       "ScopeDownPolicy",
@@ -12249,6 +13019,7 @@
       "UpdateIAMPolicyAssignment",
       "UpdateIpRestriction",
       "UpdatePublicSharingSettings",
+      "UpdateRefreshSchedule",
       "UpdateResourcePermissions",
       "UpdateTemplate",
       "UpdateTemplateAlias",
@@ -12273,6 +13044,7 @@
       "ListIAMPolicyAssignmentsForUser",
       "ListIngestions",
       "ListNamespaces",
+      "ListRefreshSchedules",
       "ListTagsForResource",
       "ListTemplateAliases",
       "ListTemplateVersions",
@@ -12283,7 +13055,10 @@
       "ListUserGroups",
       "ListUsers"
     ],
-    "prefix": "quicksight"
+    "prefix": "quicksight",
+    "arn_format": "arn:aws:quicksight:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:quicksight:.+",
+    "name": "Amazon QuickSight"
   },
   "ram": {
     "readActions": [
@@ -12317,7 +13092,10 @@
       "ListResourceTypes",
       "ListResources"
     ],
-    "prefix": "ram"
+    "prefix": "ram",
+    "arn_format": "arn:aws:ram:${Region}:${AccountId}:resource-share/${ResourceUUID}",
+    "arn_regex": "^arn:aws:ram:.+:.+:.+",
+    "name": "AWS Resource Access Manager"
   },
   "rbin": {
     "readActions": [
@@ -12336,7 +13114,10 @@
       "ListRules",
       "ListTagsForResource"
     ],
-    "prefix": "rbin"
+    "prefix": "rbin",
+    "arn_format": "arn:aws:rbin:${Region}:${Account}:rule/${ResourceName}",
+    "arn_regex": "^arn:aws:rbin:.+:.+:.+",
+    "name": "AWS Recycle Bin"
   },
   "rds": {
     "readActions": [
@@ -12491,7 +13272,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "rds"
+    "prefix": "rds",
+    "arn_format": "arn:aws:rds:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:rds:.+",
+    "name": "Amazon RDS"
   },
   "rds-data": {
     "readActions": [],
@@ -12504,7 +13288,10 @@
       "RollbackTransaction"
     ],
     "listActions": [],
-    "prefix": "rds-data"
+    "prefix": "rds-data",
+    "arn_format": "arn:aws:rds:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:rds:.+",
+    "name": "Amazon RDS Data API"
   },
   "rds-db": {
     "readActions": [],
@@ -12512,7 +13299,10 @@
       "connect"
     ],
     "listActions": [],
-    "prefix": "rds-db"
+    "prefix": "rds-db",
+    "arn_format": "arn:aws:rds-db:\u003cregion\u003e:\u003caccount-id\u003e:dbuser:\u003cdbi-resource-id\u003e/\u003cdb-user-name\u003e",
+    "arn_regex": "^arn:aws:rds-db:.+",
+    "name": "Amazon RDS IAM Authentication"
   },
   "redshift": {
     "readActions": [
@@ -12658,7 +13448,10 @@
       "ListSchemas",
       "ListTables"
     ],
-    "prefix": "redshift"
+    "prefix": "redshift",
+    "arn_format": "arn:aws:redshift:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:redshift:.+:.+:.+",
+    "name": "Amazon Redshift"
   },
   "redshift-data": {
     "readActions": [
@@ -12677,7 +13470,10 @@
       "ListStatements",
       "ListTables"
     ],
-    "prefix": "redshift-data"
+    "prefix": "redshift-data",
+    "arn_format": "arn:aws:redshift-serverless:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:(redshift|redshift-serverless):.+:.+:.+",
+    "name": "Amazon Redshift Data API"
   },
   "redshift-serverless": {
     "readActions": [
@@ -12726,7 +13522,10 @@
       "ListUsageLimits",
       "ListWorkgroups"
     ],
-    "prefix": "redshift-serverless"
+    "prefix": "redshift-serverless",
+    "arn_format": "arn:aws:redshift-serverless:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:redshift-serverless:.+:.+:.+",
+    "name": "Amazon Redshift Serverless"
   },
   "refactor-spaces": {
     "readActions": [
@@ -12759,7 +13558,10 @@
       "ListServices",
       "ListTagsForResource"
     ],
-    "prefix": "refactor-spaces"
+    "prefix": "refactor-spaces",
+    "arn_format": "arn:aws:refactor-spaces:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:refactor-spaces:.+",
+    "name": "AWS Migration Hub Refactor Spaces"
   },
   "rekognition": {
     "readActions": [
@@ -12772,6 +13574,7 @@
       "GetCelebrityRecognition",
       "GetContentModeration",
       "GetFaceDetection",
+      "GetFaceLivenessSessionResults",
       "GetFaceSearch",
       "GetLabelDetection",
       "GetPersonTracking",
@@ -12783,6 +13586,7 @@
       "CopyProjectVersion",
       "CreateCollection",
       "CreateDataset",
+      "CreateFaceLivenessSession",
       "CreateProject",
       "CreateProjectVersion",
       "CreateStreamProcessor",
@@ -12808,6 +13612,7 @@
       "StartCelebrityRecognition",
       "StartContentModeration",
       "StartFaceDetection",
+      "StartFaceLivenessSession",
       "StartFaceSearch",
       "StartLabelDetection",
       "StartPersonTracking",
@@ -12831,7 +13636,10 @@
       "ListStreamProcessors",
       "ListTagsForResource"
     ],
-    "prefix": "rekognition"
+    "prefix": "rekognition",
+    "arn_format": "arn:aws:rekognition:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:rekognition:.+",
+    "name": "Amazon Rekognition"
   },
   "resiliencehub": {
     "readActions": [
@@ -12892,7 +13700,10 @@
       "ListTestRecommendations",
       "ListUnsupportedAppVersionResources"
     ],
-    "prefix": "resiliencehub"
+    "prefix": "resiliencehub",
+    "arn_format": "arn:aws:resiliencehub:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:resiliencehub:.+",
+    "name": "AWS Resilience Hub Service"
   },
   "resource-explorer": {
     "readActions": [],
@@ -12902,7 +13713,10 @@
       "ListResources",
       "ListTags"
     ],
-    "prefix": "resource-explorer"
+    "prefix": "resource-explorer",
+    "arn_format": "arn:${Partition}:resource-explorer:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:resource-explorer:.+",
+    "name": "AWS Tag Editor"
   },
   "resource-explorer-2": {
     "readActions": [
@@ -12930,7 +13744,10 @@
       "ListTagsForResource",
       "ListViews"
     ],
-    "prefix": "resource-explorer-2"
+    "prefix": "resource-explorer-2",
+    "arn_format": "arn:aws:resource-explorer-2:${Region}:${Account}:${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:resource-explorer-2:.+:.+:.+",
+    "name": "AWS Resource Explorer"
   },
   "resource-groups": {
     "readActions": [
@@ -12958,7 +13775,10 @@
       "ListGroupResources",
       "ListGroups"
     ],
-    "prefix": "resource-groups"
+    "prefix": "resource-groups",
+    "arn_format": "arn:aws:resource-groups:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:resource-groups:.+",
+    "name": "AWS Resource Groups"
   },
   "rhelkb": {
     "readActions": [
@@ -12966,7 +13786,10 @@
     ],
     "writeActions": [],
     "listActions": [],
-    "prefix": "rhelkb"
+    "prefix": "rhelkb",
+    "arn_format": "arn:${Partition}:rhelkb:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:rhelkb:.+",
+    "name": "Amazon RHEL Knowledgebase Portal"
   },
   "robomaker": {
     "readActions": [
@@ -13034,7 +13857,10 @@
       "ListWorldTemplates",
       "ListWorlds"
     ],
-    "prefix": "robomaker"
+    "prefix": "robomaker",
+    "arn_format": "arn:aws:robomaker:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:robomaker:.+:.+:.+",
+    "name": "AWS RoboMaker"
   },
   "rolesanywhere": {
     "readActions": [
@@ -13069,7 +13895,10 @@
       "ListTagsForResource",
       "ListTrustAnchors"
     ],
-    "prefix": "rolesanywhere"
+    "prefix": "rolesanywhere",
+    "arn_format": "arn:aws:rolesanywhere:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:rolesanywhere:.+:.+:.+",
+    "name": "AWS Identity and Access Management Roles Anywhere"
   },
   "route53": {
     "readActions": [
@@ -13148,7 +13977,10 @@
       "ListTrafficPolicyVersions",
       "ListVPCAssociationAuthorizations"
     ],
-    "prefix": "route53"
+    "prefix": "route53",
+    "arn_format": "arn:aws:route53:::${Resource}/{$Id}",
+    "arn_regex": "^arn:aws:route53:::.+",
+    "name": "Amazon Route 53"
   },
   "route53-recovery-cluster": {
     "readActions": [
@@ -13161,7 +13993,10 @@
     "listActions": [
       "ListRoutingControls"
     ],
-    "prefix": "route53-recovery-cluster"
+    "prefix": "route53-recovery-cluster",
+    "arn_format": "arn:aws:route53-recovery-control::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:route53-recovery-control::.+:.+",
+    "name": "Amazon Route 53 Recovery Cluster"
   },
   "route53-recovery-control-config": {
     "readActions": [
@@ -13194,7 +14029,10 @@
       "ListSafetyRules",
       "ListTagsForResource"
     ],
-    "prefix": "route53-recovery-control-config"
+    "prefix": "route53-recovery-control-config",
+    "arn_format": "arn:aws:route53-recovery-control::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:route53-recovery-control::.+:.+",
+    "name": "Amazon Route 53 Recovery Controls"
   },
   "route53-recovery-readiness": {
     "readActions": [
@@ -13235,7 +14073,10 @@
       "ListRules",
       "ListTagsForResources"
     ],
-    "prefix": "route53-recovery-readiness"
+    "prefix": "route53-recovery-readiness",
+    "arn_format": "arn:aws:route53-recovery-readiness::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:route53-recovery-readiness::.+:.+",
+    "name": "Amazon Route 53 Recovery Readiness"
   },
   "route53domains": {
     "readActions": [
@@ -13278,7 +14119,10 @@
       "ListPrices",
       "ListTagsForDomain"
     ],
-    "prefix": "route53domains"
+    "prefix": "route53domains",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon Route 53 Domains"
   },
   "route53resolver": {
     "readActions": [
@@ -13350,7 +14194,10 @@
       "ListResolverRules",
       "ListTagsForResource"
     ],
-    "prefix": "route53resolver"
+    "prefix": "route53resolver",
+    "arn_format": "arn:aws:route53resolver:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:route53resolver:.+:.+:.+",
+    "name": "Amazon Route 53 Resolver"
   },
   "rum": {
     "readActions": [
@@ -13376,7 +14223,10 @@
       "ListRumMetricsDestinations",
       "ListTagsForResource"
     ],
-    "prefix": "rum"
+    "prefix": "rum",
+    "arn_format": "arn:aws:rum:${Region}:${Account}:appmonitor/${Name}",
+    "arn_regex": "^arn:aws:rum:.+:.+:.+",
+    "name": "AWS CloudWatch RUM"
   },
   "s3": {
     "readActions": [
@@ -13515,7 +14365,10 @@
       "ListMultipartUploadParts",
       "ListStorageLensConfigurations"
     ],
-    "prefix": "s3"
+    "prefix": "s3",
+    "arn_format": "arn:aws:s3:::${BucketName}/${KeyName}",
+    "arn_regex": "^arn:aws:s3:::.+",
+    "name": "Amazon S3"
   },
   "s3-object-lambda": {
     "readActions": [
@@ -13550,7 +14403,10 @@
       "ListBucketVersions",
       "ListMultipartUploadParts"
     ],
-    "prefix": "s3-object-lambda"
+    "prefix": "s3-object-lambda",
+    "arn_format": "arn:aws:s3-object-lambda:::accesspoint/\u003caccess point name\u003e",
+    "arn_regex": "^arn:aws:s3-object-lambda:::.+",
+    "name": "Amazon S3 Object Lambda"
   },
   "s3-outposts": {
     "readActions": [
@@ -13564,7 +14420,9 @@
       "GetObject",
       "GetObjectTagging",
       "GetObjectVersion",
-      "GetObjectVersionTagging"
+      "GetObjectVersionForReplication",
+      "GetObjectVersionTagging",
+      "GetReplicationConfiguration"
     ],
     "writeActions": [
       "AbortMultipartUpload",
@@ -13588,7 +14446,11 @@
       "PutObject",
       "PutObjectAcl",
       "PutObjectTagging",
-      "PutObjectVersionTagging"
+      "PutObjectVersionTagging",
+      "PutReplicationConfiguration",
+      "ReplicateDelete",
+      "ReplicateObject",
+      "ReplicateTags"
     ],
     "listActions": [
       "ListAccessPoints",
@@ -13601,7 +14463,10 @@
       "ListRegionalBuckets",
       "ListSharedEndpoints"
     ],
-    "prefix": "s3-outposts"
+    "prefix": "s3-outposts",
+    "arn_format": "arn:aws:s3-outposts:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:s3-outposts:.+",
+    "name": "Amazon S3 on Outposts"
   },
   "sagemaker": {
     "readActions": [
@@ -13938,7 +14803,10 @@
       "ListWorkforces",
       "ListWorkteams"
     ],
-    "prefix": "sagemaker"
+    "prefix": "sagemaker",
+    "arn_format": "arn:aws:sagemaker:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:sagemaker:.+",
+    "name": "Amazon SageMaker"
   },
   "sagemaker-geospatial": {
     "readActions": [
@@ -13966,7 +14834,10 @@
       "ListTagsForResource",
       "ListVectorEnrichmentJobs"
     ],
-    "prefix": "sagemaker-geospatial"
+    "prefix": "sagemaker-geospatial",
+    "arn_format": "arn:aws:sagemaker-geospatial:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:sagemaker-geospatial:.+:.+",
+    "name": "Amazon SageMaker geospatial capabilities"
   },
   "sagemaker-groundtruth-synthetic": {
     "readActions": [
@@ -13987,7 +14858,10 @@
       "ListProjectDataTransfers",
       "ListProjectSummaries"
     ],
-    "prefix": "sagemaker-groundtruth-synthetic"
+    "prefix": "sagemaker-groundtruth-synthetic",
+    "arn_format": "arn:${Partition}:sagemaker-groundtruth-synthetic:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:${Partition}:sagemaker-groundtruth-synthetic:.+",
+    "name": "Amazon SageMaker Ground Truth Synthetic"
   },
   "savingsplans": {
     "readActions": [
@@ -14005,7 +14879,10 @@
     "listActions": [
       "ListTagsForResource"
     ],
-    "prefix": "savingsplans"
+    "prefix": "savingsplans",
+    "arn_format": "arn:aws:savingsplans::${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:savingsplans:.+",
+    "name": "AWS Savings Plans"
   },
   "scheduler": {
     "readActions": [
@@ -14026,7 +14903,10 @@
       "ListSchedules",
       "ListTagsForResource"
     ],
-    "prefix": "scheduler"
+    "prefix": "scheduler",
+    "arn_format": "arn:aws:scheduler:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:scheduler:.+:.+:.+",
+    "name": "Amazon EventBridge Scheduler"
   },
   "schemas": {
     "readActions": [
@@ -14066,7 +14946,10 @@
       "ListSchemas",
       "ListTagsForResource"
     ],
-    "prefix": "schemas"
+    "prefix": "schemas",
+    "arn_format": "arn:aws:schemas:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:schemas:.+:.+:.+",
+    "name": "Amazon EventBridge Schemas"
   },
   "scn": {
     "readActions": [
@@ -14088,7 +14971,10 @@
       "ListInstances",
       "ListTagsForResource"
     ],
-    "prefix": "scn"
+    "prefix": "scn",
+    "arn_format": "arn:aws:scn:${Region}:${Account}:instance/",
+    "arn_regex": "^arn:aws:scn:.+",
+    "name": "AWS Supply Chain"
   },
   "sdb": {
     "readActions": [
@@ -14107,7 +14993,10 @@
     "listActions": [
       "ListDomains"
     ],
-    "prefix": "sdb"
+    "prefix": "sdb",
+    "arn_format": "arn:aws:sdb:${Region}:${Account}:domain/${DomainName}",
+    "arn_regex": "^arn:aws:sdb:.+",
+    "name": "Amazon SimpleDB"
   },
   "secretsmanager": {
     "readActions": [
@@ -14138,7 +15027,10 @@
       "ListSecretVersionIds",
       "ListSecrets"
     ],
-    "prefix": "secretsmanager"
+    "prefix": "secretsmanager",
+    "arn_format": "arn:aws:secretsmanager:${Region}:${Account}:secret:${SecretId}",
+    "arn_regex": "^arn:aws:secretsmanager:.+",
+    "name": "AWS Secrets Manager"
   },
   "securityhub": {
     "readActions": [
@@ -14217,7 +15109,10 @@
       "ListStandardsControlAssociations",
       "ListTagsForResource"
     ],
-    "prefix": "securityhub"
+    "prefix": "securityhub",
+    "arn_format": "arn:aws:securityhub:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:securityhub:.+",
+    "name": "AWS Security Hub"
   },
   "securitylake": {
     "readActions": [
@@ -14257,7 +15152,10 @@
       "ListLogSources",
       "ListSubscribers"
     ],
-    "prefix": "securitylake"
+    "prefix": "securitylake",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon Security Lake"
   },
   "serverlessrepo": {
     "readActions": [
@@ -14281,7 +15179,10 @@
       "ListApplicationVersions",
       "ListApplications"
     ],
-    "prefix": "serverlessrepo"
+    "prefix": "serverlessrepo",
+    "arn_format": "arn:aws:serverlessrepo:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:serverlessrepo:.+:.+:.+",
+    "name": "AWS Serverless Application Repository"
   },
   "servicecatalog": {
     "readActions": [
@@ -14404,7 +15305,10 @@
       "ListTagOptions",
       "ListTagsForResource"
     ],
-    "prefix": "servicecatalog"
+    "prefix": "servicecatalog",
+    "arn_format": "arn:aws:(catalog|servicecatalog):${Region}:${Account}:${ResourceType}/${Id}",
+    "arn_regex": "^arn:aws:(catalog|servicecatalog):.+",
+    "name": "AWS Service Catalog"
   },
   "servicediscovery": {
     "readActions": [
@@ -14439,7 +15343,10 @@
       "ListServices",
       "ListTagsForResource"
     ],
-    "prefix": "servicediscovery"
+    "prefix": "servicediscovery",
+    "arn_format": "arn:aws:servicediscovery:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:servicediscovery:.+",
+    "name": "AWS Cloud Map"
   },
   "serviceextract": {
     "readActions": [
@@ -14447,7 +15354,10 @@
     ],
     "writeActions": [],
     "listActions": [],
-    "prefix": "serviceextract"
+    "prefix": "serviceextract",
+    "arn_format": "arn:${Partition}:serviceextract:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:serviceextract:.+:.+:.+",
+    "name": "AWS Microservice Extractor for .NET"
   },
   "servicequotas": {
     "readActions": [
@@ -14475,7 +15385,10 @@
       "ListServices",
       "ListTagsForResource"
     ],
-    "prefix": "servicequotas"
+    "prefix": "servicequotas",
+    "arn_format": "arn:aws:servicequotas:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:servicequotas:.+",
+    "name": "Service Quotas"
   },
   "ses": {
     "readActions": [
@@ -14555,7 +15468,10 @@
       "ListTemplates",
       "ListVerifiedEmailAddresses"
     ],
-    "prefix": "ses"
+    "prefix": "ses",
+    "arn_format": "arn:aws:ses:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ses:.+:[0-9]+:.+",
+    "name": "Amazon SES"
   },
   "shield": {
     "readActions": [
@@ -14600,7 +15516,10 @@
       "ListResourcesInProtectionGroup",
       "ListTagsForResource"
     ],
-    "prefix": "shield"
+    "prefix": "shield",
+    "arn_format": "arn:aws:shield::${Account}:${Resource}/${ResourceId}",
+    "arn_regex": "^arn:aws:shield::[0-9]+:.+/.+",
+    "name": "AWS Shield"
   },
   "signer": {
     "readActions": [
@@ -14626,7 +15545,10 @@
       "ListSigningProfiles",
       "ListTagsForResource"
     ],
-    "prefix": "signer"
+    "prefix": "signer",
+    "arn_format": "arn:aws:signer:${Region}:${Account}:/${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:signer:.+",
+    "name": "AWS Signer"
   },
   "simspaceweaver": {
     "readActions": [
@@ -14650,7 +15572,10 @@
       "ListSimulations",
       "ListTagsForResource"
     ],
-    "prefix": "simspaceweaver"
+    "prefix": "simspaceweaver",
+    "arn_format": "arn:aws:simspaceweaver:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:simspaceweaver:.+:.+:.+",
+    "name": "AWS SimSpace Weaver"
   },
   "sms": {
     "readActions": [
@@ -14696,7 +15621,10 @@
     "listActions": [
       "ListApps"
     ],
-    "prefix": "sms"
+    "prefix": "sms",
+    "arn_format": "arn:aws:\u003cserviceName\u003e:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+    "arn_regex": "^arn:aws:\u003cserviceName\u003e:.+:.+:.+",
+    "name": "AWS Server Migration Service"
   },
   "sms-voice": {
     "readActions": [
@@ -14713,7 +15641,10 @@
     "listActions": [
       "ListConfigurationSets"
     ],
-    "prefix": "sms-voice"
+    "prefix": "sms-voice",
+    "arn_format": "arn:aws:sms-voice:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+    "arn_regex": "^arn:aws:sms-voice:.+:.+:.+",
+    "name": "Amazon Pinpoint SMS and Voice Service"
   },
   "snow-device-management": {
     "readActions": [
@@ -14735,7 +15666,10 @@
       "ListTagsForResource",
       "ListTasks"
     ],
-    "prefix": "snow-device-management"
+    "prefix": "snow-device-management",
+    "arn_format": "arn:aws:snow-device-management:\u003cregion\u003e:\u003caccount-id\u003e:\u003cresource-type\u003e/\u003cresource_name\u003e",
+    "arn_regex": "^arn:aws:snow-device-management:.+:.+:.+/.+",
+    "name": "AWS Snow Device Management"
   },
   "snowball": {
     "readActions": [
@@ -14770,7 +15704,10 @@
       "ListLongTermPricing",
       "ListServiceVersions"
     ],
-    "prefix": "snowball"
+    "prefix": "snowball",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Snowball"
   },
   "sns": {
     "readActions": [
@@ -14820,7 +15757,10 @@
       "ListTagsForResource",
       "ListTopics"
     ],
-    "prefix": "sns"
+    "prefix": "sns",
+    "arn_format": "arn:aws:sns:${Region}:${Account}:${TopicName}",
+    "arn_regex": "^arn:aws:sns:.+",
+    "name": "Amazon SNS"
   },
   "sqlworkbench": {
     "readActions": [
@@ -14895,7 +15835,10 @@
       "ListTaggedResources",
       "ListTagsForResource"
     ],
-    "prefix": "sqlworkbench"
+    "prefix": "sqlworkbench",
+    "arn_format": "arn:aws:sqlworkbench:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:sqlworkbench:.+:.+:.+",
+    "name": "AWS SQL Workbench"
   },
   "sqs": {
     "readActions": [
@@ -14921,7 +15864,10 @@
       "ListQueueTags",
       "ListQueues"
     ],
-    "prefix": "sqs"
+    "prefix": "sqs",
+    "arn_format": "arn:aws:sqs:${Region}:${Account}:${QueueName}",
+    "arn_regex": "^arn:aws:sqs:.+",
+    "name": "Amazon SQS"
   },
   "ssm": {
     "readActions": [
@@ -15078,7 +16024,10 @@
       "ListResourceDataSync",
       "ListTagsForResource"
     ],
-    "prefix": "ssm"
+    "prefix": "ssm",
+    "arn_format": "arn:aws:ssm:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:(ssm|ec2):.+",
+    "name": "AWS Systems Manager"
   },
   "ssm-contacts": {
     "readActions": [
@@ -15126,7 +16075,10 @@
       "ListRotations",
       "ListTagsForResource"
     ],
-    "prefix": "ssm-contacts"
+    "prefix": "ssm-contacts",
+    "arn_format": "arn:aws:ssm-contacts:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ssm-contacts:.+",
+    "name": "AWS Systems Manager Incident Manager Contacts"
   },
   "ssm-guiconnect": {
     "readActions": [
@@ -15137,7 +16089,10 @@
       "StartConnection"
     ],
     "listActions": [],
-    "prefix": "ssm-guiconnect"
+    "prefix": "ssm-guiconnect",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Systems Manager GUI Connect"
   },
   "ssm-incidents": {
     "readActions": [
@@ -15175,7 +16130,10 @@
       "ListTagsForResource",
       "ListTimelineEvents"
     ],
-    "prefix": "ssm-incidents"
+    "prefix": "ssm-incidents",
+    "arn_format": "arn:aws:ssm-incidents::${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ssm-incidents::.+:.+",
+    "name": "AWS Systems Manager Incident Manager"
   },
   "ssm-sap": {
     "readActions": [
@@ -15204,7 +16162,10 @@
       "ListOperations",
       "ListTagsForResource"
     ],
-    "prefix": "ssm-sap"
+    "prefix": "ssm-sap",
+    "arn_format": "arn:aws:ssm-sap:${Region}:${Account}:${ApplicationType}/${ApplicationId}",
+    "arn_regex": "^arn:aws:ssm-sap:.+",
+    "name": "AWS Systems Manager for SAP"
   },
   "ssmmessages": {
     "readActions": [],
@@ -15215,7 +16176,10 @@
       "OpenDataChannel"
     ],
     "listActions": [],
-    "prefix": "ssmmessages"
+    "prefix": "ssmmessages",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon Session Manager Message Gateway Service"
   },
   "sso": {
     "readActions": [
@@ -15316,7 +16280,10 @@
       "ListProfiles",
       "ListTagsForResource"
     ],
-    "prefix": "sso"
+    "prefix": "sso",
+    "arn_format": "arn:aws:sso:::${RelativeId}",
+    "arn_regex": "^arn:aws:sso:::.+",
+    "name": "AWS IAM Identity Center (successor to AWS Single Sign-On)"
   },
   "sso-directory": {
     "readActions": [
@@ -15377,7 +16344,10 @@
       "ListMfaDevicesForUser",
       "ListProvisioningTenants"
     ],
-    "prefix": "sso-directory"
+    "prefix": "sso-directory",
+    "arn_format": "arn:${Partition}:sso-directory:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:${Partition}:sso-directory:${Region}:.+",
+    "name": "AWS IAM Identity Center (successor to AWS Single Sign-On) directory"
   },
   "states": {
     "readActions": [
@@ -15412,7 +16382,10 @@
       "ListStateMachines",
       "ListTagsForResource"
     ],
-    "prefix": "states"
+    "prefix": "states",
+    "arn_format": "arn:aws:states:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:states:.+",
+    "name": "AWS Step Functions"
   },
   "storagegateway": {
     "readActions": [
@@ -15512,7 +16485,10 @@
       "ListVolumeRecoveryPoints",
       "ListVolumes"
     ],
-    "prefix": "storagegateway"
+    "prefix": "storagegateway",
+    "arn_format": "arn:aws:storagegateway:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:storagegateway:.+",
+    "name": "AWS Storage Gateway"
   },
   "sts": {
     "readActions": [
@@ -15531,7 +16507,10 @@
       "TagSession"
     ],
     "listActions": [],
-    "prefix": "sts"
+    "prefix": "sts",
+    "arn_format": "arn:aws:iam::${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:iam::.+",
+    "name": "AWS Security Token Service"
   },
   "support": {
     "readActions": [
@@ -15561,7 +16540,10 @@
       "SearchForCases"
     ],
     "listActions": [],
-    "prefix": "support"
+    "prefix": "support",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Support"
   },
   "supportapp": {
     "readActions": [
@@ -15583,7 +16565,10 @@
       "ListSlackChannelConfigurations",
       "ListSlackWorkspaceConfigurations"
     ],
-    "prefix": "supportapp"
+    "prefix": "supportapp",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Support App in Slack"
   },
   "supportplans": {
     "readActions": [
@@ -15594,7 +16579,10 @@
       "StartSupportPlanUpdate"
     ],
     "listActions": [],
-    "prefix": "supportplans"
+    "prefix": "supportplans",
+    "arn_format": "^arn:${Partition}:supportplans::${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:${Partition}:supportplans::.+:.+",
+    "name": "AWS Support Plans"
   },
   "sustainability": {
     "readActions": [
@@ -15602,7 +16590,10 @@
     ],
     "writeActions": [],
     "listActions": [],
-    "prefix": "sustainability"
+    "prefix": "sustainability",
+    "arn_format": "arn:${Partition}:sustainability:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:sustainability:.+:.+:.+",
+    "name": "AWS Sustainability"
   },
   "swf": {
     "readActions": [
@@ -15660,7 +16651,10 @@
       "ListTagsForResource",
       "ListWorkflowTypes"
     ],
-    "prefix": "swf"
+    "prefix": "swf",
+    "arn_format": "arn:aws:swf:${Region}:${Account}:/domain/${DomainName}",
+    "arn_regex": "^arn:aws:swf:.+",
+    "name": "Amazon Simple Workflow Service"
   },
   "synthetics": {
     "readActions": [
@@ -15690,7 +16684,10 @@
       "ListGroups",
       "ListTagsForResource"
     ],
-    "prefix": "synthetics"
+    "prefix": "synthetics",
+    "arn_format": "arn:aws:synthetics:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:synthetics:.+",
+    "name": "Amazon CloudWatch Synthetics"
   },
   "tag": {
     "readActions": [
@@ -15706,7 +16703,10 @@
       "UntagResources"
     ],
     "listActions": [],
-    "prefix": "tag"
+    "prefix": "tag",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon Resource Group Tagging API"
   },
   "tax": {
     "readActions": [
@@ -15727,7 +16727,10 @@
     "listActions": [
       "ListTaxRegistrations"
     ],
-    "prefix": "tax"
+    "prefix": "tax",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "AWS Tax Settings"
   },
   "textract": {
     "readActions": [
@@ -15748,7 +16751,10 @@
       "StartLendingAnalysis"
     ],
     "listActions": [],
-    "prefix": "textract"
+    "prefix": "textract",
+    "arn_format": "arn:${Partition}:textract:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:${Partition}:textract:.+",
+    "name": "Amazon Textract"
   },
   "timestream": {
     "readActions": [
@@ -15791,7 +16797,10 @@
       "ListTables",
       "ListTagsForResource"
     ],
-    "prefix": "timestream"
+    "prefix": "timestream",
+    "arn_format": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+    "arn_regex": "^arn:aws:timestream:.+",
+    "name": "Amazon Timestream"
   },
   "tiros": {
     "readActions": [
@@ -15804,7 +16813,10 @@
       "ExtendQuery"
     ],
     "listActions": [],
-    "prefix": "tiros"
+    "prefix": "tiros",
+    "arn_format": "arn:${Partition}:tiros:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:tiros::.+",
+    "name": "AWS Tiros"
   },
   "tnb": {
     "readActions": [
@@ -15846,7 +16858,10 @@
       "ListSolNetworkPackages",
       "ListTagsForResource"
     ],
-    "prefix": "tnb"
+    "prefix": "tnb",
+    "arn_format": "arn:aws:tnb:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:tnb:.+",
+    "name": "AWS Telco Network Builder"
   },
   "transcribe": {
     "readActions": [
@@ -15900,7 +16915,10 @@
       "ListVocabularies",
       "ListVocabularyFilters"
     ],
-    "prefix": "transcribe"
+    "prefix": "transcribe",
+    "arn_format": "arn:aws:transcribe:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:transcribe:.+:.+:.+",
+    "name": "Amazon Transcribe"
   },
   "transfer": {
     "readActions": [
@@ -15967,7 +16985,10 @@
       "ListUsers",
       "ListWorkflows"
     ],
-    "prefix": "transfer"
+    "prefix": "transfer",
+    "arn_format": "arn:aws:transfer:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:transfer:.+:.+:.+",
+    "name": "AWS Transfer Family"
   },
   "translate": {
     "readActions": [
@@ -15994,7 +17015,10 @@
       "ListTerminologies",
       "ListTextTranslationJobs"
     ],
-    "prefix": "translate"
+    "prefix": "translate",
+    "arn_format": "arn:aws:translate:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:translate:.+:.+:.+",
+    "name": "Amazon Translate"
   },
   "trustedadvisor": {
     "readActions": [
@@ -16043,7 +17067,10 @@
       "ListOrganizationalUnitsForParent",
       "ListRoots"
     ],
-    "prefix": "trustedadvisor"
+    "prefix": "trustedadvisor",
+    "arn_format": "arn:aws:trustedadvisor:${Region}:${Account}:checks/${Category}/${CheckId}",
+    "arn_regex": "^arn:aws:trustedadvisor:.*",
+    "name": "AWS Trusted Advisor"
   },
   "vendor-insights": {
     "readActions": [
@@ -16075,7 +17102,10 @@
       "ListSecurityProfiles",
       "ListTagsForResource"
     ],
-    "prefix": "vendor-insights"
+    "prefix": "vendor-insights",
+    "arn_format": "arn:aws:vendor-insights:::${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:vendor-insights:.+",
+    "name": "AWS Marketplace Vendor Insights"
   },
   "voiceid": {
     "readActions": [
@@ -16115,7 +17145,10 @@
       "ListTagsForResource",
       "ListWatchlists"
     ],
-    "prefix": "voiceid"
+    "prefix": "voiceid",
+    "arn_format": "arn:aws:voiceid:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:voiceid:.+",
+    "name": "Amazon Connect Voice ID"
   },
   "vpc-lattice": {
     "readActions": [
@@ -16175,7 +17208,10 @@
       "ListTargetGroups",
       "ListTargets"
     ],
-    "prefix": "vpc-lattice"
+    "prefix": "vpc-lattice",
+    "arn_format": "arn:aws:vpc-lattice:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:vpc-lattice:.+",
+    "name": "Amazon VPC Lattice"
   },
   "vpc-lattice-svcs": {
     "readActions": [],
@@ -16183,7 +17219,10 @@
       "Invoke"
     ],
     "listActions": [],
-    "prefix": "vpc-lattice-svcs"
+    "prefix": "vpc-lattice-svcs",
+    "arn_format": "arn:aws:vpc-lattice:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:vpc-lattice:.+",
+    "name": "Amazon VPC Lattice Services"
   },
   "waf": {
     "readActions": [
@@ -16269,7 +17308,10 @@
       "ListWebACLs",
       "ListXssMatchSets"
     ],
-    "prefix": "waf"
+    "prefix": "waf",
+    "arn_format": "arn:aws:waf::${Account}:${ResourceId}/${Id}",
+    "arn_regex": "^arn:aws:waf::[0-9]+:.+/.+",
+    "name": "AWS WAF"
   },
   "waf-regional": {
     "readActions": [
@@ -16359,7 +17401,10 @@
       "ListWebACLs",
       "ListXssMatchSets"
     ],
-    "prefix": "waf-regional"
+    "prefix": "waf-regional",
+    "arn_format": "arn:aws:waf-regional:${Region}:${Account}:${ResourceId}/${Id}",
+    "arn_regex": "^arn:aws:waf-regional:.+:[0-9]+:.+/.+",
+    "name": "AWS WAF Regional"
   },
   "wafv2": {
     "readActions": [
@@ -16418,7 +17463,10 @@
       "ListTagsForResource",
       "ListWebACLs"
     ],
-    "prefix": "wafv2"
+    "prefix": "wafv2",
+    "arn_format": "arn:aws:wafv2:${Region}:${Account}:${Scope}/${ResourceType}/${ResourceName}/${ResourceId}",
+    "arn_regex": "^arn:aws:wafv2:.+:.+:.+/.+/.+/.+",
+    "name": "AWS WAF V2"
   },
   "wam": {
     "readActions": [],
@@ -16426,7 +17474,10 @@
       "AuthenticatePackager"
     ],
     "listActions": [],
-    "prefix": "wam"
+    "prefix": "wam",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon WorkSpaces Application Manager"
   },
   "wellarchitected": {
     "readActions": [
@@ -16478,7 +17529,10 @@
       "ListWorkloadShares",
       "ListWorkloads"
     ],
-    "prefix": "wellarchitected"
+    "prefix": "wellarchitected",
+    "arn_format": "arn:aws:wellarchitected:${Region}:${Account}:${ResourceName}/${ResourceId}",
+    "arn_regex": "^arn:aws:wellarchitected:.+",
+    "name": "AWS Well-Architected Tool"
   },
   "wickr": {
     "readActions": [],
@@ -16493,7 +17547,10 @@
       "ListNetworks",
       "ListTagsForResource"
     ],
-    "prefix": "wickr"
+    "prefix": "wickr",
+    "arn_format": "arn:aws:wickr:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:wickr:.+:.+:.+",
+    "name": "AWS Wickr"
   },
   "wisdom": {
     "readActions": [
@@ -16533,7 +17590,10 @@
       "ListKnowledgeBases",
       "ListTagsForResource"
     ],
-    "prefix": "wisdom"
+    "prefix": "wisdom",
+    "arn_format": "arn:aws:wisdom:${Region}:${Account}:${Resource}/${ResourceId}",
+    "arn_regex": "^arn:aws:wisdom:.+:.+:.+",
+    "name": "Amazon Connect Wisdom"
   },
   "workdocs": {
     "readActions": [
@@ -16599,7 +17659,10 @@
       "UpdateUser"
     ],
     "listActions": [],
-    "prefix": "workdocs"
+    "prefix": "workdocs",
+    "arn_format": "",
+    "arn_regex": "",
+    "name": "Amazon WorkDocs"
   },
   "worklink": {
     "readActions": [
@@ -16642,7 +17705,10 @@
       "ListWebsiteAuthorizationProviders",
       "ListWebsiteCertificateAuthorities"
     ],
-    "prefix": "worklink"
+    "prefix": "worklink",
+    "arn_format": "arn:aws:worklink::${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:worklink:.+",
+    "name": "Amazon WorkLink"
   },
   "workmail": {
     "readActions": [
@@ -16782,7 +17848,10 @@
       "ListTagsForResource",
       "ListUsers"
     ],
-    "prefix": "workmail"
+    "prefix": "workmail",
+    "arn_format": "arn:aws:workmail:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:workmail:.+:.+:.+",
+    "name": "Amazon WorkMail"
   },
   "workmailmessageflow": {
     "readActions": [
@@ -16792,7 +17861,10 @@
       "PutRawMessageContent"
     ],
     "listActions": [],
-    "prefix": "workmailmessageflow"
+    "prefix": "workmailmessageflow",
+    "arn_format": "arn:aws:workmailmessageflow:${Region}:${Account}:message/${OrganizationId}/${Context}/${MessageId}",
+    "arn_regex": "^arn:aws:workmailmessageflow:.+:.+:.+",
+    "name": "Amazon WorkMail Message Flow"
   },
   "workspaces": {
     "readActions": [
@@ -16867,7 +17939,10 @@
     "listActions": [
       "ListAvailableManagementCidrRanges"
     ],
-    "prefix": "workspaces"
+    "prefix": "workspaces",
+    "arn_format": "arn:aws:workspaces:${Region}:${Account}:*",
+    "arn_regex": "^arn:aws:workspaces:.*:.*:.*",
+    "name": "Amazon WorkSpaces"
   },
   "workspaces-web": {
     "readActions": [
@@ -16927,7 +18002,10 @@
       "ListUserAccessLoggingSettings",
       "ListUserSettings"
     ],
-    "prefix": "workspaces-web"
+    "prefix": "workspaces-web",
+    "arn_format": "arn:aws:workspaces-web:${Region}:${Account}:${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:workspaces-web:.+",
+    "name": "Amazon WorkSpaces Web"
   },
   "xray": {
     "readActions": [
@@ -16969,6 +18047,9 @@
       "ListResourcePolicies",
       "ListTagsForResource"
     ],
-    "prefix": "xray"
+    "prefix": "xray",
+    "arn_format": "arn:aws:xray:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:xray:.+",
+    "name": "AWS X-Ray"
   }
 }

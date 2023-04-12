@@ -1,5 +1,8 @@
 [
   {
+    "name": "Amazon Comprehend",
+    "arn_format": "arn:aws:comprehend:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:comprehend:.+:.+:.+",
     "actions": [
       "BatchDetectDominantLanguage",
       "BatchDetectEntities",
@@ -89,6 +92,9 @@
     "prefix": "comprehend"
   },
   {
+    "name": "Amazon Elastic File System",
+    "arn_format": "arn:aws:elasticfilesystem:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:elasticfilesystem:.+",
     "actions": [
       "Backup",
       "ClientMount",
@@ -129,6 +135,9 @@
     "prefix": "elasticfilesystem"
   },
   {
+    "name": "AWS Glue",
+    "arn_format": "arn:aws:glue:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:glue:.+:.+",
     "actions": [
       "BatchCreatePartition",
       "BatchDeleteConnection",
@@ -344,6 +353,9 @@
     "prefix": "glue"
   },
   {
+    "name": "Amazon CloudWatch Evidently",
+    "arn_format": "arn:aws:evidently:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:evidently:.+:.+:.+",
     "actions": [
       "BatchEvaluateFeature",
       "CreateExperiment",
@@ -387,6 +399,9 @@
     "prefix": "evidently"
   },
   {
+    "name": "AWS Savings Plans",
+    "arn_format": "arn:aws:savingsplans::${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:savingsplans:.+",
     "actions": [
       "CreateSavingsPlan",
       "DeleteQueuedSavingsPlan",
@@ -401,6 +416,9 @@
     "prefix": "savingsplans"
   },
   {
+    "name": "AWS Systems Manager",
+    "arn_format": "arn:aws:ssm:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:(ssm|ec2):.+",
     "actions": [
       "AddTagsToResource",
       "AssociateOpsItemRelatedItem",
@@ -554,6 +572,9 @@
     "prefix": "ssm"
   },
   {
+    "name": "AWS IAM Identity Center (successor to AWS Single Sign-On)",
+    "arn_format": "arn:aws:sso:::${RelativeId}",
+    "arn_regex": "^arn:aws:sso:::.+",
     "actions": [
       "AssociateDirectory",
       "AssociateProfile",
@@ -651,6 +672,9 @@
     "prefix": "sso"
   },
   {
+    "name": "AWS IoT",
+    "arn_format": "arn:aws:iot:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:iot:.+:[0-9]+:.+",
     "actions": [
       "AcceptCertificateTransfer",
       "AddThingToBillingGroup",
@@ -910,6 +934,9 @@
     "prefix": "iot"
   },
   {
+    "name": "AWS Migration Hub",
+    "arn_format": "arn:aws:mgh:<region>:<namespace>:<relative-id>",
+    "arn_regex": "^arn:aws:mgh:[a-z0-9-]+:[0-9]{12}:.+",
     "actions": [
       "AssociateCreatedArtifact",
       "AssociateDiscoveredResource",
@@ -935,6 +962,9 @@
     "prefix": "mgh"
   },
   {
+    "name": "AWS Fault Injection Simulator",
+    "arn_format": "arn:aws:fis:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:fis:.+:.+:.+",
     "actions": [
       "CreateExperimentTemplate",
       "DeleteExperimentTemplate",
@@ -959,6 +989,9 @@
     "prefix": "fis"
   },
   {
+    "name": "AWS service providing managed private networks",
+    "arn_format": "arn:aws:private-networks:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:private-networks:.+",
     "actions": [
       "AcknowledgeOrderReceipt",
       "ActivateDeviceIdentifier",
@@ -990,6 +1023,9 @@
     "prefix": "private-networks"
   },
   {
+    "name": "AWS Lambda",
+    "arn_format": "arn:aws:lambda:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:lambda:.+",
     "actions": [
       "AddLayerVersionPermission",
       "AddPermission",
@@ -1063,6 +1099,7 @@
     "prefix": "lambda"
   },
   {
+    "name": "AWS Free Tier",
     "actions": [
       "GetFreeTierAlertPreference",
       "GetFreeTierUsage",
@@ -1071,6 +1108,9 @@
     "prefix": "freetier"
   },
   {
+    "name": "AWS Application Migration Service",
+    "arn_format": "arn:aws:mgn:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:mgn:.+",
     "actions": [
       "ArchiveApplication",
       "ArchiveWave",
@@ -1171,6 +1211,9 @@
     "prefix": "mgn"
   },
   {
+    "name": "AWS Data Exchange",
+    "arn_format": "arn:aws:dataexchange:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:dataexchange:.+",
     "actions": [
       "CancelJob",
       "CreateAsset",
@@ -1207,6 +1250,9 @@
     "prefix": "dataexchange"
   },
   {
+    "name": "Amazon Machine Learning",
+    "arn_format": "arn:aws:machinelearning:${Region}:${Account}:${ResourceType}/${RelativeID}",
+    "arn_regex": "^arn:aws:machinelearning:.+",
     "actions": [
       "AddTags",
       "CreateBatchPrediction",
@@ -1240,6 +1286,9 @@
     "prefix": "machinelearning"
   },
   {
+    "name": "AWS Audit Manager",
+    "arn_format": "arn:aws:auditmanager:::${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:auditmanager::.+",
     "actions": [
       "AssociateAssessmentReportEvidenceFolder",
       "BatchAssociateAssessmentReportEvidence",
@@ -1306,6 +1355,9 @@
     "prefix": "auditmanager"
   },
   {
+    "name": "Amazon GuardDuty",
+    "arn_format": "arn:aws:guardduty:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:guardduty:.+",
     "actions": [
       "AcceptAdministratorInvitation",
       "AcceptInvitation",
@@ -1379,6 +1431,9 @@
     "prefix": "guardduty"
   },
   {
+    "name": "Amazon EventBridge",
+    "arn_format": "arn:aws:events:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:events:.+",
     "actions": [
       "ActivateEventSource",
       "CancelReplay",
@@ -1440,8 +1495,17 @@
     ],
     "prefix": "events"
   },
-  { "actions": ["GetProgrammaticAccessCredentials"], "prefix": "finspace-api" },
   {
+    "name": "Amazon FinSpace API",
+    "arn_format": "arn:aws:finspace-api:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:finspace-api:.+",
+    "actions": ["GetProgrammaticAccessCredentials"],
+    "prefix": "finspace-api"
+  },
+  {
+    "name": "Amazon Lex V2",
+    "arn_format": "arn:aws:lex:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:lex:.+:[0-9]+:.+",
     "actions": [
       "BatchCreateCustomVocabularyItem",
       "BatchDeleteCustomVocabularyItem",
@@ -1529,6 +1593,9 @@
     "prefix": "lex"
   },
   {
+    "name": "Amazon Lex",
+    "arn_format": "arn:aws:lex:${Region}:${Account}:${Type}:${Name}",
+    "arn_regex": "^arn:aws:lex:.+:[0-9]+:.+",
     "actions": [
       "CreateBotVersion",
       "CreateIntentVersion",
@@ -1581,6 +1648,9 @@
     "prefix": "lex"
   },
   {
+    "name": "Amazon CodeGuru Security",
+    "arn_format": "arn:${Partition}:codeguru-security:${Region}:${Account}:*",
+    "arn_regex": "^arn:${Partition}:codeguru-security:.+:.+:.+",
     "actions": [
       "BatchGetFindings",
       "CreateScan",
@@ -1594,6 +1664,9 @@
     "prefix": "codeguru-security"
   },
   {
+    "name": "AWS Proton",
+    "arn_format": "arn:aws:proton:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:proton:.+:.+:.+",
     "actions": [
       "AcceptEnvironmentAccountConnection",
       "CancelComponentDeployment",
@@ -1707,6 +1780,9 @@
     "prefix": "proton"
   },
   {
+    "name": "AWS Resource Access Manager",
+    "arn_format": "arn:aws:ram:${Region}:${AccountId}:resource-share/${ResourceUUID}",
+    "arn_regex": "^arn:aws:ram:.+:.+:.+",
     "actions": [
       "AcceptResourceShareInvitation",
       "AssociateResourceShare",
@@ -1737,6 +1813,9 @@
     "prefix": "ram"
   },
   {
+    "name": "AWS Supply Chain",
+    "arn_format": "arn:aws:scn:${Region}:${Account}:instance/",
+    "arn_regex": "^arn:aws:scn:.+",
     "actions": [
       "AssignAdminPermissionsToUser",
       "CreateInstance",
@@ -1755,6 +1834,9 @@
     "prefix": "scn"
   },
   {
+    "name": "AWS Elemental MediaConnect",
+    "arn_format": "arn:aws:mediaconnect:${Region}:${Account}:<namespace>:<relative-id>:<relative-name>",
+    "arn_regex": "^arn:aws:mediaconnect:.+",
     "actions": [
       "AddFlowMediaStreams",
       "AddFlowOutputs",
@@ -1790,6 +1872,9 @@
     "prefix": "mediaconnect"
   },
   {
+    "name": "Amazon S3",
+    "arn_format": "arn:aws:s3:::${BucketName}/${KeyName}",
+    "arn_regex": "^arn:aws:s3:::.+",
     "actions": [
       "AbortMultipartUpload",
       "BypassGovernanceRetention",
@@ -1925,6 +2010,9 @@
     "prefix": "s3"
   },
   {
+    "name": "Amazon SageMaker",
+    "arn_format": "arn:aws:sagemaker:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:sagemaker:.+",
     "actions": [
       "AddAssociation",
       "AddTags",
@@ -2258,6 +2346,9 @@
     "prefix": "sagemaker"
   },
   {
+    "name": "AWS Lake Formation",
+    "arn_format": "arn:${Partition}:lakeformation:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:lakeformation:.+:.+",
     "actions": [
       "AddLFTagsToResource",
       "BatchGrantPermissions",
@@ -2308,6 +2399,9 @@
     "prefix": "lakeformation"
   },
   {
+    "name": "Amazon Redshift Data API",
+    "arn_format": "arn:aws:redshift-serverless:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:(redshift|redshift-serverless):.+:.+:.+",
     "actions": [
       "BatchExecuteStatement",
       "CancelStatement",
@@ -2323,6 +2417,9 @@
     "prefix": "redshift-data"
   },
   {
+    "name": "Amazon Managed Service for Prometheus",
+    "arn_format": "arn:aws:aps:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:aps:.+:.+:.+",
     "actions": [
       "CreateAlertManagerAlerts",
       "CreateAlertManagerDefinition",
@@ -2365,6 +2462,9 @@
     "prefix": "aps"
   },
   {
+    "name": "AWS Mobile Hub",
+    "arn_format": "arn:aws:mobilehub:<region>:<aws_account_ID>:project/<project_ID>",
+    "arn_regex": "^arn:aws:mobilehub:.+:[0-9]+:.+",
     "actions": [
       "CreateProject",
       "CreateServiceRole",
@@ -2393,6 +2493,9 @@
     "prefix": "mobilehub"
   },
   {
+    "name": "AWS Global Accelerator",
+    "arn_format": "arn:aws:globalaccelerator::${Account}:accelerator/${AcceleratorId}",
+    "arn_regex": "^arn:aws:globalaccelerator::.+:.+",
     "actions": [
       "AddCustomRoutingEndpoints",
       "AddEndpoints",
@@ -2447,6 +2550,9 @@
     "prefix": "globalaccelerator"
   },
   {
+    "name": "Amazon CloudWatch Internet Monitor",
+    "arn_format": "arn:aws:internetmonitor:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:internetmonitor:.+:.+:.+",
     "actions": [
       "CreateMonitor",
       "DeleteMonitor",
@@ -2462,6 +2568,9 @@
     "prefix": "internetmonitor"
   },
   {
+    "name": "Amazon Connect Customer Profiles",
+    "arn_format": "arn:aws:profile:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:profile:.+:.+:.+",
     "actions": [
       "AddProfileKey",
       "CreateDomain",
@@ -2505,6 +2614,9 @@
     "prefix": "profile"
   },
   {
+    "name": "AWS Serverless Application Repository",
+    "arn_format": "arn:aws:serverlessrepo:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:serverlessrepo:.+:.+:.+",
     "actions": [
       "CreateApplication",
       "CreateApplicationVersion",
@@ -2525,6 +2637,9 @@
     "prefix": "serverlessrepo"
   },
   {
+    "name": "Amazon Forecast",
+    "arn_format": "arn:aws:forecast:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:forecast:.+:.+:.+",
     "actions": [
       "CreateAutoPredictor",
       "CreateDataset",
@@ -2600,6 +2715,9 @@
     "prefix": "forecast"
   },
   {
+    "name": "Amazon Cloud Directory",
+    "arn_format": "arn:aws:clouddirectory::${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:clouddirectory:.+:[0-9]+:(directory|schema)/.+",
     "actions": [
       "AddFacetToObject",
       "ApplySchema",
@@ -2670,8 +2788,17 @@
     ],
     "prefix": "clouddirectory"
   },
-  { "actions": ["PutAuditEvents"], "prefix": "cloudtrail-data" },
   {
+    "name": "AWS CloudTrail Data",
+    "arn_format": "arn:aws:cloudtrail:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:cloudtrail:.+:[0-9]+:.+",
+    "actions": ["PutAuditEvents"],
+    "prefix": "cloudtrail-data"
+  },
+  {
+    "name": "AWS Elemental MediaTailor",
+    "arn_format": "arn:aws:mediatailor:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:mediatailor:.+:.+:.+",
     "actions": [
       "ConfigureLogsForChannel",
       "ConfigureLogsForPlaybackConfiguration",
@@ -2721,6 +2848,9 @@
     "prefix": "mediatailor"
   },
   {
+    "name": "Amazon Route 53",
+    "arn_format": "arn:aws:route53:::${Resource}/{$Id}",
+    "arn_regex": "^arn:aws:route53:::.+",
     "actions": [
       "ActivateKeySigningKey",
       "AssociateVPCWithHostedZone",
@@ -2796,6 +2926,9 @@
     "prefix": "route53"
   },
   {
+    "name": "Amazon SimpleDB",
+    "arn_format": "arn:aws:sdb:${Region}:${Account}:domain/${DomainName}",
+    "arn_regex": "^arn:aws:sdb:.+",
     "actions": [
       "BatchDeleteAttributes",
       "BatchPutAttributes",
@@ -2811,6 +2944,9 @@
     "prefix": "sdb"
   },
   {
+    "name": "AWS Security Token Service",
+    "arn_format": "arn:aws:iam::${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:iam::.+",
     "actions": [
       "AssumeRole",
       "AssumeRoleWithSAML",
@@ -2827,6 +2963,9 @@
     "prefix": "sts"
   },
   {
+    "name": "AWS Elemental MediaPackage",
+    "arn_format": "arn:aws:mediapackage:${Region}:${Account}:${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:mediapackage:.+",
     "actions": [
       "ConfigureLogs",
       "CreateChannel",
@@ -2851,6 +2990,9 @@
     "prefix": "mediapackage"
   },
   {
+    "name": "Amazon Keyspaces (for Apache Cassandra)",
+    "arn_format": "arn:aws:cassandra:${Region}:${Account}:/${ResourceType}/${ResourcePath}/",
+    "arn_regex": "^arn:aws:cassandra:.+",
     "actions": [
       "Alter",
       "Create",
@@ -2865,6 +3007,9 @@
     "prefix": "cassandra"
   },
   {
+    "name": "AWS Resilience Hub Service",
+    "arn_format": "arn:aws:resiliencehub:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:resiliencehub:.+",
     "actions": [
       "AddDraftAppVersionResourceMappings",
       "CreateApp",
@@ -2922,10 +3067,14 @@
     "prefix": "resiliencehub"
   },
   {
+    "name": "AWS Systems Manager GUI Connect",
     "actions": ["CancelConnection", "GetConnection", "StartConnection"],
     "prefix": "ssm-guiconnect"
   },
   {
+    "name": "Amazon Athena",
+    "arn_format": "arn:aws:athena:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:athena:.+",
     "actions": [
       "BatchGetNamedQuery",
       "BatchGetPreparedStatement",
@@ -2992,6 +3141,7 @@
     "prefix": "athena"
   },
   {
+    "name": "AWS Marketplace Metering Service",
     "actions": [
       "BatchMeterUsage",
       "MeterUsage",
@@ -3001,6 +3151,7 @@
     "prefix": "aws-marketplace"
   },
   {
+    "name": "AWS Marketplace Procurement Systems Integration",
     "actions": [
       "DescribeProcurementSystemConfiguration",
       "PutProcurementSystemConfiguration"
@@ -3008,6 +3159,7 @@
     "prefix": "aws-marketplace"
   },
   {
+    "name": "AWS Marketplace Private Marketplace",
     "actions": [
       "AssociateProductsWithPrivateMarketplace",
       "CreatePrivateMarketplaceRequests",
@@ -3018,6 +3170,9 @@
     "prefix": "aws-marketplace"
   },
   {
+    "name": "AWS Marketplace Catalog",
+    "arn_format": "arn:aws:aws-marketplace:${Region}:${Account}:${Catalog}/${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:aws-marketplace:.+",
     "actions": [
       "CancelChangeSet",
       "CompleteTask",
@@ -3036,13 +3191,29 @@
     "prefix": "aws-marketplace"
   },
   {
+    "name": "AWS Marketplace Image Building Service",
     "actions": ["DescribeBuilds", "ListBuilds", "StartBuild"],
     "prefix": "aws-marketplace"
   },
-  { "actions": ["GetSellerDashboard"], "prefix": "aws-marketplace" },
-  { "actions": ["ListPrivateListings"], "prefix": "aws-marketplace" },
-  { "actions": ["GetEntitlements"], "prefix": "aws-marketplace" },
   {
+    "name": "AWS Marketplace Seller Reporting",
+    "arn_format": "arn:aws:aws-marketplace::${Account}:${Catalog}/${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:aws-marketplace:.+",
+    "actions": ["GetSellerDashboard"],
+    "prefix": "aws-marketplace"
+  },
+  {
+    "name": "AWS Marketplace Discovery",
+    "actions": ["ListPrivateListings"],
+    "prefix": "aws-marketplace"
+  },
+  {
+    "name": "AWS Marketplace Entitlement Service",
+    "actions": ["GetEntitlements"],
+    "prefix": "aws-marketplace"
+  },
+  {
+    "name": "AWS Marketplace",
     "actions": [
       "AcceptAgreementApprovalRequest",
       "AcceptAgreementRequest",
@@ -3066,6 +3237,9 @@
     "prefix": "aws-marketplace"
   },
   {
+    "name": "Amazon Pinpoint",
+    "arn_format": "arn:aws:mobiletargeting:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:mobiletargeting:.+",
     "actions": [
       "CreateApp",
       "CreateCampaign",
@@ -3194,6 +3368,7 @@
     "prefix": "mobiletargeting"
   },
   {
+    "name": "AWS Auto Scaling",
     "actions": [
       "CreateScalingPlan",
       "DeleteScalingPlan",
@@ -3205,6 +3380,9 @@
     "prefix": "autoscaling-plans"
   },
   {
+    "name": "Amazon CodeCatalyst",
+    "arn_format": "arn:aws:codecatalyst:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:codecatalyst:.+",
     "actions": [
       "AcceptConnection",
       "AssociateIamRoleToConnection",
@@ -3224,6 +3402,9 @@
     "prefix": "codecatalyst"
   },
   {
+    "name": "AWS Cost and Usage Report",
+    "arn_format": "arn:aws:cur:${Region}:${Account}:definition/${ResourceName}",
+    "arn_regex": "^arn:aws:cur:.+:.+:.+",
     "actions": [
       "DeleteReportDefinition",
       "DescribeReportDefinitions",
@@ -3238,6 +3419,9 @@
     "prefix": "cur"
   },
   {
+    "name": "AWS Identity Store",
+    "arn_format": "arn:aws:identitystore::${AwsAccountId}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:identitystore:.+",
     "actions": [
       "CreateGroup",
       "CreateGroupMembership",
@@ -3262,6 +3446,9 @@
     "prefix": "identitystore"
   },
   {
+    "name": "AWS Elemental Support Cases",
+    "arn_format": "arn:${Partition}:elemental-support-cases:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:elemental-support-cases:.+:.+:.+",
     "actions": [
       "CheckCasePermission",
       "CreateCase",
@@ -3272,6 +3459,7 @@
     "prefix": "elemental-support-cases"
   },
   {
+    "name": "Amazon Route 53 Domains",
     "actions": [
       "AcceptDomainTransferFromAnotherAwsAccount",
       "AssociateDelegationSignerToDomain",
@@ -3311,6 +3499,9 @@
     "prefix": "route53domains"
   },
   {
+    "name": "AWS Wickr",
+    "arn_format": "arn:aws:wickr:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:wickr:.+:.+:.+",
     "actions": [
       "CreateAdminSession",
       "CreateNetwork",
@@ -3323,6 +3514,9 @@
     "prefix": "wickr"
   },
   {
+    "name": "AWS OpsWorks",
+    "arn_format": "arn:aws:${ServiceName}:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:opsworks:.+",
     "actions": [
       "AssignInstance",
       "AssignVolume",
@@ -3402,6 +3596,9 @@
     "prefix": "opsworks"
   },
   {
+    "name": "Amazon FreeRTOS",
+    "arn_format": "arn:aws:freertos:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:freertos:.+:[0-9]+:.+",
     "actions": [
       "CreateSoftwareConfiguration",
       "CreateSubscription",
@@ -3427,10 +3624,16 @@
     "prefix": "freertos"
   },
   {
+    "name": "AWS Identity Store Auth",
+    "arn_format": "arn:${Partition}:identitystore-auth:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:${Partition}:identitystore-auth:${Region}:.+",
     "actions": ["BatchDeleteSession", "BatchGetSession", "ListSessions"],
     "prefix": "identitystore-auth"
   },
   {
+    "name": "AWS CodeDeploy",
+    "arn_format": "arn:aws:codedeploy:${Region}:${Account}:${ResourceType}:${ResourceSpecifier}",
+    "arn_regex": "^arn:aws:codedeploy:.+",
     "actions": [
       "AddTagsToOnPremisesInstances",
       "BatchGetApplicationRevisions",
@@ -3484,6 +3687,9 @@
     "prefix": "codedeploy"
   },
   {
+    "name": "AWS Identity and Access Management",
+    "arn_format": "arn:aws:iam::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iam::.+",
     "actions": [
       "AddClientIDToOpenIDConnectProvider",
       "AddRoleToInstanceProfile",
@@ -3659,6 +3865,9 @@
     "prefix": "iam"
   },
   {
+    "name": "Amazon Route 53 Resolver",
+    "arn_format": "arn:aws:route53resolver:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:route53resolver:.+:.+:.+",
     "actions": [
       "AssociateFirewallRuleGroup",
       "AssociateResolverEndpointIpAddress",
@@ -3727,6 +3936,9 @@
     "prefix": "route53resolver"
   },
   {
+    "name": "Amazon WorkMail",
+    "arn_format": "arn:aws:workmail:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:workmail:.+:.+:.+",
     "actions": [
       "AddMembersToGroup",
       "AssociateDelegateToResource",
@@ -3863,6 +4075,9 @@
     "prefix": "workmail"
   },
   {
+    "name": "Amazon Route 53 Recovery Readiness",
+    "arn_format": "arn:aws:route53-recovery-readiness::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:route53-recovery-readiness::.+:.+",
     "actions": [
       "CreateCell",
       "CreateCrossAccountAuthorization",
@@ -3900,6 +4115,9 @@
     "prefix": "route53-recovery-readiness"
   },
   {
+    "name": "AWS CodeBuild",
+    "arn_format": "arn:aws:codebuild:${Region}:${Account}:build/${BuildId}",
+    "arn_regex": "^arn:aws:codebuild:.+:[0-9]+:.+/.+",
     "actions": [
       "BatchDeleteBuilds",
       "BatchGetBuildBatches",
@@ -3958,6 +4176,9 @@
     "prefix": "codebuild"
   },
   {
+    "name": "AWS IoT Analytics",
+    "arn_format": "arn:aws:iotanalytics:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iotanalytics:.+",
     "actions": [
       "BatchPutMessage",
       "CancelPipelineReprocessing",
@@ -3997,6 +4218,9 @@
     "prefix": "iotanalytics"
   },
   {
+    "name": "Amazon Connect",
+    "arn_format": "arn:aws:connect:${Region}:${Account}:instance/${InstanceId}",
+    "arn_regex": "^arn:aws:connect:.+:.+:instance/.+",
     "actions": [
       "AssociateApprovedOrigin",
       "AssociateBot",
@@ -4182,6 +4406,9 @@
     "prefix": "connect"
   },
   {
+    "name": "Amazon Pinpoint Email Service",
+    "arn_format": "arn:aws:ses:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ses:.+:[0-9]+:.+",
     "actions": [
       "CreateConfigurationSet",
       "CreateConfigurationSetEventDestination",
@@ -4229,6 +4456,9 @@
     "prefix": "ses"
   },
   {
+    "name": "Amazon Simple Email Service v2",
+    "arn_format": "arn:aws:ses:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ses:.+:[0-9]+:.+",
     "actions": [
       "BatchGetMetricData",
       "CreateConfigurationSet",
@@ -4320,6 +4550,9 @@
     "prefix": "ses"
   },
   {
+    "name": "Amazon SES",
+    "arn_format": "arn:aws:ses:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ses:.+:[0-9]+:.+",
     "actions": [
       "CloneReceiptRuleSet",
       "CreateConfigurationSet",
@@ -4396,6 +4629,9 @@
     "prefix": "ses"
   },
   {
+    "name": "AWS Cost Explorer Service",
+    "arn_format": "arn:aws:ce::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:ce::.+:.+",
     "actions": [
       "CreateAnomalyMonitor",
       "CreateAnomalySubscription",
@@ -4450,6 +4686,9 @@
     "prefix": "ce"
   },
   {
+    "name": "AWS Amplify Admin",
+    "arn_format": "arn:aws:amplifybackend:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:amplifybackend:.+:.+:.+",
     "actions": [
       "CloneBackend",
       "CreateBackend",
@@ -4486,6 +4725,9 @@
     "prefix": "amplifybackend"
   },
   {
+    "name": "Amazon CloudWatch Synthetics",
+    "arn_format": "arn:aws:synthetics:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:synthetics:.+",
     "actions": [
       "AssociateResource",
       "CreateCanary",
@@ -4512,6 +4754,9 @@
     "prefix": "synthetics"
   },
   {
+    "name": "Amazon Elastic Inference",
+    "arn_format": "arn:aws:elastic-inference:<region>:<account-id>:elastic-inference-accelerator/<identifier>",
+    "arn_regex": "^arn:aws:elastic-inference:.+",
     "actions": [
       "Connect",
       "DescribeAcceleratorOfferings",
@@ -4524,6 +4769,7 @@
     "prefix": "elastic-inference"
   },
   {
+    "name": "AWS Application Cost Profiler Service",
     "actions": [
       "DeleteReportDefinition",
       "GetReportDefinition",
@@ -4535,6 +4781,9 @@
     "prefix": "application-cost-profiler"
   },
   {
+    "name": "AWS Migration Hub Refactor Spaces",
+    "arn_format": "arn:aws:refactor-spaces:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:refactor-spaces:.+",
     "actions": [
       "CreateApplication",
       "CreateEnvironment",
@@ -4564,6 +4813,9 @@
     "prefix": "refactor-spaces"
   },
   {
+    "name": "AWS DeepLens",
+    "arn_format": "arn:aws:deeplens:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:aws:deeplens:.+:.+:.+",
     "actions": [
       "AssociateServiceRoleToAccount",
       "BatchGetDevice",
@@ -4593,6 +4845,9 @@
     "prefix": "deeplens"
   },
   {
+    "name": "Amazon GameSparks",
+    "arn_format": "arn:aws:gamesparks:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:gamesparks:.+:.+:.+",
     "actions": [
       "CreateGame",
       "CreateSnapshot",
@@ -4632,6 +4887,9 @@
     "prefix": "gamesparks"
   },
   {
+    "name": "Amazon RDS Data API",
+    "arn_format": "arn:aws:rds:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:rds:.+",
     "actions": [
       "BatchExecuteStatement",
       "BeginTransaction",
@@ -4643,6 +4901,9 @@
     "prefix": "rds-data"
   },
   {
+    "name": "AWS SQL Workbench",
+    "arn_format": "arn:aws:sqlworkbench:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:sqlworkbench:.+:.+:.+",
     "actions": [
       "AssociateConnectionWithChart",
       "AssociateConnectionWithTab",
@@ -4714,6 +4975,9 @@
     "prefix": "sqlworkbench"
   },
   {
+    "name": "Amazon Inspector2",
+    "arn_format": "arn:aws:inspector2:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:inspector2:.+:.+:.+",
     "actions": [
       "AssociateMember",
       "BatchGetAccountStatus",
@@ -4752,6 +5016,9 @@
     "prefix": "inspector2"
   },
   {
+    "name": "AWS IAM Identity Center (successor to AWS Single Sign-On) directory",
+    "arn_format": "arn:${Partition}:sso-directory:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:${Partition}:sso-directory:${Region}:.+",
     "actions": [
       "AddMemberToGroup",
       "CompleteVirtualMfaDeviceRegistration",
@@ -4809,6 +5076,9 @@
     "prefix": "sso-directory"
   },
   {
+    "name": "Amazon DocumentDB Elastic Clusters",
+    "arn_format": "arn:aws:docdb-elastic:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:docdb-elastic:.+:.+:.+",
     "actions": [
       "CreateCluster",
       "CreateClusterSnapshot",
@@ -4826,8 +5096,17 @@
     ],
     "prefix": "docdb-elastic"
   },
-  { "actions": ["Invoke"], "prefix": "vpc-lattice-svcs" },
   {
+    "name": "Amazon VPC Lattice Services",
+    "arn_format": "arn:aws:vpc-lattice:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:vpc-lattice:.+",
+    "actions": ["Invoke"],
+    "prefix": "vpc-lattice-svcs"
+  },
+  {
+    "name": "AWS IoT Jobs DataPlane",
+    "arn_format": "arn:aws:iot:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:iot:.+:[0-9]+:.+",
     "actions": [
       "DescribeJobExecution",
       "GetPendingJobExecutions",
@@ -4837,6 +5116,9 @@
     "prefix": "iotjobsdata"
   },
   {
+    "name": "Amazon AppFlow",
+    "arn_format": "arn:aws:appflow:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:appflow:.+:.+:.+",
     "actions": [
       "CreateConnectorProfile",
       "CreateFlow",
@@ -4871,6 +5153,9 @@
     "prefix": "appflow"
   },
   {
+    "name": "AWS Trusted Advisor",
+    "arn_format": "arn:aws:trustedadvisor:${Region}:${Account}:checks/${Category}/${CheckId}",
+    "arn_regex": "^arn:aws:trustedadvisor:.*",
     "actions": [
       "CreateEngagement",
       "CreateEngagementAttachment",
@@ -4916,6 +5201,9 @@
     "prefix": "trustedadvisor"
   },
   {
+    "name": "AWS Config",
+    "arn_format": "arn:aws:config:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:config:.+",
     "actions": [
       "BatchGetAggregateResourceConfig",
       "BatchGetResourceConfig",
@@ -5013,6 +5301,9 @@
     "prefix": "config"
   },
   {
+    "name": "Amazon RDS",
+    "arn_format": "arn:aws:rds:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:rds:.+",
     "actions": [
       "AddRoleToDBCluster",
       "AddRoleToDBInstance",
@@ -5164,6 +5455,9 @@
     "prefix": "rds"
   },
   {
+    "name": "Amazon Simple Workflow Service",
+    "arn_format": "arn:aws:swf:${Region}:${Account}:/domain/${DomainName}",
+    "arn_regex": "^arn:aws:swf:.+",
     "actions": [
       "CancelTimer",
       "CancelWorkflowExecution",
@@ -5218,6 +5512,9 @@
     "prefix": "swf"
   },
   {
+    "name": "AWS AppSync",
+    "arn_format": "arn:aws:appsync:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:appsync:.+",
     "actions": [
       "AssociateApi",
       "CreateApiCache",
@@ -5276,6 +5573,9 @@
     "prefix": "appsync"
   },
   {
+    "name": "AWS Certificate Manager",
+    "arn_format": "arn:aws:acm:${Region}:${AccountId}:${ArnType}/${ResourceId}",
+    "arn_regex": "^arn:aws:acm:.+:[0-9]+:.+",
     "actions": [
       "AddTagsToCertificate",
       "DeleteCertificate",
@@ -5296,6 +5596,9 @@
     "prefix": "acm"
   },
   {
+    "name": "AWS Systems Manager Incident Manager",
+    "arn_format": "arn:aws:ssm-incidents::${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ssm-incidents::.+:.+",
     "actions": [
       "CreateReplicationSet",
       "CreateResponsePlan",
@@ -5330,6 +5633,9 @@
     "prefix": "ssm-incidents"
   },
   {
+    "name": "AWS X-Ray",
+    "arn_format": "arn:aws:xray:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:xray:.+",
     "actions": [
       "BatchGetTraceSummaryById",
       "BatchGetTraces",
@@ -5368,6 +5674,9 @@
     "prefix": "xray"
   },
   {
+    "name": "AWS CloudWatch RUM",
+    "arn_format": "arn:aws:rum:${Region}:${Account}:appmonitor/${Name}",
+    "arn_regex": "^arn:aws:rum:.+:.+:.+",
     "actions": [
       "BatchCreateRumMetricDefinitions",
       "BatchDeleteRumMetricDefinitions",
@@ -5390,6 +5699,9 @@
     "prefix": "rum"
   },
   {
+    "name": "Amazon CloudFront",
+    "arn_format": "arn:aws:cloudfront:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:cloudfront:.+:[0-9]+:.+",
     "actions": [
       "AssociateAlias",
       "CopyDistribution",
@@ -5507,6 +5819,9 @@
     "prefix": "cloudfront"
   },
   {
+    "name": "Amazon Elastic Kubernetes Service",
+    "arn_format": "arn:aws:eks:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:eks:.+",
     "actions": [
       "AccessKubernetesApi",
       "AssociateEncryptionConfig",
@@ -5548,6 +5863,9 @@
     "prefix": "eks"
   },
   {
+    "name": "AWS Identity Sync",
+    "arn_format": "arn:aws:identity-sync:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:identity-sync:.+:.+:.+",
     "actions": [
       "CreateSyncFilter",
       "CreateSyncProfile",
@@ -5565,6 +5883,9 @@
     "prefix": "identity-sync"
   },
   {
+    "name": "AWS Firewall Manager",
+    "arn_format": "arn:aws:fms:${Region}:${Account}:${Resource}/${Id}",
+    "arn_regex": "^arn:aws:fms:.+:[0-9]+:.+/.+",
     "actions": [
       "AssociateAdminAccount",
       "AssociateThirdPartyFirewall",
@@ -5608,6 +5929,9 @@
     "prefix": "fms"
   },
   {
+    "name": "Amazon Kinesis",
+    "arn_format": "arn:aws:kinesis:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:kinesis:.+",
     "actions": [
       "AddTagsToStream",
       "CreateStream",
@@ -5642,10 +5966,13 @@
     "prefix": "kinesis"
   },
   {
+    "name": "AWS Billing Console",
     "actions": [
+      "GetConsoleActionSetEnforced",
       "ModifyAccount",
       "ModifyBilling",
       "ModifyPaymentMethods",
+      "UpdateConsoleActionSetEnforced",
       "ViewAccount",
       "ViewBilling",
       "ViewPaymentMethods",
@@ -5654,6 +5981,9 @@
     "prefix": "aws-portal"
   },
   {
+    "name": "AWS Directory Service",
+    "arn_format": "arn:aws:ds:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:ds:.+",
     "actions": [
       "AcceptSharedDirectory",
       "AddIpRoutes",
@@ -5732,6 +6062,9 @@
     "prefix": "ds"
   },
   {
+    "name": "AWS IoT SiteWise",
+    "arn_format": "arn:aws:iotsitewise:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:iotsitewise:.+:.+:.+",
     "actions": [
       "AssociateAssets",
       "AssociateTimeSeriesToAssetProperty",
@@ -5811,6 +6144,9 @@
     "prefix": "iotsitewise"
   },
   {
+    "name": "AWS CodeStar Notifications",
+    "arn_format": "arn:aws:codestar-notifications:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:codestar-notifications:.+:.+:.+",
     "actions": [
       "CreateNotificationRule",
       "DeleteNotificationRule",
@@ -5829,6 +6165,9 @@
     "prefix": "codestar-notifications"
   },
   {
+    "name": "AWS App2Container",
+    "arn_format": "arn:${Partition}:a2c:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:a2c:.+:.+:.+",
     "actions": [
       "GetContainerizationJobDetails",
       "GetDeploymentJobDetails",
@@ -5838,6 +6177,9 @@
     "prefix": "a2c"
   },
   {
+    "name": "Amazon Fraud Detector",
+    "arn_format": "arn:aws:frauddetector:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:frauddetector:.+:.+:.+",
     "actions": [
       "BatchCreateVariable",
       "BatchGetVariable",
@@ -5917,6 +6259,9 @@
     "prefix": "frauddetector"
   },
   {
+    "name": "Amazon WorkLink",
+    "arn_format": "arn:aws:worklink::${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:worklink:.+",
     "actions": [
       "AssociateDomain",
       "AssociateWebsiteAuthorizationProvider",
@@ -5956,6 +6301,9 @@
     "prefix": "worklink"
   },
   {
+    "name": "AWS CodeStar Connections",
+    "arn_format": "arn:aws:codestar-connections:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:codestar-connections:.+:.+:.+",
     "actions": [
       "CreateConnection",
       "CreateHost",
@@ -5982,6 +6330,7 @@
     "prefix": "codestar-connections"
   },
   {
+    "name": "AWS Support App in Slack",
     "actions": [
       "CreateSlackChannelConfiguration",
       "DeleteAccountAlias",
@@ -6000,6 +6349,9 @@
     "prefix": "supportapp"
   },
   {
+    "name": "Amazon WorkSpaces",
+    "arn_format": "arn:aws:workspaces:${Region}:${Account}:*",
+    "arn_regex": "^arn:aws:workspaces:.*:.*:.*",
     "actions": [
       "AssociateConnectionAlias",
       "AssociateIpGroups",
@@ -6071,6 +6423,9 @@
     "prefix": "workspaces"
   },
   {
+    "name": "Amazon Lookout for Vision",
+    "arn_format": "arn:aws:lookoutvision:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:lookoutvision:.+:.+:.+",
     "actions": [
       "CreateDataset",
       "CreateModel",
@@ -6101,6 +6456,9 @@
     "prefix": "lookoutvision"
   },
   {
+    "name": "Amazon Chime",
+    "arn_format": "arn:aws:chime:${Region}:${Account}:${ResourceType}/${ResourceID}",
+    "arn_regex": "^arn:aws:chime:.+",
     "actions": [
       "AcceptDelegate",
       "ActivateUsers",
@@ -6409,6 +6767,9 @@
     "prefix": "chime"
   },
   {
+    "name": "Amazon ElastiCache",
+    "arn_format": "arn:aws:elasticache:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:elasticache:.+:.+:.+",
     "actions": [
       "AddTagsToResource",
       "AuthorizeCacheSecurityGroupIngress",
@@ -6480,6 +6841,9 @@
     "prefix": "elasticache"
   },
   {
+    "name": "AWS IoT Wireless",
+    "arn_format": "arn:aws:iotwireless:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:iotwireless:.+",
     "actions": [
       "AssociateAwsAccountWithPartnerAccount",
       "AssociateMulticastGroupWithFuotaTask",
@@ -6595,6 +6959,9 @@
     "prefix": "iotwireless"
   },
   {
+    "name": "Amazon Kinesis Firehose",
+    "arn_format": "arn:aws:firehose:{Region}:{Account}:deliverystream/${DeliveryStreamName}",
+    "arn_regex": "^arn:aws:firehose:.+:[0-9]+:deliverystream/.+",
     "actions": [
       "CreateDeliveryStream",
       "DeleteDeliveryStream",
@@ -6612,6 +6979,7 @@
     "prefix": "firehose"
   },
   {
+    "name": "Amazon Mechanical Turk",
     "actions": [
       "AcceptQualificationRequest",
       "ApproveAssignment",
@@ -6656,6 +7024,9 @@
     "prefix": "mechanicalturk"
   },
   {
+    "name": "AWS Storage Gateway",
+    "arn_format": "arn:aws:storagegateway:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:storagegateway:.+",
     "actions": [
       "ActivateGateway",
       "AddCache",
@@ -6752,6 +7123,9 @@
     "prefix": "storagegateway"
   },
   {
+    "name": "Amazon Elastic MapReduce",
+    "arn_format": "arn:aws:elasticmapreduce:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:elasticmapreduce:.+",
     "actions": [
       "AddInstanceFleet",
       "AddInstanceGroups",
@@ -6836,6 +7210,9 @@
     "prefix": "elasticmapreduce"
   },
   {
+    "name": "Amazon Route 53 Recovery Cluster",
+    "arn_format": "arn:aws:route53-recovery-control::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:route53-recovery-control::.+:.+",
     "actions": [
       "GetRoutingControlState",
       "ListRoutingControls",
@@ -6845,6 +7222,9 @@
     "prefix": "route53-recovery-cluster"
   },
   {
+    "name": "AWS Batch",
+    "arn_format": "arn:aws:batch:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:batch:.+",
     "actions": [
       "CancelJob",
       "CreateComputeEnvironment",
@@ -6874,6 +7254,9 @@
     "prefix": "batch"
   },
   {
+    "name": "High-volume outbound communications",
+    "arn_format": "arn:aws:connect-campaigns:${Region}:${Account}:campaign/${CampaignId}",
+    "arn_regex": "^arn:aws:connect-campaigns:.+:.*:campaign/.*",
     "actions": [
       "CreateCampaign",
       "DeleteCampaign",
@@ -6901,6 +7284,9 @@
     "prefix": "connect-campaigns"
   },
   {
+    "name": "AWS IoT Events",
+    "arn_format": "arn:aws:iotevents:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iotevents:.+",
     "actions": [
       "BatchAcknowledgeAlarm",
       "BatchDeleteDetector",
@@ -6945,6 +7331,9 @@
     "prefix": "iotevents"
   },
   {
+    "name": "AWS Billing Conductor",
+    "arn_format": "arn:aws:billingconductor::${Account}:${ResourceType}",
+    "arn_regex": "^arn:aws:billingconductor:.+",
     "actions": [
       "AssociateAccounts",
       "AssociatePricingRules",
@@ -6981,6 +7370,9 @@
     "prefix": "billingconductor"
   },
   {
+    "name": "AWS CloudTrail",
+    "arn_format": "arn:aws:cloudtrail:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:cloudtrail:.+:[0-9]+:.+",
     "actions": [
       "AddTags",
       "CancelQuery",
@@ -7035,6 +7427,9 @@
     "prefix": "cloudtrail"
   },
   {
+    "name": "Amazon DynamoDB",
+    "arn_format": "arn:aws:dynamodb:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:dynamodb:.+:.+",
     "actions": [
       "BatchGetItem",
       "BatchWriteItem",
@@ -7105,6 +7500,9 @@
     "prefix": "dynamodb"
   },
   {
+    "name": "Amazon OpenSearch Service",
+    "arn_format": "arn:aws:es:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:es:.+",
     "actions": [
       "AcceptInboundConnection",
       "AcceptInboundCrossClusterSearchConnection",
@@ -7196,6 +7594,9 @@
     "prefix": "es"
   },
   {
+    "name": "AWS DeepRacer",
+    "arn_format": "arn:aws:deepracer:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:deepracer:.+",
     "actions": [
       "AddLeaderboardAccessPermission",
       "AdminGetAccountConfig",
@@ -7251,6 +7652,9 @@
     "prefix": "deepracer"
   },
   {
+    "name": "Amazon Connect Voice ID",
+    "arn_format": "arn:aws:voiceid:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:voiceid:.+",
     "actions": [
       "AssociateFraudster",
       "CreateDomain",
@@ -7287,6 +7691,9 @@
     "prefix": "voiceid"
   },
   {
+    "name": "Amazon EMR on EKS (EMR Containers)",
+    "arn_format": "arn:aws:emr-containers:${Region}:${Account}:/${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:emr-containers:.+",
     "actions": [
       "CancelJobRun",
       "CreateJobTemplate",
@@ -7311,6 +7718,9 @@
     "prefix": "emr-containers"
   },
   {
+    "name": "AWS Budget Service",
+    "arn_format": "arn:aws:budgets::${Account}:budget/${BudgetName}",
+    "arn_regex": "^arn:aws:budgets::.+:.+",
     "actions": [
       "CreateBudgetAction",
       "DeleteBudgetAction",
@@ -7326,6 +7736,9 @@
     "prefix": "budgets"
   },
   {
+    "name": "Amazon EventBridge Schemas",
+    "arn_format": "arn:aws:schemas:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:schemas:.+:.+:.+",
     "actions": [
       "CreateDiscoverer",
       "CreateRegistry",
@@ -7362,6 +7775,9 @@
     "prefix": "schemas"
   },
   {
+    "name": "AWS Network Manager",
+    "arn_format": "arn:aws:networkmanager::${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:networkmanager::.+:.+",
     "actions": [
       "AcceptAttachment",
       "AssociateConnectPeer",
@@ -7452,6 +7868,7 @@
     "prefix": "networkmanager"
   },
   {
+    "name": "AWS Support",
     "actions": [
       "AddAttachmentsToSet",
       "AddCommunicationToCase",
@@ -7479,6 +7896,9 @@
     "prefix": "support"
   },
   {
+    "name": "Amazon Cognito Identity",
+    "arn_format": "arn:aws:cognito-identity:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:cognito-identity:.+",
     "actions": [
       "CreateIdentityPool",
       "DeleteIdentities",
@@ -7507,6 +7927,9 @@
     "prefix": "cognito-identity"
   },
   {
+    "name": "Amazon Polly",
+    "arn_format": "arn:aws:polly:${Region}:${Account}:lexicon/${RelativeId}",
+    "arn_regex": "^arn:aws:polly:${Region}:.+",
     "actions": [
       "DeleteLexicon",
       "DescribeVoices",
@@ -7521,6 +7944,9 @@
     "prefix": "polly"
   },
   {
+    "name": "AWS Clean Rooms",
+    "arn_format": "arn:aws:cleanrooms:${Region}:${Account}:${ResourceType}/${PathToResource}",
+    "arn_regex": "^arn:aws:cleanrooms:.+",
     "actions": [
       "BatchGetSchema",
       "CreateCollaboration",
@@ -7563,6 +7989,9 @@
     "prefix": "cleanrooms"
   },
   {
+    "name": "AWS AppConfig",
+    "arn_format": "arn:aws:appconfig:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:appconfig:.+",
     "actions": [
       "CreateApplication",
       "CreateConfigurationProfile",
@@ -7613,6 +8042,9 @@
     "prefix": "appconfig"
   },
   {
+    "name": "AWS App Runner",
+    "arn_format": "arn:aws:apprunner:${Region}:${Account}:${ResourceType}/${PathToResource}",
+    "arn_regex": "^arn:aws:apprunner:.+",
     "actions": [
       "AssociateCustomDomain",
       "AssociateWebAcl",
@@ -7658,6 +8090,9 @@
     "prefix": "apprunner"
   },
   {
+    "name": "AWS License Manager",
+    "arn_format": "arn:aws:license-manager:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:license-manager:.+:.+:.+",
     "actions": [
       "AcceptGrant",
       "CheckInLicense",
@@ -7713,6 +8148,9 @@
     "prefix": "license-manager"
   },
   {
+    "name": "Alexa for Business",
+    "arn_format": "arn:aws:a4b:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:a4b:.+:.+:.+",
     "actions": [
       "ApproveSkill",
       "AssociateContactWithAddressBook",
@@ -7814,6 +8252,9 @@
     "prefix": "a4b"
   },
   {
+    "name": "AWS Private Certificate Authority",
+    "arn_format": "arn:aws:acm-pca:${Region}:${Account}:${ARNType}/${ResourceId}",
+    "arn_regex": "^arn:aws:acm-pca:.+:[0-9]+:.+",
     "actions": [
       "CreateCertificateAuthority",
       "CreateCertificateAuthorityAuditReport",
@@ -7842,6 +8283,9 @@
     "prefix": "acm-pca"
   },
   {
+    "name": "AWS Step Functions",
+    "arn_format": "arn:aws:states:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:states:.+",
     "actions": [
       "CreateActivity",
       "CreateStateMachine",
@@ -7873,6 +8317,9 @@
     "prefix": "states"
   },
   {
+    "name": "Amazon Connect Wisdom",
+    "arn_format": "arn:aws:wisdom:${Region}:${Account}:${Resource}/${ResourceId}",
+    "arn_regex": "^arn:aws:wisdom:.+:.+:.+",
     "actions": [
       "CreateAssistant",
       "CreateAssistantAssociation",
@@ -7909,6 +8356,9 @@
     "prefix": "wisdom"
   },
   {
+    "name": "Amazon EventBridge Scheduler",
+    "arn_format": "arn:aws:scheduler:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:scheduler:.+:.+:.+",
     "actions": [
       "CreateSchedule",
       "CreateScheduleGroup",
@@ -7926,6 +8376,7 @@
     "prefix": "scheduler"
   },
   {
+    "name": "Amazon Message Delivery Service",
     "actions": [
       "AcknowledgeMessage",
       "DeleteMessage",
@@ -7937,6 +8388,9 @@
     "prefix": "ec2messages"
   },
   {
+    "name": "AWS IoT Greengrass V2",
+    "arn_format": "arn:aws:greengrass:${Region}:${Account}:${ResourceType}:${ResourcePath}",
+    "arn_regex": "^arn:aws:greengrass:.+",
     "actions": [
       "AssociateServiceRoleToAccount",
       "BatchAssociateClientDeviceWithCoreDevice",
@@ -7971,6 +8425,9 @@
     "prefix": "greengrass"
   },
   {
+    "name": "AWS IoT Greengrass",
+    "arn_format": "arn:aws:greengrass:${Region}:${Account}:/greengrass/${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:greengrass:.+:[0-9]+:.+",
     "actions": [
       "AssociateRoleToGroup",
       "AssociateServiceRoleToAccount",
@@ -8069,6 +8526,9 @@
     "prefix": "greengrass"
   },
   {
+    "name": "Amazon Redshift",
+    "arn_format": "arn:aws:redshift:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:redshift:.+:.+:.+",
     "actions": [
       "AcceptReservedNodeExchange",
       "AddPartner",
@@ -8211,6 +8671,7 @@
     "prefix": "redshift"
   },
   {
+    "name": "Amazon WorkDocs",
     "actions": [
       "AbortDocumentVersionUpload",
       "ActivateUser",
@@ -8274,6 +8735,7 @@
     "prefix": "workdocs"
   },
   {
+    "name": "AWS Marketplace Management Portal",
     "actions": [
       "uploadFiles",
       "viewMarketing",
@@ -8284,6 +8746,9 @@
     "prefix": "aws-marketplace-management"
   },
   {
+    "name": "Amazon Comprehend Medical",
+    "arn_format": "arn:${Partition}:comprehendmedical:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:comprehendmedical:.+:.+:.+",
     "actions": [
       "DescribeEntitiesDetectionV2Job",
       "DescribeICD10CMInferenceJob",
@@ -8314,6 +8779,9 @@
     "prefix": "comprehendmedical"
   },
   {
+    "name": "Amazon CloudWatch Observability Access Manager",
+    "arn_format": "arn:aws:oam:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:oam:.+:.+:.+",
     "actions": [
       "CreateLink",
       "CreateSink",
@@ -8334,6 +8802,9 @@
     "prefix": "oam"
   },
   {
+    "name": "AWS DeepComposer",
+    "arn_format": "arn:aws:deepcomposer:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:deepcomposer:.+:.+:.+",
     "actions": [
       "AssociateCoupon",
       "CreateAudio",
@@ -8356,8 +8827,17 @@
     ],
     "prefix": "deepcomposer"
   },
-  { "actions": ["Query"], "prefix": "elemental-support-content" },
   {
+    "name": "AWS Elemental Support Content",
+    "arn_format": "arn:${Partition}:elemental-support-content:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:elemental-support-content:.+:.+:.+",
+    "actions": ["Query"],
+    "prefix": "elemental-support-content"
+  },
+  {
+    "name": "Amazon Managed Blockchain",
+    "arn_format": "arn:aws:managedblockchain:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:managedblockchain:.*:[0-9]*:.+",
     "actions": [
       "CreateAccessor",
       "CreateMember",
@@ -8393,6 +8873,9 @@
     "prefix": "managedblockchain"
   },
   {
+    "name": "AWS WAF",
+    "arn_format": "arn:aws:waf::${Account}:${ResourceId}/${Id}",
+    "arn_regex": "^arn:aws:waf::[0-9]+:.+/.+",
     "actions": [
       "CreateByteMatchSet",
       "CreateGeoMatchSet",
@@ -8475,6 +8958,9 @@
     "prefix": "waf"
   },
   {
+    "name": "Amazon EventBridge Pipes",
+    "arn_format": "arn:aws:pipes:${Region}:${Account}:pipe/${PipeName}",
+    "arn_regex": "^arn:aws:pipes:.+:.+:.+",
     "actions": [
       "CreatePipe",
       "DeletePipe",
@@ -8490,6 +8976,9 @@
     "prefix": "pipes"
   },
   {
+    "name": "Amazon AppStream 2.0",
+    "arn_format": "arn:aws:appstream:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:appstream:.+",
     "actions": [
       "AssociateApplicationFleet",
       "AssociateApplicationToEntitlement",
@@ -8561,6 +9050,9 @@
     "prefix": "appstream"
   },
   {
+    "name": "Amazon DataZone",
+    "arn_format": "arn:${Partition}:datazone:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:datazone:.+:.+:.+",
     "actions": [
       "GetProject",
       "GetProjectConfiguration",
@@ -8571,6 +9063,9 @@
     "prefix": "datazone"
   },
   {
+    "name": "Amazon QuickSight",
+    "arn_format": "arn:aws:quicksight:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:quicksight:.+",
     "actions": [
       "AccountConfigurations",
       "CancelIngestion",
@@ -8591,6 +9086,7 @@
       "CreateIngestion",
       "CreateNamespace",
       "CreateReader",
+      "CreateRefreshSchedule",
       "CreateTemplate",
       "CreateTemplateAlias",
       "CreateTheme",
@@ -8603,6 +9099,7 @@
       "DeleteCustomPermissions",
       "DeleteDashboard",
       "DeleteDataSet",
+      "DeleteDataSetRefreshProperties",
       "DeleteDataSource",
       "DeleteEmailCustomizationTemplate",
       "DeleteFolder",
@@ -8611,6 +9108,7 @@
       "DeleteGroupMembership",
       "DeleteIAMPolicyAssignment",
       "DeleteNamespace",
+      "DeleteRefreshSchedule",
       "DeleteTemplate",
       "DeleteTemplateAlias",
       "DeleteTheme",
@@ -8628,6 +9126,7 @@
       "DescribeDashboardPermissions",
       "DescribeDataSet",
       "DescribeDataSetPermissions",
+      "DescribeDataSetRefreshProperties",
       "DescribeDataSource",
       "DescribeDataSourcePermissions",
       "DescribeEmailCustomizationTemplate",
@@ -8640,6 +9139,7 @@
       "DescribeIngestion",
       "DescribeIpRestriction",
       "DescribeNamespace",
+      "DescribeRefreshSchedule",
       "DescribeTemplate",
       "DescribeTemplateAlias",
       "DescribeTemplatePermissions",
@@ -8668,6 +9168,7 @@
       "ListIAMPolicyAssignmentsForUser",
       "ListIngestions",
       "ListNamespaces",
+      "ListRefreshSchedules",
       "ListTagsForResource",
       "ListTemplateAliases",
       "ListTemplateVersions",
@@ -8679,6 +9180,7 @@
       "ListUsers",
       "PassDataSet",
       "PassDataSource",
+      "PutDataSetRefreshProperties",
       "RegisterUser",
       "RestoreAnalysis",
       "ScopeDownPolicy",
@@ -8713,6 +9215,7 @@
       "UpdateIAMPolicyAssignment",
       "UpdateIpRestriction",
       "UpdatePublicSharingSettings",
+      "UpdateRefreshSchedule",
       "UpdateResourcePermissions",
       "UpdateTemplate",
       "UpdateTemplateAlias",
@@ -8725,6 +9228,9 @@
     "prefix": "quicksight"
   },
   {
+    "name": "AWS WAF V2",
+    "arn_format": "arn:aws:wafv2:${Region}:${Account}:${Scope}/${ResourceType}/${ResourceName}/${ResourceId}",
+    "arn_regex": "^arn:aws:wafv2:.+:.+:.+/.+/.+/.+",
     "actions": [
       "AssociateWebACL",
       "CheckCapacity",
@@ -8779,8 +9285,15 @@
     ],
     "prefix": "wafv2"
   },
-  { "actions": ["AuthenticatePackager"], "prefix": "wam" },
   {
+    "name": "Amazon WorkSpaces Application Manager",
+    "actions": ["AuthenticatePackager"],
+    "prefix": "wam"
+  },
+  {
+    "name": "Amazon Connect Cases",
+    "arn_format": "arn:aws:cases:${Region}:${Account}:domain/${DomainId}",
+    "arn_regex": "^arn:aws:cases:.+",
     "actions": [
       "BatchGetField",
       "BatchPutFieldOptions",
@@ -8816,6 +9329,9 @@
     "prefix": "cases"
   },
   {
+    "name": "Amazon Data Lifecycle Manager",
+    "arn_format": "arn:aws:dlm:${Region}:${Account}:policy/${ResourceName}",
+    "arn_regex": "^arn:aws:dlm:.+:.+:.+",
     "actions": [
       "CreateLifecyclePolicy",
       "DeleteLifecyclePolicy",
@@ -8829,6 +9345,9 @@
     "prefix": "dlm"
   },
   {
+    "name": "AWS Well-Architected Tool",
+    "arn_format": "arn:aws:wellarchitected:${Region}:${Account}:${ResourceName}/${ResourceId}",
+    "arn_regex": "^arn:aws:wellarchitected:.+",
     "actions": [
       "AssociateLenses",
       "CreateLensShare",
@@ -8877,6 +9396,9 @@
     "prefix": "wellarchitected"
   },
   {
+    "name": "AWS Connector Service",
+    "arn_format": "arn:aws:<serviceName>:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:aws:<serviceName>:.+:.+:.+",
     "actions": [
       "GetConnectorHealth",
       "RegisterConnector",
@@ -8885,6 +9407,9 @@
     "prefix": "awsconnector"
   },
   {
+    "name": "Amazon Kendra",
+    "arn_format": "arn:aws:kendra:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:kendra:.+:.+:.+",
     "actions": [
       "AssociateEntitiesToExperience",
       "AssociatePersonasToEntities",
@@ -8955,6 +9480,9 @@
     "prefix": "kendra"
   },
   {
+    "name": "Amazon Interactive Video Service",
+    "arn_format": "arn:aws:ivs:${Region}:${Account}:${ArnType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ivs:.+:.+:.+",
     "actions": [
       "BatchGetChannel",
       "BatchGetStreamKey",
@@ -8995,6 +9523,9 @@
     "prefix": "ivs"
   },
   {
+    "name": "Amazon Lightsail",
+    "arn_format": "arn:aws:lightsail:${Region}:${Account}:${ResourceType}/${Id}",
+    "arn_regex": "^arn:aws:lightsail:.+",
     "actions": [
       "AllocateStaticIp",
       "AttachCertificateToDistribution",
@@ -9159,6 +9690,9 @@
     "prefix": "lightsail"
   },
   {
+    "name": "AWS Backup storage",
+    "arn_format": "arn:${Partition}:backup-storage:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^^arn:aws:backup-storage:.+:.+:.+",
     "actions": [
       "CommitBackupJob",
       "DeleteObjects",
@@ -9179,6 +9713,9 @@
     "prefix": "backup-storage"
   },
   {
+    "name": "Amazon Cognito Sync",
+    "arn_format": "arn:aws:cognito-sync:${Region}:${Account}:${ResourceType}/${ResourcePath}:",
+    "arn_regex": "^arn:aws:cognito-sync:.+",
     "actions": [
       "BulkPublish",
       "DeleteDataset",
@@ -9203,6 +9740,9 @@
     "prefix": "cognito-sync"
   },
   {
+    "name": "Amazon CloudSearch",
+    "arn_format": "arn:aws:cloudsearch:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:cloudsearch:.+:.+:.+",
     "actions": [
       "AddTags",
       "BuildSuggesters",
@@ -9240,6 +9780,9 @@
     "prefix": "cloudsearch"
   },
   {
+    "name": "Amazon EMR Serverless",
+    "arn_format": "arn:aws:emr-serverless:${Region}:${Account}:/${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:emr-serverless:.+",
     "actions": [
       "CancelJobRun",
       "CreateApplication",
@@ -9260,6 +9803,9 @@
     "prefix": "emr-serverless"
   },
   {
+    "name": "Amazon Route 53 Application Recovery Controller - Zonal Shift",
+    "arn_format": "arn:aws:arc-zonal-shift:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:arc-zonal-shift:.+:.+:.+",
     "actions": [
       "CancelZonalShift",
       "GetManagedResource",
@@ -9271,6 +9817,9 @@
     "prefix": "arc-zonal-shift"
   },
   {
+    "name": "Amazon Elastic Transcoder",
+    "arn_format": "arn:aws:elastictranscoder:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:elastictranscoder:.+",
     "actions": [
       "CancelJob",
       "CreateJob",
@@ -9293,10 +9842,14 @@
     "prefix": "elastictranscoder"
   },
   {
+    "name": "AWS Consolidated Billing",
+    "arn_format": "arn:${Partition}:consolidatedbilling::${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:${Partition}:consolidatedbilling::.+:.+",
     "actions": ["GetAccountBillingRole", "ListLinkedAccounts"],
     "prefix": "consolidatedbilling"
   },
   {
+    "name": "AWS Invoicing Service",
     "actions": [
       "GetInvoiceEmailDeliveryPreferences",
       "GetInvoicePDF",
@@ -9306,6 +9859,7 @@
     "prefix": "invoicing"
   },
   {
+    "name": "Amazon Security Lake",
     "actions": [
       "CreateAwsLogSource",
       "CreateCustomLogSource",
@@ -9342,6 +9896,9 @@
     "prefix": "securitylake"
   },
   {
+    "name": "AWS IoT FleetWise",
+    "arn_format": "arn:aws:iotfleetwise:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:iotfleetwise:.+:[0-9]+:.+",
     "actions": [
       "AssociateVehicleFleet",
       "BatchCreateVehicle",
@@ -9397,6 +9954,7 @@
     "prefix": "iotfleetwise"
   },
   {
+    "name": "AWS Price List",
     "actions": [
       "DescribeServices",
       "GetAttributeValues",
@@ -9407,6 +9965,9 @@
     "prefix": "pricing"
   },
   {
+    "name": "AWS Backup",
+    "arn_format": "arn:aws:backup:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:backup:.+:.+:.+",
     "actions": [
       "CancelLegalHold",
       "CopyFromBackupVault",
@@ -9486,10 +10047,14 @@
     "prefix": "backup"
   },
   {
+    "name": "Amazon Mobile Analytics",
     "actions": ["GetFinancialReports", "GetReports", "PutEvents"],
     "prefix": "mobileanalytics"
   },
   {
+    "name": "AWS Glue DataBrew",
+    "arn_format": "arn:aws:databrew:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:databrew:.+:.+:.+",
     "actions": [
       "BatchDeleteRecipeVersion",
       "CreateDataset",
@@ -9538,8 +10103,17 @@
     ],
     "prefix": "databrew"
   },
-  { "actions": ["GetRhelURL"], "prefix": "rhelkb" },
   {
+    "name": "Amazon RHEL Knowledgebase Portal",
+    "arn_format": "arn:${Partition}:rhelkb:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:rhelkb:.+",
+    "actions": ["GetRhelURL"],
+    "prefix": "rhelkb"
+  },
+  {
+    "name": "Amazon VPC Lattice",
+    "arn_format": "arn:aws:vpc-lattice:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:vpc-lattice:.+",
     "actions": [
       "CreateAccessLogSubscription",
       "CreateListener",
@@ -9596,6 +10170,9 @@
     "prefix": "vpc-lattice"
   },
   {
+    "name": "Amazon Braket",
+    "arn_format": "arn:aws:braket:{$Region}:{$AccountI}>:.+",
+    "arn_regex": "^arn:aws:braket::.+",
     "actions": [
       "CancelJob",
       "CancelQuantumTask",
@@ -9614,6 +10191,9 @@
     "prefix": "braket"
   },
   {
+    "name": "AWS IoT Device Tester",
+    "arn_format": "arn:${Partition}:iot-device-tester:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:.+:iot-device-tester:.+:.+:.+",
     "actions": [
       "CheckVersion",
       "DownloadTestSuite",
@@ -9624,6 +10204,9 @@
     "prefix": "iot-device-tester"
   },
   {
+    "name": "AWS Database Migration Service",
+    "arn_format": "arn:aws:dms:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:dms:.+",
     "actions": [
       "AddTagsToResource",
       "ApplyPendingMaintenanceAction",
@@ -9731,6 +10314,7 @@
     "prefix": "dms"
   },
   {
+    "name": "Amazon Session Manager Message Gateway Service",
     "actions": [
       "CreateControlChannel",
       "CreateDataChannel",
@@ -9740,6 +10324,9 @@
     "prefix": "ssmmessages"
   },
   {
+    "name": "AWS Network Firewall",
+    "arn_format": "arn:aws:network-firewall:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:network-firewall:.+:.+:.+",
     "actions": [
       "AssociateFirewallPolicy",
       "AssociateSubnets",
@@ -9781,6 +10368,7 @@
     "prefix": "network-firewall"
   },
   {
+    "name": "AWS Billing ",
     "actions": [
       "GetBillingData",
       "GetBillingDetails",
@@ -9799,6 +10387,9 @@
     "prefix": "billing"
   },
   {
+    "name": "AWS Artifact",
+    "arn_format": "arn:aws:artifact:::${Resource}",
+    "arn_regex": "^arn:aws:artifact::.+",
     "actions": [
       "AcceptAgreement",
       "DownloadAgreement",
@@ -9812,6 +10403,9 @@
     "prefix": "artifact"
   },
   {
+    "name": "AWS Systems Manager Incident Manager Contacts",
+    "arn_format": "arn:aws:ssm-contacts:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ssm-contacts:.+",
     "actions": [
       "AcceptPage",
       "ActivateContactChannel",
@@ -9856,6 +10450,9 @@
     "prefix": "ssm-contacts"
   },
   {
+    "name": "Amazon Transcribe",
+    "arn_format": "arn:aws:transcribe:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:transcribe:.+:.+:.+",
     "actions": [
       "CreateCallAnalyticsCategory",
       "CreateLanguageModel",
@@ -9906,6 +10503,9 @@
     "prefix": "transcribe"
   },
   {
+    "name": "AWS IQ Permissions",
+    "arn_format": "arn:aws:iq-permission:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iq-permission:.+",
     "actions": [
       "ApproveAccessGrant",
       "ApprovePermissionRequest",
@@ -9919,6 +10519,9 @@
     "prefix": "iq-permission"
   },
   {
+    "name": "AWS Elemental MediaPackage VOD",
+    "arn_format": "arn:aws:mediapackage-vod:${Region}:${Account}:${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:mediapackage-vod:.+:.+:.+",
     "actions": [
       "ConfigureLogs",
       "CreateAsset",
@@ -9941,6 +10544,9 @@
     "prefix": "mediapackage-vod"
   },
   {
+    "name": "AWS Device Farm",
+    "arn_format": "arn:aws:devicefarm:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:devicefarm:.+",
     "actions": [
       "CreateDevicePool",
       "CreateInstanceProfile",
@@ -10023,6 +10629,9 @@
     "prefix": "devicefarm"
   },
   {
+    "name": "AWS Ground Station",
+    "arn_format": "arn:aws:groundstation:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:groundstation:.+",
     "actions": [
       "CancelContact",
       "CreateConfig",
@@ -10061,6 +10670,9 @@
     "prefix": "groundstation"
   },
   {
+    "name": "Amazon DevOps Guru",
+    "arn_format": "arn:aws:devops-guru:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:devops-guru:.+:.+:.+/.+",
     "actions": [
       "AddNotificationChannel",
       "DeleteInsight",
@@ -10097,6 +10709,9 @@
     "prefix": "devops-guru"
   },
   {
+    "name": "AWS Signer",
+    "arn_format": "arn:aws:signer:${Region}:${Account}:/${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:signer:.+",
     "actions": [
       "AddProfilePermission",
       "CancelSigningProfile",
@@ -10119,13 +10734,18 @@
     "prefix": "signer"
   },
   {
+    "name": "AWS Purchase Orders Console",
+    "arn_format": "arn:${Partition}:purchase-orders::${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:${Partition}:purchase-orders::.+:.+:.+",
     "actions": [
       "AddPurchaseOrder",
       "DeletePurchaseOrder",
+      "GetConsoleActionSetEnforced",
       "GetPurchaseOrder",
       "ListPurchaseOrderInvoices",
       "ListPurchaseOrders",
       "ModifyPurchaseOrders",
+      "UpdateConsoleActionSetEnforced",
       "UpdatePurchaseOrder",
       "UpdatePurchaseOrderStatus",
       "ViewPurchaseOrders"
@@ -10133,6 +10753,9 @@
     "prefix": "purchase-orders"
   },
   {
+    "name": "Amazon OpenSearch Serverless",
+    "arn_format": "arn:aws:aoss:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:aoss:.+",
     "actions": [
       "BatchGetCollection",
       "BatchGetVpcEndpoint",
@@ -10169,6 +10792,9 @@
     "prefix": "aoss"
   },
   {
+    "name": "AWS Resource Groups",
+    "arn_format": "arn:aws:resource-groups:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:resource-groups:.+",
     "actions": [
       "CreateGroup",
       "DeleteGroup",
@@ -10193,6 +10819,9 @@
     "prefix": "resource-groups"
   },
   {
+    "name": "Amazon Honeycode",
+    "arn_format": "arn:aws:honeycode:${Region}:${Account}:${ResourceType}:${ResourcePath}",
+    "arn_regex": "^arn:aws:honeycode:.+:.+:.+",
     "actions": [
       "ApproveTeamAssociation",
       "BatchCreateTableRows",
@@ -10228,6 +10857,9 @@
     "prefix": "honeycode"
   },
   {
+    "name": "AWS Support Plans",
+    "arn_format": "^arn:${Partition}:supportplans::${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:${Partition}:supportplans::.+:.+",
     "actions": [
       "GetSupportPlan",
       "GetSupportPlanUpdateStatus",
@@ -10236,6 +10868,9 @@
     "prefix": "supportplans"
   },
   {
+    "name": "AWS IQ",
+    "arn_format": "arn:aws:iq:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iq:.+",
     "actions": [
       "AcceptCall",
       "ApprovePaymentRequest",
@@ -10295,6 +10930,9 @@
     "prefix": "iq"
   },
   {
+    "name": "AWS Telco Network Builder",
+    "arn_format": "arn:aws:tnb:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:tnb:.+",
     "actions": [
       "CancelSolNetworkOperation",
       "CreateSolFunctionPackage",
@@ -10333,6 +10971,9 @@
     "prefix": "tnb"
   },
   {
+    "name": "AWS Amplify UI Builder",
+    "arn_format": "arn:aws:amplifyuibuilder:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:amplifyuibuilder:.+:.+:.+",
     "actions": [
       "CreateComponent",
       "CreateForm",
@@ -10359,6 +11000,9 @@
     "prefix": "amplifyuibuilder"
   },
   {
+    "name": "Amazon WorkSpaces Web",
+    "arn_format": "arn:aws:workspaces-web:${Region}:${Account}:${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:workspaces-web:.+",
     "actions": [
       "AssociateBrowserSettings",
       "AssociateNetworkSettings",
@@ -10415,6 +11059,9 @@
     "prefix": "workspaces-web"
   },
   {
+    "name": "Amazon Elastic Container Registry Public",
+    "arn_format": "arn:aws:ecr-public::${Account}:${RepositoryOrRegistry}/${RepositoryNameOrAccountId}",
+    "arn_regex": "^arn:aws:ecr-public::.+",
     "actions": [
       "BatchCheckLayerAvailability",
       "BatchDeleteImage",
@@ -10443,6 +11090,9 @@
     "prefix": "ecr-public"
   },
   {
+    "name": "AWS Snow Device Management",
+    "arn_format": "arn:aws:snow-device-management:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:aws:snow-device-management:.+:.+:.+/.+",
     "actions": [
       "CancelTask",
       "CreateTask",
@@ -10461,10 +11111,16 @@
     "prefix": "snow-device-management"
   },
   {
+    "name": "Amazon API Gateway Management V2",
+    "arn_format": "arn:aws:apigateway:${Region}::${ApiGatewayResourcePath}",
+    "arn_regex": "^arn:aws:apigateway:.+",
     "actions": ["DELETE", "GET", "PATCH", "POST", "PUT"],
     "prefix": "apigateway"
   },
   {
+    "name": "Amazon API Gateway Management",
+    "arn_format": "arn:aws:apigateway:${Region}::${ApiGatewayResourcePath}",
+    "arn_regex": "^arn:aws:apigateway:.+",
     "actions": [
       "AddCertificateToDomain",
       "DELETE",
@@ -10479,6 +11135,9 @@
     "prefix": "apigateway"
   },
   {
+    "name": "Apache Kafka APIs for Amazon MSK clusters",
+    "arn_format": "arn:aws:kafka:${Region}:${Account}:${ResourceType}/${ResourceDescriptor}",
+    "arn_regex": "^arn:aws:kafka:.+",
     "actions": [
       "AlterCluster",
       "AlterClusterDynamicConfiguration",
@@ -10503,6 +11162,9 @@
     "prefix": "kafka-cluster"
   },
   {
+    "name": "AWS Identity and Access Management Roles Anywhere",
+    "arn_format": "arn:aws:rolesanywhere:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:rolesanywhere:.+:.+:.+",
     "actions": [
       "CreateProfile",
       "CreateTrustAnchor",
@@ -10534,6 +11196,9 @@
     "prefix": "rolesanywhere"
   },
   {
+    "name": "Amazon CodeWhisperer",
+    "arn_format": "arn:aws:codewhisperer:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:codewhisperer:.+:[0-9]+:.+",
     "actions": [
       "CreateProfile",
       "GenerateRecommendations",
@@ -10543,6 +11208,9 @@
     "prefix": "codewhisperer"
   },
   {
+    "name": "AWS Elemental Appliances and Software Activation Service",
+    "arn_format": "arn:aws:elemental-activations:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:elemental-activations:.+:.+:.+",
     "actions": [
       "CompleteAccountRegistration",
       "CompleteFileUpload",
@@ -10558,6 +11226,9 @@
     "prefix": "elemental-activations"
   },
   {
+    "name": "Amazon Managed Grafana",
+    "arn_format": "arn:aws:grafana:${Region}:${Account}:/${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:grafana:.+:.+:.+",
     "actions": [
       "AssociateLicense",
       "CreateWorkspace",
@@ -10581,6 +11252,9 @@
     "prefix": "grafana"
   },
   {
+    "name": "AWS App Mesh",
+    "arn_format": "arn:aws:appmesh:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:appmesh:.+:.+:.+",
     "actions": [
       "CreateGatewayRoute",
       "CreateMesh",
@@ -10625,6 +11299,9 @@
     "prefix": "appmesh"
   },
   {
+    "name": "Database Query Metadata Service",
+    "arn_format": "arn:${Partition}:dbqms::",
+    "arn_regex": "^arn:${Partition}:dbqms::.+",
     "actions": [
       "CreateFavoriteQuery",
       "CreateQueryHistory",
@@ -10643,6 +11320,9 @@
     "prefix": "dbqms"
   },
   {
+    "name": "Amazon Managed Streaming for Apache Kafka",
+    "arn_format": "arn:aws:kafka:${Region}:${Account}:${ResourceType}/${ResourceName}/${Uuid}",
+    "arn_regex": "^arn:aws:kafka:.+",
     "actions": [
       "BatchAssociateScramSecret",
       "BatchDisassociateScramSecret",
@@ -10684,6 +11364,9 @@
     "prefix": "kafka"
   },
   {
+    "name": "Amazon CodeGuru Reviewer",
+    "arn_format": "arn:aws:codeguru-reviewer:${Region}:${Account}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:codeguru-reviewer:.+:.+:.+",
     "actions": [
       "AssociateRepository",
       "CreateCodeReview",
@@ -10706,6 +11389,7 @@
     "prefix": "codeguru-reviewer"
   },
   {
+    "name": "AWS CodeDeploy secure host commands service",
     "actions": [
       "GetDeploymentSpecification",
       "PollHostCommand",
@@ -10715,6 +11399,9 @@
     "prefix": "codedeploy-commands-secure"
   },
   {
+    "name": "Amazon MemoryDB",
+    "arn_format": "arn:aws:memorydb:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:memorydb:.+:.+:.+",
     "actions": [
       "BatchUpdateCluster",
       "CopySnapshot",
@@ -10758,6 +11445,9 @@
     "prefix": "memorydb"
   },
   {
+    "name": "Amazon Pinpoint SMS Voice V2",
+    "arn_format": "arn:aws:sms-voice:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:sms-voice:.+",
     "actions": [
       "AssociateOriginationIdentity",
       "CreateConfigurationSet",
@@ -10806,6 +11496,9 @@
     "prefix": "sms-voice"
   },
   {
+    "name": "Amazon Pinpoint SMS and Voice Service",
+    "arn_format": "arn:aws:sms-voice:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:aws:sms-voice:.+:.+:.+",
     "actions": [
       "CreateConfigurationSet",
       "CreateConfigurationSetEventDestination",
@@ -10819,6 +11512,9 @@
     "prefix": "sms-voice"
   },
   {
+    "name": "AWS SimSpace Weaver",
+    "arn_format": "arn:aws:simspaceweaver:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:simspaceweaver:.+:.+:.+",
     "actions": [
       "DeleteApp",
       "DeleteSimulation",
@@ -10839,6 +11535,9 @@
     "prefix": "simspaceweaver"
   },
   {
+    "name": "Amazon CloudWatch",
+    "arn_format": "arn:aws:cloudwatch:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:cloudwatch:.+",
     "actions": [
       "DeleteAlarms",
       "DeleteAnomalyDetector",
@@ -10883,6 +11582,9 @@
     "prefix": "cloudwatch"
   },
   {
+    "name": "Amazon EC2 Auto Scaling",
+    "arn_format": "arn:aws:autoscaling:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:autoscaling:.+:.+:.+",
     "actions": [
       "AttachInstances",
       "AttachLoadBalancerTargetGroups",
@@ -10953,6 +11655,7 @@
     "prefix": "autoscaling"
   },
   {
+    "name": "AWS Snowball",
     "actions": [
       "CancelCluster",
       "CancelJob",
@@ -10984,6 +11687,9 @@
     "prefix": "snowball"
   },
   {
+    "name": "AWS Shield",
+    "arn_format": "arn:aws:shield::${Account}:${Resource}/${ResourceId}",
+    "arn_regex": "^arn:aws:shield::[0-9]+:.+/.+",
     "actions": [
       "AssociateDRTLogBucket",
       "AssociateDRTRole",
@@ -11025,6 +11731,9 @@
     "prefix": "shield"
   },
   {
+    "name": "AWS IoT TwinMaker",
+    "arn_format": "arn:aws:iottwinmaker:${Region}:${Account}:${ResourceType}/${ResourceTypeId}",
+    "arn_regex": "^arn:aws:iottwinmaker:.+:.+:.+",
     "actions": [
       "BatchPutPropertyValues",
       "CreateComponentType",
@@ -11064,6 +11773,9 @@
     "prefix": "iottwinmaker"
   },
   {
+    "name": "AWS Secrets Manager",
+    "arn_format": "arn:aws:secretsmanager:${Region}:${Account}:secret:${SecretId}",
+    "arn_regex": "^arn:aws:secretsmanager:.+",
     "actions": [
       "CancelRotateSecret",
       "CreateSecret",
@@ -11091,6 +11803,7 @@
     "prefix": "secretsmanager"
   },
   {
+    "name": "AWS Payments",
     "actions": [
       "CreatePaymentInstrument",
       "DeletePaymentInstrument",
@@ -11103,6 +11816,9 @@
     "prefix": "payments"
   },
   {
+    "name": "AWS Application Auto Scaling",
+    "arn_format": "arn:aws:application-autoscaling:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:application-autoscaling:.+:.+:.+",
     "actions": [
       "DeleteScalingPolicy",
       "DeleteScheduledAction",
@@ -11121,6 +11837,9 @@
     "prefix": "application-autoscaling"
   },
   {
+    "name": "Amazon FSx",
+    "arn_format": "arn:aws:fsx:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:fsx:.+",
     "actions": [
       "AssociateFileGateway",
       "AssociateFileSystemAliases",
@@ -11171,6 +11890,9 @@
     "prefix": "fsx"
   },
   {
+    "name": "AWS Amplify",
+    "arn_format": "arn:aws:amplify:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:amplify:.+:.+:.+",
     "actions": [
       "CreateApp",
       "CreateBackendEnvironment",
@@ -11213,6 +11935,9 @@
     "prefix": "amplify"
   },
   {
+    "name": "AWS App Mesh Preview",
+    "arn_format": "arn:aws:appmesh-preview:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:appmesh-preview:.+:.+:.+",
     "actions": [
       "CreateGatewayRoute",
       "CreateMesh",
@@ -11254,6 +11979,9 @@
     "prefix": "appmesh-preview"
   },
   {
+    "name": "Amazon Kinesis Video Streams",
+    "arn_format": "arn:aws:kinesisvideo:${Region}:${Account}:${ResourceType}/${ResourceName}/${CreationTime}",
+    "arn_regex": "^arn:aws:kinesisvideo:.+",
     "actions": [
       "ConnectAsMaster",
       "ConnectAsViewer",
@@ -11300,10 +12028,16 @@
     "prefix": "kinesisvideo"
   },
   {
+    "name": "Amazon API Gateway",
+    "arn_format": "arn:aws:execute-api:<region>:<account_id>:<api_id>/<stage>/<method>/<api_specific_resource_path>",
+    "arn_regex": "^arn:aws:execute-api:.+",
     "actions": ["InvalidateCache", "Invoke", "ManageConnections"],
     "prefix": "execute-api"
   },
   {
+    "name": "AWS Migration Hub Strategy Recommendations",
+    "arn_format": "arn:${Partition}:iam:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:${ServiceName}:.+:.+:.+",
     "actions": [
       "GetAntiPattern",
       "GetApplicationComponentDetails",
@@ -11337,6 +12071,9 @@
     "prefix": "migrationhub-strategy"
   },
   {
+    "name": "AWS Elemental MediaLive",
+    "arn_format": "arn:aws:medialive:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:medialive:${Region}:${Account}:.+",
     "actions": [
       "AcceptInputDeviceTransfer",
       "BatchDelete",
@@ -11401,6 +12138,9 @@
     "prefix": "medialive"
   },
   {
+    "name": "AWS CloudShell",
+    "arn_format": "arn:aws:cloudshell:${Region}:${Account}:environment/${EnvironmentId}",
+    "arn_regex": "^arn:aws:cloudshell:${Region}:${Account}:environment/.+?",
     "actions": [
       "CreateEnvironment",
       "CreateSession",
@@ -11415,6 +12155,9 @@
     "prefix": "cloudshell"
   },
   {
+    "name": "Amazon Location",
+    "arn_format": "arn:aws:geo:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:geo:.+",
     "actions": [
       "AssociateTrackerConsumer",
       "BatchDeleteDevicePositionHistory",
@@ -11478,6 +12221,9 @@
     "prefix": "geo"
   },
   {
+    "name": "AWS Key Management Service",
+    "arn_format": "arn:aws:kms:${Region}:${Account}:${ResourceType}/${Id}",
+    "arn_regex": "^arn:aws:kms:.+",
     "actions": [
       "CancelKeyDeletion",
       "ConnectCustomKeyStore",
@@ -11535,6 +12281,9 @@
     "prefix": "kms"
   },
   {
+    "name": "Amazon SageMaker Ground Truth Synthetic",
+    "arn_format": "arn:${Partition}:sagemaker-groundtruth-synthetic:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:${Partition}:sagemaker-groundtruth-synthetic:.+",
     "actions": [
       "CreateProject",
       "DeleteProject",
@@ -11552,6 +12301,9 @@
     "prefix": "sagemaker-groundtruth-synthetic"
   },
   {
+    "name": "AWS CloudHSM",
+    "arn_format": "arn:aws:cloudhsm:${Region}:${Account}:${ResourceName}",
+    "arn_regex": "^arn:aws:cloudhsm:.+",
     "actions": [
       "AddTagsToResource",
       "CopyBackupToRegion",
@@ -11589,8 +12341,17 @@
     ],
     "prefix": "cloudhsm"
   },
-  { "actions": ["GetCodeGuruFreeTrialSummary"], "prefix": "codeguru" },
   {
+    "name": "Amazon CodeGuru",
+    "arn_format": "arn:${Partition}:codeguru:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:codeguru:.+:.+:.+",
+    "actions": ["GetCodeGuruFreeTrialSummary"],
+    "prefix": "codeguru"
+  },
+  {
+    "name": "Amazon EC2",
+    "arn_format": "arn:aws:ec2:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:ec2:.+",
     "actions": [
       "AcceptAddressTransfer",
       "AcceptReservedInstancesExchangeQuote",
@@ -12195,6 +12956,7 @@
     "prefix": "ec2"
   },
   {
+    "name": "AWS Import Export Disk Service",
     "actions": [
       "CancelJob",
       "CreateJob",
@@ -12205,8 +12967,17 @@
     ],
     "prefix": "importexport"
   },
-  { "actions": ["GetConfig"], "prefix": "serviceextract" },
   {
+    "name": "AWS Microservice Extractor for .NET",
+    "arn_format": "arn:${Partition}:serviceextract:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:serviceextract:.+:.+:.+",
+    "actions": ["GetConfig"],
+    "prefix": "serviceextract"
+  },
+  {
+    "name": "AWS Data Pipeline",
+    "arn_format": "arn:aws:datapipeline:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:datapipeline:.+:.+",
     "actions": [
       "ActivatePipeline",
       "AddTags",
@@ -12233,6 +13004,9 @@
     "prefix": "datapipeline"
   },
   {
+    "name": "AWS Server Migration Service",
+    "arn_format": "arn:aws:<serviceName>:<region>:<account-id>:<resource-type>/<resource_name>",
+    "arn_regex": "^arn:aws:<serviceName>:.+:.+:.+",
     "actions": [
       "CreateApp",
       "CreateReplicationJob",
@@ -12275,6 +13049,9 @@
     "prefix": "sms"
   },
   {
+    "name": "Amazon SageMaker geospatial capabilities",
+    "arn_format": "arn:aws:sagemaker-geospatial:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:sagemaker-geospatial:.+:.+",
     "actions": [
       "DeleteEarthObservationJob",
       "DeleteVectorEnrichmentJob",
@@ -12299,6 +13076,9 @@
     "prefix": "sagemaker-geospatial"
   },
   {
+    "name": "Amazon Monitron",
+    "arn_format": "arn:aws:monitron:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:monitron:.+:.+:.+",
     "actions": [
       "AssociateProjectAdminUser",
       "CreateProject",
@@ -12316,6 +13096,9 @@
     "prefix": "monitron"
   },
   {
+    "name": "AWS CloudFormation",
+    "arn_format": "arn:aws:cloudformation:${Region}:${Account}:${ResourceType}/${Id}",
+    "arn_regex": "^arn:aws:cloudformation:.+:[0-9]+:.+",
     "actions": [
       "ActivateType",
       "BatchDescribeTypeConfigurations",
@@ -12390,6 +13173,9 @@
     "prefix": "cloudformation"
   },
   {
+    "name": "AWS Cloud Control API",
+    "arn_format": "arn:aws:cloudformation:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:cloudformation:.+:[0-9]+:.+",
     "actions": [
       "CancelResourceRequest",
       "CreateResource",
@@ -12403,10 +13189,16 @@
     "prefix": "cloudformation"
   },
   {
+    "name": "Amazon WorkMail Message Flow",
+    "arn_format": "arn:aws:workmailmessageflow:${Region}:${Account}:message/${OrganizationId}/${Context}/${MessageId}",
+    "arn_regex": "^arn:aws:workmailmessageflow:.+:.+:.+",
     "actions": ["GetRawMessageContent", "PutRawMessageContent"],
     "prefix": "workmailmessageflow"
   },
   {
+    "name": "AWS Recycle Bin",
+    "arn_format": "arn:aws:rbin:${Region}:${Account}:rule/${ResourceName}",
+    "arn_regex": "^arn:aws:rbin:.+:.+:.+",
     "actions": [
       "CreateRule",
       "DeleteRule",
@@ -12422,6 +13214,9 @@
     "prefix": "rbin"
   },
   {
+    "name": "AWS Chatbot",
+    "arn_format": "arn:aws:chatbot::${Account}:chat-configuration/${ConfigurationType}/${ChatbotConfigurationName}",
+    "arn_regex": "^arn:aws:chatbot:.+",
     "actions": [
       "CreateChimeWebhookConfiguration",
       "CreateMicrosoftTeamsChannelConfiguration",
@@ -12455,6 +13250,9 @@
     "prefix": "chatbot"
   },
   {
+    "name": "Amazon Macie",
+    "arn_format": "arn:aws:macie2:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:macie2:.+:.+:.+",
     "actions": [
       "AcceptInvitation",
       "BatchGetCustomDataIdentifiers",
@@ -12539,6 +13337,9 @@
     "prefix": "macie2"
   },
   {
+    "name": "AWS Migration Hub Orchestrator",
+    "arn_format": "arn:aws:migrationhub-orchestrator:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:migrationhub-orchestrator:.+:.+:.+",
     "actions": [
       "CreateWorkflow",
       "CreateWorkflowStep",
@@ -12575,6 +13376,9 @@
     "prefix": "migrationhub-orchestrator"
   },
   {
+    "name": "AWS Mainframe Modernization Service",
+    "arn_format": "arn:aws:m2:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:m2:${Region}:${Account}:.+",
     "actions": [
       "CancelBatchJobExecution",
       "CreateApplication",
@@ -12612,6 +13416,9 @@
     "prefix": "m2"
   },
   {
+    "name": "AWS Health APIs and Notifications",
+    "arn_format": "arn:aws:health::${Namespace}:${RelativeId}",
+    "arn_regex": "^arn:aws:health:[^:]*:[^:]*:.+",
     "actions": [
       "DescribeAffectedAccountsForOrganization",
       "DescribeAffectedEntities",
@@ -12630,6 +13437,9 @@
     "prefix": "health"
   },
   {
+    "name": "AWS Outposts",
+    "arn_format": "arn:aws:outposts:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:outposts:.+:.+:.+",
     "actions": [
       "CancelOrder",
       "CreateOrder",
@@ -12663,6 +13473,9 @@
     "prefix": "outposts"
   },
   {
+    "name": "Amazon GameLift",
+    "arn_format": "arn:aws:gamelift:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:gamelift:.+",
     "actions": [
       "AcceptMatch",
       "ClaimGameServer",
@@ -12772,6 +13585,9 @@
     "prefix": "gamelift"
   },
   {
+    "name": "AWS IoT Fleet Hub for Device Management",
+    "arn_format": "arn:aws:iotfleethub:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iotfleethub:.+:.+:.+",
     "actions": [
       "CreateApplication",
       "DeleteApplication",
@@ -12785,6 +13601,9 @@
     "prefix": "iotfleethub"
   },
   {
+    "name": "Amazon Route 53 Recovery Controls",
+    "arn_format": "arn:aws:route53-recovery-control::${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:route53-recovery-control::.+:.+",
     "actions": [
       "CreateCluster",
       "CreateControlPanel",
@@ -12814,6 +13633,9 @@
     "prefix": "route53-recovery-control-config"
   },
   {
+    "name": "AWS OpsWorks Configuration Management",
+    "arn_format": "arn:aws:opsworks-cm:<region>:<account>:<resourceType>/<id>",
+    "arn_regex": "^arn:aws:opsworks-cm:.+:[0-9]+:.+",
     "actions": [
       "AssociateNode",
       "CreateBackup",
@@ -12838,6 +13660,9 @@
     "prefix": "opsworks-cm"
   },
   {
+    "name": "Amazon Timestream",
+    "arn_format": "arn:aws:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}",
+    "arn_regex": "^arn:aws:timestream:.+",
     "actions": [
       "CancelQuery",
       "CreateBatchLoadTask",
@@ -12877,6 +13702,9 @@
     "prefix": "timestream"
   },
   {
+    "name": "AWS IoT RoboRunner",
+    "arn_format": "arn:aws:iotroborunner:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:iotroborunner:.+:.+:.+",
     "actions": [
       "CreateDestination",
       "CreateSite",
@@ -12902,10 +13730,16 @@
     "prefix": "iotroborunner"
   },
   {
+    "name": "Amazon EC2 Instance Connect",
+    "arn_format": "arn:aws:ec2:<region>:<account>:<resourceType>/<resourcePath>",
+    "arn_regex": "^arn:aws:ec2:.+",
     "actions": ["SendSSHPublicKey", "SendSerialConsoleSSHPublicKey"],
     "prefix": "ec2-instance-connect"
   },
   {
+    "name": "Amazon Interactive Video Service Chat",
+    "arn_format": "arn:aws:ivschat:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:ivschat:.+:.+:.+",
     "actions": [
       "CreateChatToken",
       "CreateLoggingConfiguration",
@@ -12927,8 +13761,15 @@
     ],
     "prefix": "ivschat"
   },
-  { "actions": ["connect"], "prefix": "rds-db" },
   {
+    "name": "Amazon RDS IAM Authentication",
+    "arn_format": "arn:aws:rds-db:<region>:<account-id>:dbuser:<dbi-resource-id>/<db-user-name>",
+    "arn_regex": "^arn:aws:rds-db:.+",
+    "actions": ["connect"],
+    "prefix": "rds-db"
+  },
+  {
+    "name": "AWS Application Discovery Service",
     "actions": [
       "AssociateConfigurationItemsToApplication",
       "BatchDeleteImportData",
@@ -12960,6 +13801,9 @@
     "prefix": "discovery"
   },
   {
+    "name": "Amazon Elastic Block Store",
+    "arn_format": "arn:aws:ebs:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:ebs:.+",
     "actions": [
       "CompleteSnapshot",
       "GetSnapshotBlock",
@@ -12971,6 +13815,9 @@
     "prefix": "ebs"
   },
   {
+    "name": "AWS CodeCommit",
+    "arn_format": "arn:aws:codecommit:${Region}:${Account}:${RepositoryName}",
+    "arn_regex": "^arn:aws:codecommit:.+",
     "actions": [
       "AssociateApprovalRuleTemplateWithRepository",
       "BatchAssociateApprovalRuleTemplateWithRepositories",
@@ -13064,6 +13911,9 @@
     "prefix": "codecommit"
   },
   {
+    "name": "Amazon CodeGuru Profiler",
+    "arn_format": "arn:aws:codeguru-profiler:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:codeguru-profiler:.+:.+:.+",
     "actions": [
       "AddNotificationChannels",
       "BatchGetFrameMetricData",
@@ -13092,6 +13942,9 @@
     "prefix": "codeguru-profiler"
   },
   {
+    "name": "AWS IoT Core Device Advisor",
+    "arn_format": "arn:aws:iotdeviceadvisor:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:iotdeviceadvisor:.+",
     "actions": [
       "CreateSuiteDefinition",
       "DeleteSuiteDefinition",
@@ -13111,6 +13964,9 @@
     "prefix": "iotdeviceadvisor"
   },
   {
+    "name": "AWS Marketplace Vendor Insights",
+    "arn_format": "arn:aws:vendor-insights:::${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:vendor-insights:.+",
     "actions": [
       "ActivateSecurityProfile",
       "AssociateDataSource",
@@ -13139,6 +13995,9 @@
     "prefix": "vendor-insights"
   },
   {
+    "name": "Amazon SNS",
+    "arn_format": "arn:aws:sns:${Region}:${Account}:${TopicName}",
+    "arn_regex": "^arn:aws:sns:.+",
     "actions": [
       "AddPermission",
       "CheckIfPhoneNumberIsOptedOut",
@@ -13185,6 +14044,9 @@
     "prefix": "sns"
   },
   {
+    "name": "Amazon Cognito User Pools",
+    "arn_format": "arn:aws:cognito-idp:${Region}:${Account}:${ResourceType}/${ResourcePath}:",
+    "arn_regex": "^arn:aws:cognito-idp:.+",
     "actions": [
       "AddCustomAttributes",
       "AdminAddUserToGroup",
@@ -13295,10 +14157,16 @@
     "prefix": "cognito-idp"
   },
   {
+    "name": "AWS Tag Editor",
+    "arn_format": "arn:${Partition}:resource-explorer:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:resource-explorer:.+",
     "actions": ["ListResourceTypes", "ListResources", "ListTags"],
     "prefix": "resource-explorer"
   },
   {
+    "name": "Amazon DataZone Control",
+    "arn_format": "arn:aws:datazonecontrol:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:datazonecontrol:.+:.+:.+",
     "actions": [
       "CreateAccountAssociationInvitation",
       "CreateDataSource",
@@ -13333,6 +14201,9 @@
     "prefix": "datazonecontrol"
   },
   {
+    "name": "AWS Elastic Beanstalk",
+    "arn_format": "arn:aws:elasticbeanstalk:${Region}:${AccountID}:${ResourceType}/${PathToResource}",
+    "arn_regex": "^arn:aws:elasticbeanstalk:.+:.*:.+/.+",
     "actions": [
       "AbortEnvironmentUpdate",
       "AddTags",
@@ -13388,6 +14259,7 @@
     "prefix": "elasticbeanstalk"
   },
   {
+    "name": "Amazon CloudWatch Application Insights",
     "actions": [
       "CreateApplication",
       "CreateComponent",
@@ -13421,6 +14293,9 @@
     "prefix": "applicationinsights"
   },
   {
+    "name": "AWS Elastic Load Balancing",
+    "arn_format": "arn:aws:elasticloadbalancing:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:elasticloadbalancing:.+",
     "actions": [
       "AddTags",
       "ApplySecurityGroupsToLoadBalancer",
@@ -13454,6 +14329,9 @@
     "prefix": "elasticloadbalancing"
   },
   {
+    "name": "Elastic Load Balancing V2",
+    "arn_format": "arn:aws:elasticloadbalancing:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:elasticloadbalancing:.+",
     "actions": [
       "AddListenerCertificates",
       "AddTags",
@@ -13493,8 +14371,16 @@
     ],
     "prefix": "elasticloadbalancing"
   },
-  { "actions": ["CreateDatabaseBinarySnapshot"], "prefix": "mediaimport" },
   {
+    "name": "AmazonMediaImport",
+    "arn_format": "arn:aws:mediaimport:${Region}:${Account}/*",
+    "actions": ["CreateDatabaseBinarySnapshot"],
+    "prefix": "mediaimport"
+  },
+  {
+    "name": "Amazon Lookout for Equipment",
+    "arn_format": "arn:aws:lookoutequipment:${Region}:${Account}:${ResourceType}/${ResourceName}/${ResourceId}",
+    "arn_regex": "^arn:aws:lookoutequipment:.+:.+:.+",
     "actions": [
       "CreateDataset",
       "CreateInferenceScheduler",
@@ -13533,6 +14419,9 @@
     "prefix": "lookoutequipment"
   },
   {
+    "name": "Amazon Lookout for Metrics",
+    "arn_format": "arn:aws:lookoutmetrics:${Region}:${AccountId}:${ResourceType}:${ResourceName}",
+    "arn_regex": "^arn:aws:lookoutmetrics:.+:.+:.+",
     "actions": [
       "ActivateAnomalyDetector",
       "BackTestAnomalyDetector",
@@ -13568,10 +14457,14 @@
     "prefix": "lookoutmetrics"
   },
   {
+    "name": "AWS Marketplace Commerce Analytics Service",
     "actions": ["GenerateDataSet", "StartSupportDataExport"],
     "prefix": "marketplacecommerceanalytics"
   },
   {
+    "name": "Amazon Translate",
+    "arn_format": "arn:aws:translate:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:translate:.+:.+:.+",
     "actions": [
       "CreateParallelData",
       "DeleteParallelData",
@@ -13595,6 +14488,9 @@
     "prefix": "translate"
   },
   {
+    "name": "AWS WAF Regional",
+    "arn_format": "arn:aws:waf-regional:${Region}:${Account}:${ResourceId}/${Id}",
+    "arn_regex": "^arn:aws:waf-regional:.+:[0-9]+:.+/.+",
     "actions": [
       "AssociateWebACL",
       "CreateByteMatchSet",
@@ -13681,6 +14577,9 @@
     "prefix": "waf-regional"
   },
   {
+    "name": "Amazon Elastic Container Service",
+    "arn_format": "arn:aws:ecs:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:ecs:.+",
     "actions": [
       "CreateCapacityProvider",
       "CreateCluster",
@@ -13744,6 +14643,9 @@
     "prefix": "ecs"
   },
   {
+    "name": "Amazon Elastic Container Registry",
+    "arn_format": "arn:aws:ecr:${Region}:${Account}:repository/${RepositoryName}",
+    "arn_regex": "^arn:aws:ecr:.+",
     "actions": [
       "BatchCheckLayerAvailability",
       "BatchDeleteImage",
@@ -13792,6 +14694,9 @@
     "prefix": "ecr"
   },
   {
+    "name": "Amazon DynamoDB Accelerator (DAX)",
+    "arn_format": "arn:aws:dax:${Region}:${Account}:cache/${ClusterName}",
+    "arn_regex": "^arn:aws:dax:.+:[0-9]+:cache/[a-zA-Z0-9_.-]+",
     "actions": [
       "BatchGetItem",
       "BatchWriteItem",
@@ -13827,6 +14732,7 @@
     "prefix": "dax"
   },
   {
+    "name": "Amazon Resource Group Tagging API",
     "actions": [
       "DescribeReportCreation",
       "GetComplianceSummary",
@@ -13840,6 +14746,9 @@
     "prefix": "tag"
   },
   {
+    "name": "Amazon CloudWatch Logs",
+    "arn_format": "arn:aws:logs:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:logs:.+",
     "actions": [
       "AssociateKmsKey",
       "CancelExportTask",
@@ -13900,6 +14809,9 @@
     "prefix": "logs"
   },
   {
+    "name": "Amazon Redshift Serverless",
+    "arn_format": "arn:aws:redshift-serverless:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:redshift-serverless:.+:.+:.+",
     "actions": [
       "ConvertRecoveryPointToSnapshot",
       "CreateEndpointAccess",
@@ -13945,6 +14857,9 @@
     "prefix": "redshift-serverless"
   },
   {
+    "name": "AWS Backup Gateway",
+    "arn_format": "arn:aws:backup-gateway:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:*:backup-gateway:.+:.+:.+",
     "actions": [
       "AssociateGatewayToServer",
       "Backup",
@@ -13977,6 +14892,9 @@
     "prefix": "backup-gateway"
   },
   {
+    "name": "AWS Service Catalog",
+    "arn_format": "arn:aws:(catalog|servicecatalog):${Region}:${Account}:${ResourceType}/${Id}",
+    "arn_regex": "^arn:aws:(catalog|servicecatalog):.+",
     "actions": [
       "AcceptPortfolioShare",
       "AssociateAttributeGroup",
@@ -14096,6 +15014,9 @@
     "prefix": "servicecatalog"
   },
   {
+    "name": "AWS Elastic Disaster Recovery",
+    "arn_format": "arn:aws:drs:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:drs:.+",
     "actions": [
       "AssociateFailbackClientToRecoveryInstanceForDrs",
       "BatchCreateVolumeSnapshotGroupForDrs",
@@ -14176,6 +15097,9 @@
     "prefix": "drs"
   },
   {
+    "name": "Amazon MQ",
+    "arn_format": "arn:aws:mq:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:mq:.+",
     "actions": [
       "CreateBroker",
       "CreateConfiguration",
@@ -14203,6 +15127,9 @@
     "prefix": "mq"
   },
   {
+    "name": "AWS Control Tower",
+    "arn_format": "arn:${Partition}:controltower:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:controltower:.+:.+:.+",
     "actions": [
       "CreateManagedAccount",
       "DeleteLandingZone",
@@ -14250,6 +15177,9 @@
     "prefix": "controltower"
   },
   {
+    "name": "Amazon Nimble Studio",
+    "arn_format": "arn:aws:nimble:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:nimble:.+:.+:.+",
     "actions": [
       "AcceptEulas",
       "CreateLaunchProfile",
@@ -14306,6 +15236,9 @@
     "prefix": "nimble"
   },
   {
+    "name": "Amazon Managed Workflows for Apache Airflow",
+    "arn_format": "arn:aws:airflow:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:airflow:.+:.+:.+",
     "actions": [
       "CreateCliToken",
       "CreateEnvironment",
@@ -14322,6 +15255,7 @@
     "prefix": "airflow"
   },
   {
+    "name": "AWS Tax Settings",
     "actions": [
       "BatchPutTaxRegistration",
       "DeleteTaxRegistration",
@@ -14339,6 +15273,9 @@
     "prefix": "tax"
   },
   {
+    "name": "Amazon S3 Object Lambda",
+    "arn_format": "arn:aws:s3-object-lambda:::accesspoint/<access point name>",
+    "arn_regex": "^arn:aws:s3-object-lambda:::.+",
     "actions": [
       "AbortMultipartUpload",
       "DeleteObject",
@@ -14369,8 +15306,17 @@
     ],
     "prefix": "s3-object-lambda"
   },
-  { "actions": ["GetCarbonFootprintSummary"], "prefix": "sustainability" },
   {
+    "name": "AWS Sustainability",
+    "arn_format": "arn:${Partition}:sustainability:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:${Partition}:sustainability:.+:.+:.+",
+    "actions": ["GetCarbonFootprintSummary"],
+    "prefix": "sustainability"
+  },
+  {
+    "name": "Amazon Personalize",
+    "arn_format": "arn:aws:personalize:${Region}:${Account}:${Resourcename}/${ResourceId}",
+    "arn_regex": "^arn:aws:personalize:.+:.+:.+",
     "actions": [
       "CreateBatchInferenceJob",
       "CreateBatchSegmentJob",
@@ -14447,6 +15393,9 @@
     "prefix": "personalize"
   },
   {
+    "name": "AWS Cloud9",
+    "arn_format": "arn:aws:cloud9:${Region}:${Account}:${ResourceType}:${ResourceId}",
+    "arn_regex": "^arn:aws:cloud9:.+:[0-9]+:.+:.+",
     "actions": [
       "ActivateEC2Remote",
       "CreateEnvironmentEC2",
@@ -14481,6 +15430,9 @@
     "prefix": "cloud9"
   },
   {
+    "name": "AWS Elemental Appliances and Software",
+    "arn_format": "arn:aws:elemental-appliances-software:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:elemental-appliances-software:.+:.+:.+",
     "actions": [
       "CompleteUpload",
       "CreateOrderV1",
@@ -14503,6 +15455,9 @@
     "prefix": "elemental-appliances-software"
   },
   {
+    "name": "Amazon Detective",
+    "arn_format": "arn:aws:detective:${Region}:${Account}:graph:${GraphId}",
+    "arn_regex": "^arn:aws:detective:.+",
     "actions": [
       "AcceptInvitation",
       "BatchGetGraphMemberDatasources",
@@ -14538,6 +15493,9 @@
     "prefix": "detective"
   },
   {
+    "name": "AWS Transfer Family",
+    "arn_format": "arn:aws:transfer:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:transfer:.+:.+:.+",
     "actions": [
       "CreateAccess",
       "CreateAgreement",
@@ -14601,6 +15559,9 @@
     "prefix": "transfer"
   },
   {
+    "name": "AWS Panorama",
+    "arn_format": "arn:aws:panorama:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:panorama:.+:.+:.+",
     "actions": [
       "CreateApplicationInstance",
       "CreateJobForDevices",
@@ -14642,6 +15603,9 @@
     "prefix": "panorama"
   },
   {
+    "name": "AWS IAM Access Analyzer",
+    "arn_format": "arn:aws:access-analyzer:${Region}:${Account}:analyzer/${AnalyzerName}",
+    "arn_regex": "^arn:aws:access-analyzer:.+",
     "actions": [
       "ApplyArchiveRule",
       "CancelPolicyGeneration",
@@ -14675,6 +15639,9 @@
     "prefix": "access-analyzer"
   },
   {
+    "name": "Amazon Omics",
+    "arn_format": "arn:aws:omics:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:omics:${Region}:${Account}:${ResourceType}/.+?",
     "actions": [
       "BatchDeleteReadSet",
       "CancelAnnotationImportJob",
@@ -14746,6 +15713,9 @@
     "prefix": "omics"
   },
   {
+    "name": "Amazon Textract",
+    "arn_format": "arn:${Partition}:textract:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:${Partition}:textract:.+",
     "actions": [
       "AnalyzeDocument",
       "AnalyzeExpense",
@@ -14764,6 +15734,7 @@
     "prefix": "textract"
   },
   {
+    "name": "AWS Activate",
     "actions": [
       "CreateForm",
       "GetAccountContact",
@@ -14777,6 +15748,9 @@
     "prefix": "activate"
   },
   {
+    "name": "Amazon Kendra Intelligent Ranking",
+    "arn_format": "arn:aws:kendra-ranking:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:kendra-ranking:.+:.+:.+",
     "actions": [
       "CreateRescoreExecutionPlan",
       "DeleteRescoreExecutionPlan",
@@ -14791,6 +15765,9 @@
     "prefix": "kendra-ranking"
   },
   {
+    "name": "Amazon AppIntegrations",
+    "arn_format": "arn:aws:app-integrations:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:app-integrations:.+:.+:.+",
     "actions": [
       "CreateDataIntegration",
       "CreateDataIntegrationAssociation",
@@ -14814,8 +15791,15 @@
     ],
     "prefix": "app-integrations"
   },
-  { "actions": ["RegisterOnPremisesAgent"], "prefix": "arsenal" },
   {
+    "name": "Application Discovery Arsenal",
+    "actions": ["RegisterOnPremisesAgent"],
+    "prefix": "arsenal"
+  },
+  {
+    "name": "Amazon FinSpace",
+    "arn_format": "arn:aws:finspace:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:finspace:.+",
     "actions": [
       "CreateEnvironment",
       "CreateUser",
@@ -14836,6 +15820,9 @@
     "prefix": "finspace"
   },
   {
+    "name": "Amazon GroundTruth Labeling",
+    "arn_format": "arn:${Partition}:groundtruthlabeling:${region}:${account}:${resourceType}/${resourcePath}",
+    "arn_regex": "^arn:${Partition}:groundtruthlabeling:.+",
     "actions": [
       "AssociatePatchToManifestJob",
       "DescribeConsoleJob",
@@ -14846,6 +15833,9 @@
     "prefix": "groundtruthlabeling"
   },
   {
+    "name": "Amazon S3 on Outposts",
+    "arn_format": "arn:aws:s3-outposts:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:s3-outposts:.+",
     "actions": [
       "AbortMultipartUpload",
       "CreateAccessPoint",
@@ -14870,7 +15860,9 @@
       "GetObject",
       "GetObjectTagging",
       "GetObjectVersion",
+      "GetObjectVersionForReplication",
       "GetObjectVersionTagging",
+      "GetReplicationConfiguration",
       "ListAccessPoints",
       "ListBucket",
       "ListBucketMultipartUploads",
@@ -14888,11 +15880,18 @@
       "PutObject",
       "PutObjectAcl",
       "PutObjectTagging",
-      "PutObjectVersionTagging"
+      "PutObjectVersionTagging",
+      "PutReplicationConfiguration",
+      "ReplicateDelete",
+      "ReplicateObject",
+      "ReplicateTags"
     ],
     "prefix": "s3-outposts"
   },
   {
+    "name": "AWS Elemental MediaStore",
+    "arn_format": "arn:aws:mediastore:${Region}:${Account}:${Resource}",
+    "arn_regex": "^arn:aws:mediastore:.+:.+",
     "actions": [
       "CreateContainer",
       "DeleteContainer",
@@ -14924,6 +15923,9 @@
     "prefix": "mediastore"
   },
   {
+    "name": "AWS BugBust",
+    "arn_format": "arn:aws:bugbust:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:bugbust:.+:.+:.+",
     "actions": [
       "CreateEvent",
       "EvaluateProfilingGroups",
@@ -14946,6 +15948,9 @@
     "prefix": "bugbust"
   },
   {
+    "name": "Amazon HealthLake",
+    "arn_format": "arn:aws:healthlake:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:healthlake:.+:.+:.+",
     "actions": [
       "CreateFHIRDatastore",
       "CreateResource",
@@ -14971,6 +15976,9 @@
     "prefix": "healthlake"
   },
   {
+    "name": "AWS Resource Explorer",
+    "arn_format": "arn:aws:resource-explorer-2:${Region}:${Account}:${ResourceType}/${ResourceIdentifier}",
+    "arn_regex": "^arn:aws:resource-explorer-2:.+:.+:.+",
     "actions": [
       "AssociateDefaultView",
       "BatchGetView",
@@ -14995,6 +16003,9 @@
     "prefix": "resource-explorer-2"
   },
   {
+    "name": "AWS IoT 1-Click",
+    "arn_format": "arn:aws:iot1click:${Region}:${Account}:${Type}/${Name}",
+    "arn_regex": "^arn:aws:iot1click:.+:[0-9]+:.+",
     "actions": [
       "AssociateDeviceWithPlacement",
       "ClaimDevicesByClaimCode",
@@ -15026,6 +16037,9 @@
     "prefix": "iot1click"
   },
   {
+    "name": "Amazon Managed Streaming for Kafka Connect",
+    "arn_format": "arn:aws:kafkaconnect:${Region}:${Account}:${ResourceType}/${ResourceName}/${UUID}",
+    "arn_regex": "^arn:aws:kafkaconnect:.+",
     "actions": [
       "CreateConnector",
       "CreateCustomPlugin",
@@ -15043,6 +16057,9 @@
     "prefix": "kafkaconnect"
   },
   {
+    "name": "AWS CodePipeline",
+    "arn_format": "arn:aws:codepipeline:${Region}:${Account}:${PathToPipelineResource}",
+    "arn_regex": "^arn:aws:codepipeline:.+",
     "actions": [
       "AcknowledgeJob",
       "AcknowledgeThirdPartyJob",
@@ -15087,6 +16104,9 @@
     "prefix": "codepipeline"
   },
   {
+    "name": "AWS Security Hub",
+    "arn_format": "arn:aws:securityhub:${Region}:${Account}:.+",
+    "arn_regex": "^arn:aws:securityhub:.+",
     "actions": [
       "AcceptAdministratorInvitation",
       "AcceptInvitation",
@@ -15162,6 +16182,9 @@
     "prefix": "securityhub"
   },
   {
+    "name": "Amazon EC2 Image Builder",
+    "arn_format": "arn:aws:imagebuilder:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:imagebuilder:.+:.+:.+",
     "actions": [
       "CancelImageCreation",
       "CreateComponent",
@@ -15223,6 +16246,9 @@
     "prefix": "imagebuilder"
   },
   {
+    "name": "Amazon SQS",
+    "arn_format": "arn:aws:sqs:${Region}:${Account}:${QueueName}",
+    "arn_regex": "^arn:aws:sqs:.+",
     "actions": [
       "AddPermission",
       "ChangeMessageVisibility",
@@ -15245,6 +16271,9 @@
     "prefix": "sqs"
   },
   {
+    "name": "AWS Cloud Map",
+    "arn_format": "arn:aws:servicediscovery:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:servicediscovery:.+",
     "actions": [
       "CreateHttpNamespace",
       "CreatePrivateDnsNamespace",
@@ -15276,6 +16305,9 @@
     "prefix": "servicediscovery"
   },
   {
+    "name": "AWS Tiros",
+    "arn_format": "arn:${Partition}:tiros:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:tiros::.+",
     "actions": [
       "CreateQuery",
       "ExtendQuery",
@@ -15286,6 +16318,7 @@
     "prefix": "tiros"
   },
   {
+    "name": "AWS Compute Optimizer",
     "actions": [
       "DeleteRecommendationPreferences",
       "DescribeRecommendationExportJobs",
@@ -15312,6 +16345,9 @@
     "prefix": "compute-optimizer"
   },
   {
+    "name": "Amazon S3 Glacier",
+    "arn_format": "arn:aws:glacier:${Region}:${Account}:vault/${VaultName}",
+    "arn_regex": "^arn:aws:glacier:.+:.+:.+",
     "actions": [
       "AbortMultipartUpload",
       "AbortVaultLock",
@@ -15350,11 +16386,15 @@
     "prefix": "glacier"
   },
   {
+    "name": "Amazon Rekognition",
+    "arn_format": "arn:aws:rekognition:${Region}:${Account}:${RelativeId}",
+    "arn_regex": "^arn:aws:rekognition:.+",
     "actions": [
       "CompareFaces",
       "CopyProjectVersion",
       "CreateCollection",
       "CreateDataset",
+      "CreateFaceLivenessSession",
       "CreateProject",
       "CreateProjectVersion",
       "CreateStreamProcessor",
@@ -15381,6 +16421,7 @@
       "GetCelebrityRecognition",
       "GetContentModeration",
       "GetFaceDetection",
+      "GetFaceLivenessSessionResults",
       "GetFaceSearch",
       "GetLabelDetection",
       "GetPersonTracking",
@@ -15401,6 +16442,7 @@
       "StartCelebrityRecognition",
       "StartContentModeration",
       "StartFaceDetection",
+      "StartFaceLivenessSession",
       "StartFaceSearch",
       "StartLabelDetection",
       "StartPersonTracking",
@@ -15418,6 +16460,7 @@
     "prefix": "rekognition"
   },
   {
+    "name": "AWS License Manager Linux Subscriptions Manager",
     "actions": [
       "GetServiceSettings",
       "ListLinuxSubscriptionInstances",
@@ -15427,6 +16470,8 @@
     "prefix": "license-manager-linux-subscriptions"
   },
   {
+    "name": "AWS Launch Wizard",
+    "arn_regex": "^arn:aws:launchwizard:.+:.+:.+",
     "actions": [
       "DeleteApp",
       "DescribeProvisionedApp",
@@ -15440,6 +16485,9 @@
     "prefix": "launchwizard"
   },
   {
+    "name": "AWS Systems Manager for SAP",
+    "arn_format": "arn:aws:ssm-sap:${Region}:${Account}:${ApplicationType}/${ApplicationId}",
+    "arn_regex": "^arn:aws:ssm-sap:.+",
     "actions": [
       "BackupDatabase",
       "DeleteResourcePermission",
@@ -15465,6 +16513,9 @@
     "prefix": "ssm-sap"
   },
   {
+    "name": "AWS Elemental MediaConvert",
+    "arn_format": "arn:aws:mediaconvert:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:mediaconvert:.+",
     "actions": [
       "AssociateCertificate",
       "CancelJob",
@@ -15498,6 +16549,9 @@
     "prefix": "mediaconvert"
   },
   {
+    "name": "Service Quotas",
+    "arn_format": "arn:aws:servicequotas:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:servicequotas:.+",
     "actions": [
       "AssociateServiceQuotaTemplate",
       "DeleteServiceQuotaIncreaseRequestFromTemplate",
@@ -15522,6 +16576,7 @@
     "prefix": "servicequotas"
   },
   {
+    "name": "Amazon Inspector",
     "actions": [
       "AddAttributesToFindings",
       "CreateAssessmentTarget",
@@ -15564,6 +16619,9 @@
     "prefix": "inspector"
   },
   {
+    "name": "AWS RoboMaker",
+    "arn_format": "arn:aws:robomaker:${Region}:${AccountId}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:robomaker:.+:.+:.+",
     "actions": [
       "BatchDeleteWorlds",
       "BatchDescribeSimulationJob",
@@ -15628,6 +16686,9 @@
     "prefix": "robomaker"
   },
   {
+    "name": "Amazon QLDB",
+    "arn_format": "arn:aws:qldb:${Region}:${Account}:${ResourceType}/${ResourcePath}",
+    "arn_regex": "^arn:aws:qldb:.+",
     "actions": [
       "CancelJournalKinesisStream",
       "CreateLedger",
@@ -15668,6 +16729,9 @@
     "prefix": "qldb"
   },
   {
+    "name": "AWS CodeStar",
+    "arn_format": "arn:aws:codestar:${Region}:${Account}:project/${ResourceId}",
+    "arn_regex": "^arn:aws:codestar:.+:[0-9]+:project/.+",
     "actions": [
       "AssociateTeamMember",
       "CreateProject",
@@ -15695,6 +16759,9 @@
     "prefix": "codestar"
   },
   {
+    "name": "AWS CodeArtifact",
+    "arn_format": "arn:aws:codeartifact:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:codeartifact:.+:[0-9]+:.+/.+",
     "actions": [
       "AssociateExternalConnection",
       "AssociateWithDownstreamRepository",
@@ -15741,6 +16808,9 @@
     "prefix": "codeartifact"
   },
   {
+    "name": "AWS Direct Connect",
+    "arn_format": "arn:aws:directconnect:${Region}:${Account}:${ResourceType}/${ResourceId}",
+    "arn_regex": "^arn:aws:directconnect:.+",
     "actions": [
       "AcceptDirectConnectGatewayAssociationProposal",
       "AllocateConnectionOnInterconnect",
@@ -15809,6 +16879,9 @@
     "prefix": "directconnect"
   },
   {
+    "name": "Amazon Neptune",
+    "arn_format": "arn:aws:neptune-db:${Region}:${Account}:${Id}/*",
+    "arn_regex": "^arn:aws:neptune-db:.+",
     "actions": [
       "CancelLoaderJob",
       "CancelMLDataProcessingJob",
@@ -15847,6 +16920,9 @@
     "prefix": "neptune-db"
   },
   {
+    "name": "AWS DataSync",
+    "arn_format": "arn:aws:datasync:${Region}:${Account}:${ResourceType}/${ResourceName}",
+    "arn_regex": "^arn:aws:datasync:.+",
     "actions": [
       "CancelTaskExecution",
       "CreateAgent",
@@ -15896,6 +16972,7 @@
     "prefix": "datasync"
   },
   {
+    "name": "AWS License Manager User Subscriptions",
     "actions": [
       "AssociateUser",
       "DeregisterIdentityProvider",
@@ -15912,6 +16989,9 @@
     "prefix": "license-manager-user-subscriptions"
   },
   {
+    "name": "AWS Organizations",
+    "arn_format": "arn:aws:organizations::${Account}:${Resource}/o-${OrganizationId}(/${ResourceType}/${ResourceId})?",
+    "arn_regex": "^arn:aws:organizations::.+:.+",
     "actions": [
       "AcceptHandshake",
       "AttachPolicy",
@@ -15972,6 +17052,9 @@
     "prefix": "organizations"
   },
   {
+    "name": "AWS Performance Insights",
+    "arn_format": "arn:aws:pi:${Region}:${Account}:${ResourceType}/${RelativeId}",
+    "arn_regex": "^arn:aws:pi:.+",
     "actions": [
       "DescribeDimensionKeys",
       "GetDimensionKeyDetails",
@@ -15983,6 +17066,9 @@
     "prefix": "pi"
   },
   {
+    "name": "Amazon Kinesis Analytics V2",
+    "arn_format": "arn:aws:kinesisanalytics:${Region}:${Account}:application/${ApplicationName}",
+    "arn_regex": "^arn:aws:kinesisanalytics:.+:[0-9]+:application/[a-zA-Z0-9_.-]+",
     "actions": [
       "AddApplicationCloudWatchLoggingOption",
       "AddApplicationInput",
@@ -16019,6 +17105,9 @@
     "prefix": "kinesisanalytics"
   },
   {
+    "name": "Amazon Kinesis Analytics",
+    "arn_format": "arn:aws:kinesisanalytics:${Region}:${Account}:application/${ApplicationName}",
+    "arn_regex": "^arn:aws:kinesisanalytics:.+:[0-9]+:application/[a-zA-Z0-9_.-]+",
     "actions": [
       "AddApplicationInput",
       "AddApplicationOutput",
@@ -16041,6 +17130,9 @@
     "prefix": "kinesisanalytics"
   },
   {
+    "name": "AWS Account Management",
+    "arn_format": "arn:aws:account::${Account}:account",
+    "arn_regex": "^arn:aws:account::.+:account",
     "actions": [
       "CloseAccount",
       "DeleteAlternateContact",
