@@ -1,0 +1,43 @@
+.mainGrid {
+  margin-top: 50px;
+  padding: 50px;
+  .gridItem {
+    display: flex;
+    justify-content: center;
+    .boxContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: #f6f6f6;
+      min-height: 100px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.selectedService {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+  .typeSection {
+    width: 80%;
+    .name {
+      border-bottom: solid;
+      border-color: #b5b0b0;
+      span {
+        color: #877f7f;
+      }
+    }
+    .column {
+      padding: 10px;
+      .action {
+        font-size: small;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
