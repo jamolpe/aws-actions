@@ -1,3 +1,4 @@
+@import "./common.scss";
 .mainGrid {
   margin-top: 50px;
   padding: 50px;
@@ -37,6 +38,8 @@
         font-size: small;
         overflow: hidden;
         text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
       }
     }
   }

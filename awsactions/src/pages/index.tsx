@@ -2,9 +2,10 @@ import services from "./services.json";
 import styles from "../styles/Home.module.scss";
 import ServiceSelector from "@/components/ActionsSelector";
 import { Box, Grid } from "@mui/material";
-import SelectedService from "@/components/SelectedAction";
+import SelectedService from "@/components/SelectedService";
 import { Service } from "@/model/models";
 import { useState } from "react";
+import JsonResult from "@/components/JsonResult";
 
 const Actions = ({
   services,
@@ -47,6 +48,11 @@ const Actions = ({
             </Box>
           </Grid>
         )}
+        <Grid item xs={12} className={styles.gridItem}>
+          <Box className={styles.boxContent}>
+            <JsonResult />
+          </Box>
+        </Grid>
       </Grid>
     </>
   );

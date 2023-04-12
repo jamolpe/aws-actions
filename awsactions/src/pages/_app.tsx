@@ -44,6 +44,15 @@ const theme = createTheme({
         },
       },
     },
+    MuiCheckbox: {
+      styleOverrides: {
+        root: {
+          "&.Mui-checked": {
+            color: styles.focusColor,
+          },
+        },
+      },
+    },
     MuiFormControl: {
       styleOverrides: {
         root: {
