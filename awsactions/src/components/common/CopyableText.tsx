@@ -1,5 +1,5 @@
 import { Tooltip, TooltipProps, styled, tooltipClasses } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import stylesGeneral from "../../styles/styles.module.scss";
 
 type CopyableTextProps = {
@@ -23,8 +23,12 @@ const LightTooltip = styled(
   },
 }));
 const CopyableText = ({ title, spanStyle, spanText }: CopyableTextProps) => {
-  const [titleText, setTitleText] = useState(title);
+  const [titleText, setTitleText] = useState("");
   const [copied, setCopied] = useState(false);
+  useEffect(() => {
+    setTitleText(title);
+    setCopied(false);
+  }, [title]);
   return (
     <LightTooltip
       placement="top"

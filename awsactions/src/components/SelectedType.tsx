@@ -1,7 +1,6 @@
 import { Checkbox, Grid } from "@mui/material";
 import React from "react";
 import styles from "../styles/Home.module.scss";
-import Tooltip from "@mui/material/Tooltip";
 import CopyableText from "./common/CopyableText";
 
 type SelectedTypeProps = {
@@ -23,10 +22,11 @@ const SelectedType = ({
   removeAction,
 }: SelectedTypeProps) => {
   let filteredData = typeActions;
-  if (searchQuery)
+  if (searchQuery) {
     filteredData = typeActions.filter((item) =>
       item.toLowerCase().includes(searchQuery.toLowerCase())
     );
+  }
   const chunkSize = Math.ceil(filteredData.length / 3);
   const chunks = Array.from({ length: 3 }, (_, i) =>
     filteredData.slice(i * chunkSize, i * chunkSize + chunkSize)
