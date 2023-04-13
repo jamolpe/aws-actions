@@ -6,11 +6,15 @@ type SelectedTypeProps = {
   typeActions: string[];
   searchQuery?: string;
   type: string;
+  addAction: (action: string) => void;
+  removeAction: (action: string) => void;
 };
 const SelectedType = ({
   typeActions,
   searchQuery,
   type,
+  addAction,
+  removeAction,
 }: SelectedTypeProps) => {
   let filteredData = typeActions;
   if (searchQuery)
@@ -33,8 +37,18 @@ const SelectedType = ({
               <Grid item xs={4} key={i} className={styles.column}>
                 {chunk.map((item, j) => (
                   <div className={styles.action} key={j}>
-                    <Checkbox size="small" style={{ padding: 0 }} />
-                    {item}
+                    <Checkbox
+                      size="small"
+                      className={styles.checkbox}
+                      onChange={(e) => {
+                        if (e.target.checked) {
+                          addAction(item);
+                        } else {
+                          removeAction(item);
+                        }
+                      }}
+                    />
+                    <span className={styles.item}>{item}</span>
                   </div>
                 ))}
               </Grid>

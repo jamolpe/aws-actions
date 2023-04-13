@@ -23,6 +23,12 @@
   align-items: center;
   flex-direction: column;
   margin-bottom: 20px;
+  .search {
+    margin-bottom: 20px;
+  }
+  .generateButton {
+    margin-top: 50px;
+  }
   .typeSection {
     width: 80%;
     .name {
@@ -40,6 +46,12 @@
         text-overflow: ellipsis;
         display: flex;
         align-items: center;
+        .item {
+          margin-left: 5px;
+        }
+        .checkbox {
+          padding: 0px;
+        }
       }
     }
   }
