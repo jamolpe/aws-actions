@@ -101,7 +101,15 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <main className={roboto.className}>
+      <main
+        className={roboto.className}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          width: "100%",
+          justifyContent: "center",
+        }}
+      >
         {loading ? <h1>Loading...</h1> : <Component {...pageProps} />}
       </main>
       <Footer />
