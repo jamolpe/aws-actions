@@ -1,4 +1,4 @@
-import { Service } from "@/model/models";
+import { PolicyAction, Service } from "@/model/models";
 import React, { useState } from "react";
 import styles from "../styles/Home.module.scss";
 import stylesGeneral from "../styles/styles.module.scss";
@@ -9,8 +9,14 @@ import SummarizeIcon from "@mui/icons-material/Summarize";
 
 type ServiceProps = {
   service: Service;
+  addPolicyAction: (policyAction: PolicyAction) => void;
+  removePolicyAction: (policyService: string) => void;
 };
-const SelectedService = ({ service }: ServiceProps) => {
+const SelectedService = ({
+  service,
+  addPolicyAction,
+  removePolicyAction,
+}: ServiceProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [actions, setActions] = useState<string[]>([]);
 
@@ -29,7 +35,14 @@ const SelectedService = ({ service }: ServiceProps) => {
   };
 
   const onAddToJsonClick = () => {
-    console.log(actions);
+    addPolicyAction({
+      Service: service.prefix,
+      Action: actions,
+    });
+  };
+
+  const removefromJson = () => {
+    removePolicyAction(service.prefix);
   };
 
   return (
@@ -77,14 +90,25 @@ const SelectedService = ({ service }: ServiceProps) => {
           removeAction={removeAction}
         />
       </div>
-      <Button
-        variant="contained"
-        className={styles.generateButton}
-        style={{ background: stylesGeneral.redOrange }}
-        onClick={() => onAddToJsonClick()}
-      >
-        <SummarizeIcon style={{ marginRight: "10px" }} /> Add to Json
-      </Button>
+      <div className={styles.buttonsSection}>
+        <Button
+          variant="contained"
+          className={styles.generateButton}
+          style={{ background: stylesGeneral.greenBlue }}
+          onClick={() => onAddToJsonClick()}
+        >
+          <SummarizeIcon style={{ marginRight: "10px" }} /> Alter Json
+        </Button>
+        <Button
+          variant="contained"
+          className={styles.deleteButton}
+          style={{ background: stylesGeneral.redOrange }}
+          onClick={() => onAddToJsonClick()}
+        >
+          <SummarizeIcon style={{ marginRight: "10px" }} /> Delete Service from
+          JSON
+        </Button>
+      </div>
     </div>
   );
 };

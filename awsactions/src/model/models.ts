@@ -7,3 +7,8 @@ export interface Service {
   arn_regex: string;
   name: string;
 }
+
+export interface PolicyAction {
+  Action: string[];
+  Service: string;
+}

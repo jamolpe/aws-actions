@@ -1,6 +1,8 @@
 $orange-color: #ff7d00e3;
 $red-color: #ff3300e3;
-
+$green-color: rgb(0 194 35);
+$blue-color: #234bf1;
 $app-font: "Roboto Slab", serif, "Source Sans Pro", sans-serif;
 $focus-color: $orange-color;
 $g-red-orange: linear-gradient(90deg, $red-color 0%, $orange-color 97%);
+$g-green-blue: linear-gradient(90deg, $green-color 0%, $blue-color 97%);

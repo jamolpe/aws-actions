@@ -1,6 +1,8 @@
 import { Checkbox, Grid } from "@mui/material";
 import React from "react";
 import styles from "../styles/Home.module.scss";
+import Tooltip from "@mui/material/Tooltip";
+import CopyableText from "./common/CopyableText";
 
 type SelectedTypeProps = {
   typeActions: string[];
@@ -48,7 +50,7 @@ const SelectedType = ({
                         }
                       }}
                     />
-                    <span className={styles.item}>{item}</span>
+                    <CopyableText text={item} spanStyle={styles.actionName} />
                   </div>
                 ))}
               </Grid>

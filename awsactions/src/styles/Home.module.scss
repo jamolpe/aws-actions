@@ -26,8 +26,11 @@
   .search {
     margin-bottom: 20px;
   }
-  .generateButton {
+  .buttonsSection {
     margin-top: 50px;
+  }
+  .deleteButton {
+    margin-left: 40px;
   }
   .typeSection {
     width: 80%;
@@ -42,12 +45,12 @@
       padding: 10px;
       .action {
         font-size: small;
-        overflow: hidden;
-        text-overflow: ellipsis;
         display: flex;
         align-items: center;
-        .item {
+        .actionName {
           margin-left: 5px;
+          overflow: auto;
+          text-overflow: ellipsis;
         }
         .checkbox {
           padding: 0px;
