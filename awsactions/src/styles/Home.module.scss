@@ -49,7 +49,7 @@
         align-items: center;
         .actionName {
           margin-left: 5px;
-          overflow: auto;
+          overflow: hidden;
           text-overflow: ellipsis;
         }
         .checkbox {
@@ -58,4 +58,8 @@
       }
     }
   }
+}
+.jsonResult {
+  display: flex;
+  flex-direction: column;
 }

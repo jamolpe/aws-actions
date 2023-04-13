@@ -5,9 +5,11 @@ import Tooltip from "@mui/material/Tooltip";
 import CopyableText from "./common/CopyableText";
 
 type SelectedTypeProps = {
+  selectedActions: string[];
   typeActions: string[];
   searchQuery?: string;
   type: string;
+  prefix: string;
   addAction: (action: string) => void;
   removeAction: (action: string) => void;
 };
@@ -15,6 +17,8 @@ const SelectedType = ({
   typeActions,
   searchQuery,
   type,
+  selectedActions,
+  prefix,
   addAction,
   removeAction,
 }: SelectedTypeProps) => {
@@ -42,6 +46,7 @@ const SelectedType = ({
                     <Checkbox
                       size="small"
                       className={styles.checkbox}
+                      checked={selectedActions.includes(item)}
                       onChange={(e) => {
                         if (e.target.checked) {
                           addAction(item);
@@ -50,7 +55,11 @@ const SelectedType = ({
                         }
                       }}
                     />
-                    <CopyableText text={item} spanStyle={styles.actionName} />
+                    <CopyableText
+                      title={`${prefix}:${item}`}
+                      spanText={item}
+                      spanStyle={styles.actionName}
+                    />
                   </div>
                 ))}
               </Grid>

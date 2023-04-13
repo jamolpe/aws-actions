@@ -1,7 +1,19 @@
+import { PolicyAction } from "@/model/models";
+import styles from "../styles/Home.module.scss";
+
 import React from "react";
 
-const JsonResult = () => {
-  return <div>JsonResult</div>;
+type JsonResultType = {
+  policyActions: PolicyAction[];
+};
+
+const JsonResult = ({ policyActions }: JsonResultType) => {
+  return (
+    <div className={styles.jsonResult}>
+      <h2>JSON</h2>
+      <pre>{policyActions.length > 0 && JSON.stringify(policyActions)}</pre>
+    </div>
+  );
 };
 
 export default JsonResult;

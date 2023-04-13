@@ -68,6 +68,11 @@ const Actions = ({
           <Grid item xs={12} className={styles.gridItem}>
             <Box className={styles.boxContent}>
               <SelectedService
+                actions={
+                  policyActions.find(
+                    (pa) => pa.Service === selectedService.prefix
+                  )?.Action ?? []
+                }
                 service={selectedService}
                 addPolicyAction={addPolicyAction}
                 removePolicyAction={removePolicyAction}
@@ -77,7 +82,7 @@ const Actions = ({
         )}
         <Grid item xs={12} className={styles.gridItem}>
           <Box className={styles.boxContent}>
-            <JsonResult />
+            <JsonResult policyActions={policyActions} />
           </Box>
         </Grid>
       </Grid>
