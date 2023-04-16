@@ -38,7 +38,7 @@ const SelectedType = ({
           <div className={styles.name}>
             <span>{type}</span>
           </div>
-          <Grid container>
+          <Grid container className={styles.actionsContainer}>
             {chunks.map((chunk, i) => (
               <Grid item xs={4} key={i} className={styles.column}>
                 {chunk.map((item, j) => (

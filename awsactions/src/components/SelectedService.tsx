@@ -1,4 +1,4 @@
-import { PolicyAction, Service } from "@/model/models";
+import { ServiceAction, Service } from "@/model/models";
 import React, { useState } from "react";
 import styles from "../styles/Home.module.scss";
 import stylesGeneral from "../styles/styles.module.scss";
@@ -10,14 +10,14 @@ import SummarizeIcon from "@mui/icons-material/Summarize";
 type ServiceProps = {
   actions: string[];
   service: Service;
-  addPolicyAction: (policyAction: PolicyAction) => void;
-  removePolicyAction: (policyService: string) => void;
+  addServiceAction: (serviceAction: ServiceAction) => void;
+  removeServiceAction: (serviceService: string) => void;
 };
 const SelectedService = ({
   service,
   actions,
-  addPolicyAction,
-  removePolicyAction,
+  addServiceAction,
+  removeServiceAction,
 }: ServiceProps) => {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -27,7 +27,7 @@ const SelectedService = ({
 
   const addAction = (action: string) => {
     const newActions = [...actions, action];
-    addPolicyAction({
+    addServiceAction({
       Service: service.prefix,
       Action: newActions,
     });
@@ -35,14 +35,14 @@ const SelectedService = ({
 
   const removeAction = (action: string) => {
     const newActions = actions.filter((a) => a !== action);
-    addPolicyAction({
+    addServiceAction({
       Service: service.prefix,
       Action: newActions,
     });
   };
 
   const removeFromJson = () => {
-    removePolicyAction(service.prefix);
+    removeServiceAction(service.prefix);
   };
 
   return (
@@ -58,6 +58,7 @@ const SelectedService = ({
           margin="normal"
           variant="outlined"
           className={styles.search}
+          sx={{ width: 300, background: "white" }}
           InputProps={{
             endAdornment: <SearchIcon />,
           }}

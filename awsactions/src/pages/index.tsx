@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.scss";
 import ServiceSelector from "@/components/ActionsSelector";
 import { Box, Grid } from "@mui/material";
 import SelectedService from "@/components/SelectedService";
-import { PolicyAction, Service } from "@/model/models";
+import { ServiceAction, Service } from "@/model/models";
 import { useState } from "react";
 import JsonResult from "@/components/JsonResult";
 
@@ -18,7 +18,7 @@ const Actions = ({
   }[];
 }) => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [policyActions, setPolicyActions] = useState<PolicyAction[]>([]);
+  const [serviceActions, setServiceActions] = useState<ServiceAction[]>([]);
 
   const changeSelected = (serviceName: string | null) => {
     if (!serviceName) return setSelectedService(null);
@@ -28,25 +28,23 @@ const Actions = ({
     }
   };
 
-  const addPolicyAction = (policyAction: PolicyAction) => {
-    const index = policyActions.findIndex(
-      (p) => p.Service === policyAction.Service
+  const addServiceAction = (serviceAction: ServiceAction) => {
+    const index = serviceActions.findIndex(
+      (p) => p.Service === serviceAction.Service
     );
     if (index >= 0) {
-      const newPolicies = [...policyActions];
-      newPolicies[index] = policyAction;
-      setPolicyActions(newPolicies);
+      const newPolicies = [...serviceActions];
+      newPolicies[index] = serviceAction;
+      setServiceActions(newPolicies);
     } else {
-      const newPolicies = [...policyActions, policyAction];
-      setPolicyActions(newPolicies);
+      const newPolicies = [...serviceActions, serviceAction];
+      setServiceActions(newPolicies);
     }
   };
 
-  const removePolicyAction = (policyService: string) => {
-    const newPolicies = policyActions.filter(
-      (pa) => pa.Service !== policyService
-    );
-    setPolicyActions(newPolicies);
+  const removeServiceAction = (service: string) => {
+    const newPolicies = serviceActions.filter((pa) => pa.Service !== service);
+    setServiceActions(newPolicies);
   };
 
   return (
@@ -69,20 +67,20 @@ const Actions = ({
             <Box className={styles.boxContent}>
               <SelectedService
                 actions={
-                  policyActions.find(
+                  serviceActions.find(
                     (pa) => pa.Service === selectedService.prefix
                   )?.Action ?? []
                 }
                 service={selectedService}
-                addPolicyAction={addPolicyAction}
-                removePolicyAction={removePolicyAction}
+                addServiceAction={addServiceAction}
+                removeServiceAction={removeServiceAction}
               />
             </Box>
           </Grid>
         )}
         <Grid item xs={12} className={styles.gridItem}>
           <Box className={styles.boxContent}>
-            <JsonResult policyActions={policyActions} />
+            <JsonResult serviceActions={serviceActions} />
           </Box>
         </Grid>
       </Grid>
