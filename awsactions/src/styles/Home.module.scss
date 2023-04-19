@@ -3,17 +3,34 @@
   margin-top: 50px;
   padding: 50px;
   max-width: 1000px;
-  .gridItem {
+  .gridButtons {
+    margin-top: 20px;
+  }
+}
+
+.accordionNoShadow {
+  box-shadow: none;
+  width: 100%;
+  .details {
+    display: "flex";
+    align-items: "center";
+    flex-direction: "column";
+    width: "100%";
+  }
+  .summary {
+    width: 100%;
     display: flex;
+    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    .boxContent {
+    .content {
       display: flex;
+      width: 100%;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      background: #f6f6f6;
-      min-height: 100px;
-      border-radius: 20px;
+    }
+    .arrow {
+      margin-right: auto;
     }
   }
 }
@@ -67,4 +84,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  .jsonContent {
+    background: #1111;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+  }
 }

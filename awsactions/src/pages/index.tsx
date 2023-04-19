@@ -1,11 +1,13 @@
 import services from "./services.json";
 import styles from "../styles/Home.module.scss";
-import ServiceSelector from "@/components/ActionsSelector";
-import { Box, Grid } from "@mui/material";
-import SelectedService from "@/components/SelectedService";
+import gridStyles from "../styles/common/Grid.module.scss";
+
+import { Grid } from "@mui/material";
 import { ServiceAction, Service } from "@/model/models";
 import { useState } from "react";
 import JsonResult from "@/components/JsonResult";
+import PolicyCreateSection from "./PolicyCreateSection";
+import GridFullRowItem from "@/components/grid/GridFullRowItem";
 
 const Actions = ({
   services,
@@ -50,39 +52,16 @@ const Actions = ({
   return (
     <>
       <Grid container spacing={2} className={styles.mainGrid}>
-        <Grid item xs={12} className={styles.gridItem}>
+        <Grid item xs={12} className={gridStyles.gridItem}>
           <h1> AWS Services</h1>
         </Grid>
-        <Grid item xs={12} className={styles.gridItem}>
-          <Box className={styles.boxContent}>
-            <ServiceSelector
-              serviceNames={nameServices.map((a) => a.name)}
-              selected={selectedService?.name ?? null}
-              changeSelected={changeSelected}
-            />
-          </Box>
-        </Grid>
-        {selectedService && (
-          <Grid item xs={12} className={styles.gridItem}>
-            <Box className={styles.boxContent}>
-              <SelectedService
-                actions={
-                  serviceActions.find(
-                    (pa) => pa.Service === selectedService.prefix
-                  )?.Action ?? []
-                }
-                service={selectedService}
-                addServiceAction={addServiceAction}
-                removeServiceAction={removeServiceAction}
-              />
-            </Box>
-          </Grid>
-        )}
-        <Grid item xs={12} className={styles.gridItem}>
-          <Box className={styles.boxContent}>
+        <PolicyCreateSection nameServices={nameServices} services={services} />
+        <GridFullRowItem>
+          <div>test</div>
+          {/* <Box className={styles.boxContent}>
             <JsonResult serviceActions={serviceActions} />
-          </Box>
-        </Grid>
+          </Box> */}
+        </GridFullRowItem>
       </Grid>
     </>
   );

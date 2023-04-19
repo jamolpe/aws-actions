@@ -1,0 +1,14 @@
+.gridItem {
+  display: flex;
+  justify-content: center;
+  .boxContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #f6f6f6;
+    min-height: 100px;
+    border-radius: 20px;
+  }
+}
