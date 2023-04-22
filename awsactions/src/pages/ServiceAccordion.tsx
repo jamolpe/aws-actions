@@ -9,7 +9,8 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 type ServiceAccordionProps = {
-  services: Record<string, Service>;
+  policyServices: ServiceAction[];
+  defaultServices: Record<string, Service>;
   nameServices: {
     prefix: string;
     name: string;
@@ -17,44 +18,46 @@ type ServiceAccordionProps = {
   accordionId: number;
   id: number;
   deleteAction: (id: number) => void;
+  modifyServiceToPolicy: (id: number, servicesAction: ServiceAction[]) => void;
 };
 
 const ServiceAccordion = ({
   nameServices,
-  services,
+  defaultServices,
+  policyServices,
   accordionId,
   id,
   deleteAction,
+  modifyServiceToPolicy,
 }: ServiceAccordionProps) => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [serviceActions, setServiceActions] = useState<ServiceAction[]>([]);
   const [expanded, setExpanded] = React.useState<number | false>(false);
 
   const changeSelected = (serviceName: string | null) => {
     if (!serviceName) return setSelectedService(null);
     const service = nameServices.find((n) => n.name === serviceName);
     if (service) {
-      setSelectedService(services[service.prefix]);
+      setSelectedService(defaultServices[service.prefix]);
     }
   };
 
   const addServiceAction = (serviceAction: ServiceAction) => {
-    const index = serviceActions.findIndex(
+    const index = policyServices.findIndex(
       (p) => p.Service === serviceAction.Service
     );
     if (index >= 0) {
-      const newPolicies = [...serviceActions];
+      const newPolicies = [...policyServices];
       newPolicies[index] = serviceAction;
-      setServiceActions(newPolicies);
+      modifyServiceToPolicy(id, newPolicies);
     } else {
-      const newPolicies = [...serviceActions, serviceAction];
-      setServiceActions(newPolicies);
+      const newPolicies = [...policyServices, serviceAction];
+      modifyServiceToPolicy(id, newPolicies);
     }
   };
 
   const removeServiceAction = (service: string) => {
-    const newPolicies = serviceActions.filter((pa) => pa.Service !== service);
-    setServiceActions(newPolicies);
+    const newPolicies = policyServices.filter((pa) => pa.Service !== service);
+    modifyServiceToPolicy(id, newPolicies);
   };
 
   const handleChange =
@@ -102,8 +105,8 @@ const ServiceAccordion = ({
           {selectedService && (
             <SelectedService
               actions={
-                serviceActions.find(
-                  (pa) => pa.Service === selectedService.prefix
+                policyServices.find(
+                  (ps) => ps.Service === selectedService.prefix
                 )?.Action ?? []
               }
               service={selectedService}

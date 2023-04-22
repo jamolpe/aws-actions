@@ -15,6 +15,11 @@ export interface ServiceAction {
   Service: string;
 }
 
+export interface PolicyAction {
+  id: number;
+  services: ServiceAction[];
+}
+
 export interface Policy {
   Version: string;
   Statement: Statement[];

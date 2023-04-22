@@ -1,6 +1,6 @@
 import { Button, Grid } from "@mui/material";
 import React, { useState } from "react";
-import { Service } from "@/model/models";
+import { PolicyAction, Service, ServiceAction } from "@/model/models";
 import ServiceAccordion from "./ServiceAccordion";
 import styles from "../styles/PolicyCreateSection.module.scss";
 import commonStyle from "../styles/styles.module.scss";
@@ -15,10 +15,6 @@ type PolicyCreateSectionProps = {
   }[];
 };
 
-interface PolicyAction {
-  id: number;
-}
-
 const PolicyCreateSection = ({
   services,
   nameServices,
@@ -26,6 +22,7 @@ const PolicyCreateSection = ({
   const [numPolicyActions, setNumPolicyActions] = useState<PolicyAction[]>([
     {
       id: 1,
+      services: [],
     },
   ]);
 
@@ -34,7 +31,7 @@ const PolicyCreateSection = ({
     if (numPolicyActions.length >= 1) {
       last = numPolicyActions[numPolicyActions.length - 1];
     }
-    const modifiedPA = [...numPolicyActions, { id: last.id + 1 }];
+    const modifiedPA = [...numPolicyActions, { id: last.id + 1, services: [] }];
     setNumPolicyActions(modifiedPA);
   };
 
@@ -47,16 +44,32 @@ const PolicyCreateSection = ({
     setNumPolicyActions(auxArr);
   };
 
+  const modifyServiceToPolicy = (
+    id: number,
+    servicesAction: ServiceAction[]
+  ) => {
+    const policyActionIndex = numPolicyActions.findIndex((p) => p.id === id);
+    if (policyActionIndex !== -1) {
+      const policyAction = numPolicyActions[policyActionIndex];
+      policyAction.services = servicesAction;
+      const modifiedPA = [...numPolicyActions];
+      modifiedPA[policyActionIndex] = policyAction;
+      setNumPolicyActions(modifiedPA);
+    }
+  };
+
   return (
     <>
       {numPolicyActions.map((PA) => {
         return (
           <GridFullRowItem key={PA.id}>
             <ServiceAccordion
+              policyServices={PA.services}
+              modifyServiceToPolicy={modifyServiceToPolicy}
               deleteAction={deleteAction}
               id={PA.id}
               accordionId={PA.id}
-              services={services}
+              defaultServices={services}
               nameServices={nameServices}
             />
           </GridFullRowItem>
