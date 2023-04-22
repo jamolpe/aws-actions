@@ -1,0 +1,30 @@
+@import "./common.scss";
+.accordionNoShadow {
+  box-shadow: none;
+  width: 100%;
+  .details {
+    display: "flex";
+    align-items: "center";
+    flex-direction: "column";
+    width: "100%";
+  }
+  .summary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    .delete {
+      color: $red-color;
+    }
+    .content {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .arrow {
+      margin-right: auto;
+    }
+  }
+}

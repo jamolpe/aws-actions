@@ -41,7 +41,7 @@ const SelectedService = ({
     });
   };
 
-  const removeFromJson = () => {
+  const removeFromService = () => {
     removeServiceAction(service.prefix);
   };
 
@@ -102,9 +102,9 @@ const SelectedService = ({
           variant="contained"
           className={styles.deleteButton}
           style={{ background: stylesGeneral.redOrange }}
-          onClick={() => removeFromJson()}
+          onClick={() => removeFromService()}
         >
-          <SummarizeIcon style={{ marginRight: "10px" }} /> Clear Service JSON
+          <SummarizeIcon style={{ marginRight: "10px" }} /> Clear Service
         </Button>
       </div>
     </div>
