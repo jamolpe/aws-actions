@@ -1,4 +1,9 @@
-import { Policy, ServiceStatement, Statement } from "@/model/models";
+import {
+  Policy,
+  PolicyStatement,
+  ServiceStatement,
+  Statement,
+} from "@/model/models";
 
 export enum EFFECTS {
   ALLOW = "Allow",
@@ -10,14 +15,20 @@ const transformActions = (action: string[], service: string) => {
 };
 
 export const policyActionsToPolicy = (
-  policyActions: ServiceStatement[]
+  policyStatements: PolicyStatement[]
 ): Policy => {
-  const statements = policyActions.map((pa) => {
-    return new Statement(
-      EFFECTS.ALLOW,
-      ["*"],
-      transformActions(pa.action, pa.service)
-    );
-  });
+  const statements = policyStatements.reduce((prev: Statement[], ps) => {
+    const result = prev;
+    for (let i = 0; i <= ps.services.length - 1; i++) {
+      result.push(
+        new Statement(
+          EFFECTS.ALLOW,
+          ["*"],
+          transformActions(ps.services[i].action, ps.services[i].service)
+        )
+      );
+    }
+    return result;
+  }, []);
   return { Version: "2012-10-17", Statement: statements };
 };

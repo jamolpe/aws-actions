@@ -9,18 +9,16 @@ type JsonResultType = {
 };
 
 const JsonResult = ({ policyCreate }: JsonResultType) => {
-  // const [policy, setPolicy] = useState<Policy | null>(null);
-  // useEffect(() => {
-  //   setPolicy(policyActionsToPolicy(serviceActions));
-  // }, [serviceActions]);
+  const [policy, setPolicy] = useState<Policy | null>(null);
+  useEffect(() => {
+    setPolicy(policyActionsToPolicy(policyCreate));
+  }, [policyCreate]);
   const DynamicReactJson = dynamic(import("react-json-view"), { ssr: false });
   return (
     <div className={styles.jsonResult}>
       <h2>Policy</h2>
       <pre className={styles.jsonContent}>
-        {policyCreate && (
-          <DynamicReactJson src={policyCreate} displayDataTypes={false} />
-        )}
+        {policy && <DynamicReactJson src={policy} displayDataTypes={false} />}
       </pre>
     </div>
   );
