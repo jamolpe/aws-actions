@@ -103,7 +103,7 @@ const SelectedService = ({
           src={broom}
           className={styles.clearService}
           style={{ marginRight: "10px" }}
-          alt={""}
+          alt={"clear statement"}
         />
       </div>
     </div>
