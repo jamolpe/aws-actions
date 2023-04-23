@@ -1,15 +1,14 @@
 import services from "./services.json";
 import styles from "../styles/Home.module.scss";
 import gridStyles from "../styles/common/Grid.module.scss";
-
-import { Grid } from "@mui/material";
-import { ServiceAction, Service } from "@/model/models";
+import { Box, Grid } from "@mui/material";
+import { ServiceStatement, Service, PolicyStatement } from "@/model/models";
 import { useState } from "react";
 import JsonResult from "@/components/JsonResult";
 import PolicyCreateSection from "./PolicyCreateSection";
 import GridFullRowItem from "@/components/grid/GridFullRowItem";
 
-const Actions = ({
+const AWSPolicyCreator = ({
   services,
   nameServices,
 }: {
@@ -19,48 +18,63 @@ const Actions = ({
     name: string;
   }[];
 }) => {
-  const [selectedService, setSelectedService] = useState<Service | null>(null);
-  const [serviceActions, setServiceActions] = useState<ServiceAction[]>([]);
+  const [policyStatements, setPolicyStatements] = useState<PolicyStatement[]>([
+    {
+      id: 1,
+      services: [],
+    },
+  ]);
 
-  const changeSelected = (serviceName: string | null) => {
-    if (!serviceName) return setSelectedService(null);
-    const service = nameServices.find((n) => n.name === serviceName);
-    if (service) {
-      setSelectedService(services[service.prefix]);
+  const addPolicyStatements = () => {
+    let last = { id: 0 };
+    if (policyStatements.length >= 1) {
+      last = policyStatements[policyStatements.length - 1];
     }
+    const modifiedPS = [...policyStatements, { id: last.id + 1, services: [] }];
+    setPolicyStatements(modifiedPS);
   };
 
-  const addServiceAction = (serviceAction: ServiceAction) => {
-    const index = serviceActions.findIndex(
-      (p) => p.Service === serviceAction.Service
-    );
-    if (index >= 0) {
-      const newPolicies = [...serviceActions];
-      newPolicies[index] = serviceAction;
-      setServiceActions(newPolicies);
-    } else {
-      const newPolicies = [...serviceActions, serviceAction];
-      setServiceActions(newPolicies);
+  const deletePolicyStatements = (id: number) => {
+    const auxArr = [...policyStatements];
+    const index = auxArr.findIndex((element) => element.id === id);
+    if (index !== -1) {
+      auxArr.splice(index, 1);
     }
+    setPolicyStatements(auxArr);
   };
 
-  const removeServiceAction = (service: string) => {
-    const newPolicies = serviceActions.filter((pa) => pa.Service !== service);
-    setServiceActions(newPolicies);
+  const modifyServiceStatement = (
+    id: number,
+    servicesAction: ServiceStatement[]
+  ) => {
+    const policyActionIndex = policyStatements.findIndex((p) => p.id === id);
+    if (policyActionIndex !== -1) {
+      const policyStatement = policyStatements[policyActionIndex];
+      policyStatement.services = servicesAction;
+      const modifiedPS = [...policyStatements];
+      modifiedPS[policyActionIndex] = policyStatement;
+      setPolicyStatements(modifiedPS);
+    }
   };
 
   return (
     <>
       <Grid container spacing={2} className={styles.mainGrid}>
         <Grid item xs={12} className={gridStyles.gridItem}>
-          <h1> AWS Services</h1>
+          <h1> AWS Policy Creator</h1>
         </Grid>
-        <PolicyCreateSection nameServices={nameServices} services={services} />
+        <PolicyCreateSection
+          policyStatements={policyStatements}
+          modifyServiceStatement={modifyServiceStatement}
+          deletePolicyStatements={deletePolicyStatements}
+          addPolicyStatements={addPolicyStatements}
+          nameServices={nameServices}
+          services={services}
+        />
         <GridFullRowItem>
-          <div>test</div>
-          {/* <Box className={styles.boxContent}>
-            <JsonResult serviceActions={serviceActions} />
-          </Box> */}
+          <Box className={styles.boxContent}>
+            <JsonResult policyCreate={policyStatements} />
+          </Box>
         </GridFullRowItem>
       </Grid>
     </>
@@ -80,4 +94,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Actions;
+export default AWSPolicyCreator;

@@ -1,4 +1,4 @@
-import { ServiceAction, Service } from "@/model/models";
+import { ServiceStatement, Service } from "@/model/models";
 import React, { useState } from "react";
 import styles from "../styles/Home.module.scss";
 import stylesGeneral from "../styles/styles.module.scss";
@@ -10,7 +10,7 @@ import SummarizeIcon from "@mui/icons-material/Summarize";
 type ServiceProps = {
   actions: string[];
   service: Service;
-  addServiceAction: (serviceAction: ServiceAction) => void;
+  addServiceAction: (serviceAction: ServiceStatement) => void;
   removeServiceAction: (serviceService: string) => void;
 };
 const SelectedService = ({
@@ -28,16 +28,16 @@ const SelectedService = ({
   const addAction = (action: string) => {
     const newActions = [...actions, action];
     addServiceAction({
-      Service: service.prefix,
-      Action: newActions,
+      service: service.prefix,
+      action: newActions,
     });
   };
 
   const removeAction = (action: string) => {
     const newActions = actions.filter((a) => a !== action);
     addServiceAction({
-      Service: service.prefix,
-      Action: newActions,
+      service: service.prefix,
+      action: newActions,
     });
   };
 

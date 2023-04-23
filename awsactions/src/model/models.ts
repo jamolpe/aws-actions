@@ -1,5 +1,6 @@
 import { EFFECTS } from "@/utils/policy";
 import { uuid } from "uuidv4";
+
 export interface Service {
   readActions: string[];
   writeActions: string[];
@@ -10,14 +11,14 @@ export interface Service {
   name: string;
 }
 
-export interface ServiceAction {
-  Action: string[];
-  Service: string;
+export interface ServiceStatement {
+  action: string[];
+  service: string;
 }
 
-export interface PolicyAction {
+export interface PolicyStatement {
   id: number;
-  services: ServiceAction[];
+  services: ServiceStatement[];
 }
 
 export interface Policy {

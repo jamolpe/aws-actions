@@ -1,6 +1,6 @@
 import ServiceSelector from "@/components/ActionsSelector";
 import SelectedService from "@/components/SelectedService";
-import { Service, ServiceAction } from "@/model/models";
+import { Service, ServiceStatement } from "@/model/models";
 import { AccordionDetails, AccordionSummary, Accordion } from "@mui/material";
 import React, { useState } from "react";
 import styles from "../styles/ServiceAccordion.module.scss";
@@ -9,7 +9,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 type ServiceAccordionProps = {
-  policyServices: ServiceAction[];
+  policyStatements: ServiceStatement[];
   defaultServices: Record<string, Service>;
   nameServices: {
     prefix: string;
@@ -17,18 +17,21 @@ type ServiceAccordionProps = {
   }[];
   accordionId: number;
   id: number;
-  deleteAction: (id: number) => void;
-  modifyServiceToPolicy: (id: number, servicesAction: ServiceAction[]) => void;
+  deletePolicyStatements: (id: number) => void;
+  modifyServiceStatement: (
+    id: number,
+    servicesAction: ServiceStatement[]
+  ) => void;
 };
 
 const ServiceAccordion = ({
   nameServices,
   defaultServices,
-  policyServices,
+  policyStatements,
   accordionId,
   id,
-  deleteAction,
-  modifyServiceToPolicy,
+  deletePolicyStatements,
+  modifyServiceStatement,
 }: ServiceAccordionProps) => {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [expanded, setExpanded] = React.useState<number | false>(false);
@@ -41,23 +44,23 @@ const ServiceAccordion = ({
     }
   };
 
-  const addServiceAction = (serviceAction: ServiceAction) => {
-    const index = policyServices.findIndex(
-      (p) => p.Service === serviceAction.Service
+  const addServiceAction = (serviceAction: ServiceStatement) => {
+    const index = policyStatements.findIndex(
+      (p) => p.service === serviceAction.service
     );
     if (index >= 0) {
-      const newPolicies = [...policyServices];
+      const newPolicies = [...policyStatements];
       newPolicies[index] = serviceAction;
-      modifyServiceToPolicy(id, newPolicies);
+      modifyServiceStatement(id, newPolicies);
     } else {
-      const newPolicies = [...policyServices, serviceAction];
-      modifyServiceToPolicy(id, newPolicies);
+      const newPolicies = [...policyStatements, serviceAction];
+      modifyServiceStatement(id, newPolicies);
     }
   };
 
   const removeServiceAction = (service: string) => {
-    const newPolicies = policyServices.filter((pa) => pa.Service !== service);
-    modifyServiceToPolicy(id, newPolicies);
+    const newPolicies = policyStatements.filter((pa) => pa.service !== service);
+    modifyServiceStatement(id, newPolicies);
   };
 
   const handleChange =
@@ -74,18 +77,18 @@ const ServiceAccordion = ({
     >
       <AccordionSummary className={styles.summary}>
         <DeleteIcon
-          fontSize="large"
+          fontSize="medium"
           className={styles.delete}
           onClick={(e) => {
             e.stopPropagation();
-            deleteAction(id);
+            deletePolicyStatements(id);
           }}
         />
-        <div className={styles.content}>Service {accordionId}</div>
+        <div className={styles.content}>Statement {accordionId}</div>
         {expanded === id ? (
-          <KeyboardArrowUpIcon fontSize="large" className={styles.arrow} />
+          <KeyboardArrowUpIcon fontSize="medium" className={styles.arrow} />
         ) : (
-          <KeyboardArrowDownIcon fontSize="large" className={styles.arrow} />
+          <KeyboardArrowDownIcon fontSize="medium" className={styles.arrow} />
         )}
       </AccordionSummary>
       <AccordionDetails
@@ -105,9 +108,9 @@ const ServiceAccordion = ({
           {selectedService && (
             <SelectedService
               actions={
-                policyServices.find(
-                  (ps) => ps.Service === selectedService.prefix
-                )?.Action ?? []
+                policyStatements.find(
+                  (ps) => ps.service === selectedService.prefix
+                )?.action ?? []
               }
               service={selectedService}
               addServiceAction={addServiceAction}
