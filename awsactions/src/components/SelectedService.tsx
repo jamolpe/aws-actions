@@ -1,11 +1,11 @@
 import { ServiceStatement, Service } from "@/model/models";
 import React, { useState } from "react";
-import styles from "../styles/Home.module.scss";
-import stylesGeneral from "../styles/styles.module.scss";
+import styles from "../styles/components/SelectedService.module.scss";
 import SelectedType from "./SelectedType";
-import { Button, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import SummarizeIcon from "@mui/icons-material/Summarize";
+import Image from "next/image";
+import broom from "../../public/icons/broom.svg";
 
 type ServiceProps = {
   actions: string[];
@@ -98,14 +98,13 @@ const SelectedService = ({
         />
       </div>
       <div className={styles.buttonsSection}>
-        <Button
-          variant="contained"
-          className={styles.deleteButton}
-          style={{ background: stylesGeneral.redOrange }}
+        <Image
           onClick={() => removeFromService()}
-        >
-          <SummarizeIcon style={{ marginRight: "10px" }} /> Clear Service
-        </Button>
+          src={broom}
+          className={styles.clearService}
+          style={{ marginRight: "10px" }}
+          alt={""}
+        />
       </div>
     </div>
   );

@@ -1,55 +1,38 @@
 @import "./common.scss";
+
 .mainGrid {
   margin-top: 50px;
   padding: 50px;
   max-width: 1000px;
 }
 
-.selectedService {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 20px;
-  .search {
-    margin-bottom: 20px;
+.actionsContainer {
+  padding: 20px;
+}
+.name {
+  border-bottom: solid;
+  border-color: #b5b0b0;
+  span {
+    color: #877f7f;
   }
-  .buttonsSection {
-    margin-top: 50px;
-  }
-  .deleteButton {
-    margin-left: 40px;
-  }
-  .typeSection {
-    width: 80%;
-    .actionsContainer {
-      padding: 20px;
+}
+.column {
+  padding: 10px;
+  .action {
+    font-size: small;
+    display: flex;
+    align-items: center;
+    .actionName {
+      margin-left: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    .name {
-      border-bottom: solid;
-      border-color: #b5b0b0;
-      span {
-        color: #877f7f;
-      }
-    }
-    .column {
-      padding: 10px;
-      .action {
-        font-size: small;
-        display: flex;
-        align-items: center;
-        .actionName {
-          margin-left: 5px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        .checkbox {
-          padding: 0px;
-        }
-      }
+    .checkbox {
+      padding: 0px;
     }
   }
 }
+
 .jsonResult {
   display: flex;
   flex-direction: column;
