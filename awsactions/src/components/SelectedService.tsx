@@ -21,7 +21,7 @@ const SelectedService = ({
   addServiceAction,
   removeServiceAction,
 }: ServiceProps) => {
-  const [arn, setArn] = useState("");
+  const [arn, setArn] = useState<string>("*");
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
@@ -34,6 +34,11 @@ const SelectedService = ({
 
   const handleArn = (event: any) => {
     setArn(event.target.value);
+    addServiceAction({
+      service: service.prefix,
+      action: actions,
+      arn: event.target.value,
+    });
   };
 
   const addAction = (action: string) => {
@@ -55,6 +60,7 @@ const SelectedService = ({
   };
 
   const removeFromService = () => {
+    setArn("*");
     removeServiceAction(service.prefix);
   };
 

@@ -1,9 +1,4 @@
-import {
-  Policy,
-  PolicyStatement,
-  ServiceStatement,
-  Statement,
-} from "@/model/models";
+import { Policy, PolicyStatement, Statement } from "@/model/models";
 
 export enum EFFECTS {
   ALLOW = "Allow",
@@ -22,6 +17,7 @@ export const policyActionsToPolicy = (
     for (let i = 0; i <= ps.services.length - 1; i++) {
       result.push(
         new Statement(
+          ps.uuid,
           EFFECTS.ALLOW,
           [ps.services[i].arn],
           transformActions(ps.services[i].action, ps.services[i].service)

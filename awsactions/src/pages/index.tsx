@@ -7,6 +7,7 @@ import { useState } from "react";
 import JsonResult from "@/components/JsonResult";
 import PolicyCreateSection from "./PolicyCreateSection";
 import GridFullRowItem from "@/components/grid/GridFullRowItem";
+import { uuid } from "uuidv4";
 
 const AWSPolicyCreator = ({
   services,
@@ -20,23 +21,19 @@ const AWSPolicyCreator = ({
 }) => {
   const [policyStatements, setPolicyStatements] = useState<PolicyStatement[]>([
     {
-      id: 1,
       services: [],
+      uuid: uuid(),
     },
   ]);
 
   const addPolicyStatements = () => {
-    let last = { id: 0 };
-    if (policyStatements.length >= 1) {
-      last = policyStatements[policyStatements.length - 1];
-    }
-    const modifiedPS = [...policyStatements, { id: last.id + 1, services: [] }];
+    const modifiedPS = [...policyStatements, { services: [], uuid: uuid() }];
     setPolicyStatements(modifiedPS);
   };
 
-  const deletePolicyStatements = (id: number) => {
+  const deletePolicyStatements = (uuid: string) => {
     const auxArr = [...policyStatements];
-    const index = auxArr.findIndex((element) => element.id === id);
+    const index = auxArr.findIndex((element) => element.uuid === uuid);
     if (index !== -1) {
       auxArr.splice(index, 1);
     }
@@ -44,10 +41,12 @@ const AWSPolicyCreator = ({
   };
 
   const modifyServiceStatement = (
-    id: number,
+    uuid: string,
     servicesAction: ServiceStatement[]
   ) => {
-    const policyActionIndex = policyStatements.findIndex((p) => p.id === id);
+    const policyActionIndex = policyStatements.findIndex(
+      (p) => p.uuid === uuid
+    );
     if (policyActionIndex !== -1) {
       const policyStatement = policyStatements[policyActionIndex];
       policyStatement.services = servicesAction;

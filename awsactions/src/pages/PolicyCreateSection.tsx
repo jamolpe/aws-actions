@@ -15,10 +15,10 @@ type PolicyCreateSectionProps = {
   }[];
   policyStatements: PolicyStatement[];
   modifyServiceStatement: (
-    id: number,
+    uuid: string,
     servicesAction: ServiceStatement[]
   ) => void;
-  deletePolicyStatements: (id: number) => void;
+  deletePolicyStatements: (uuid: string) => void;
   addPolicyStatements: () => void;
 };
 
@@ -34,13 +34,13 @@ const PolicyCreateSection = ({
     <>
       {policyStatements.map((PA) => {
         return (
-          <GridFullRowItem key={PA.id}>
+          <GridFullRowItem key={PA.uuid}>
             <ServiceAccordion
               policyStatements={PA.services}
               modifyServiceStatement={modifyServiceStatement}
               deletePolicyStatements={deletePolicyStatements}
-              id={PA.id}
-              accordionId={PA.id}
+              uuid={PA.uuid}
+              accordionId={PA.uuid}
               defaultServices={services}
               nameServices={nameServices}
             />

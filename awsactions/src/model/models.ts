@@ -1,5 +1,4 @@
 import { EFFECTS } from "@/utils/policy";
-import { uuid } from "uuidv4";
 
 export interface Service {
   readActions: string[];
@@ -18,7 +17,7 @@ export interface ServiceStatement {
 }
 
 export interface PolicyStatement {
-  id: number;
+  uuid: string;
   services: ServiceStatement[];
 }
 
@@ -32,8 +31,13 @@ export class Statement {
   Effect: EFFECTS;
   Action: string[];
   Resource: string[];
-  constructor(effect: EFFECTS, resource: string[], action: string[]) {
-    this.Sid = uuid();
+  constructor(
+    uuid: string,
+    effect: EFFECTS,
+    resource: string[],
+    action: string[]
+  ) {
+    this.Sid = uuid;
     this.Effect = effect;
     this.Action = action;
     this.Resource = resource;
