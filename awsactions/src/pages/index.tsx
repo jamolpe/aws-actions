@@ -19,12 +19,9 @@ const AWSPolicyCreator = ({
     name: string;
   }[];
 }) => {
-  const [policyStatements, setPolicyStatements] = useState<PolicyStatement[]>([
-    {
-      services: [],
-      uuid: uuid(),
-    },
-  ]);
+  const [policyStatements, setPolicyStatements] = useState<PolicyStatement[]>(
+    []
+  );
 
   const addPolicyStatements = () => {
     const modifiedPS = [...policyStatements, { services: [], uuid: uuid() }];

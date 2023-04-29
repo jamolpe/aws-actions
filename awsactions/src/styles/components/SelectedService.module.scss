@@ -9,8 +9,9 @@
   .search {
     margin-bottom: 20px;
   }
-  .arn {
-    margin-top: 20px;
+  .typeArn {
+    display: flex;
+    flex-direction: column;
   }
   .buttonsSection {
     width: 100%;

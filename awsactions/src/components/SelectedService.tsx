@@ -6,6 +6,7 @@ import { TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
 import broom from "../../public/icons/broom.svg";
+import ArnProvider from "./ArnProvider";
 
 type ServiceProps = {
   actions: string[];
@@ -32,12 +33,12 @@ const SelectedService = ({
     setSearchQuery(event.target.value);
   };
 
-  const handleArn = (event: any) => {
-    setArn(event.target.value);
+  const handleArn = (value: string) => {
+    setArn(value);
     addServiceAction({
       service: service.prefix,
       action: actions,
-      arn: event.target.value,
+      arn: value,
     });
   };
 
@@ -116,14 +117,11 @@ const SelectedService = ({
           removeAction={removeAction}
         />
       </div>
-      <div id="arn" className={styles.arn}>
-        <TextField
-          size="small"
-          label="ARN"
-          className={styles.arn}
-          value={arn}
-          sx={{ width: 300, background: "white" }}
-          onChange={handleArn}
+      <div id="arn" className={styles.typeArn}>
+        <ArnProvider
+          arn={arn}
+          handleArn={handleArn}
+          arnFormat={service.arn_format}
         />
       </div>
       <div className={styles.buttonsSection}>

@@ -1,5 +1,8 @@
 import { Policy, PolicyStatement, Statement } from "@/model/models";
 
+const ARN_REGEX = /\${([a-zA-Z0-9_-]+)}/g;
+const ARN_PLACEHOLDER = /\$\{([\w.-]+)\}/g;
+
 export enum EFFECTS {
   ALLOW = "Allow",
   DENY = "Deny",
@@ -27,4 +30,14 @@ export const policyActionsToPolicy = (
     return result;
   }, []);
   return { Version: "2012-10-17", Statement: statements };
+};
+
+export const getVariablesFromArnFormat = (arn: string) => {
+  return [...arn.matchAll(ARN_REGEX)].map((match) => match[1]);
+};
+
+export const substitute = (str: string, values: Record<string, string>) => {
+  return str.replace(ARN_PLACEHOLDER, function (match, key) {
+    return values.hasOwnProperty(key) ? values[key] : match;
+  });
 };
