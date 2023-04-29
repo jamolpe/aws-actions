@@ -23,7 +23,7 @@ export const policyActionsToPolicy = (
       result.push(
         new Statement(
           EFFECTS.ALLOW,
-          ["*"],
+          [ps.services[i].arn],
           transformActions(ps.services[i].action, ps.services[i].service)
         )
       );

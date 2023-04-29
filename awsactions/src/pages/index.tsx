@@ -59,10 +59,10 @@ const AWSPolicyCreator = ({
 
   return (
     <>
-      <Grid container spacing={2} className={styles.mainGrid}>
-        <Grid item xs={12} className={gridStyles.gridItem}>
+      <Grid container spacing={2} className={gridStyles.mainGrid}>
+        <GridFullRowItem>
           <h1> AWS Policy Creator</h1>
-        </Grid>
+        </GridFullRowItem>
         <PolicyCreateSection
           policyStatements={policyStatements}
           modifyServiceStatement={modifyServiceStatement}

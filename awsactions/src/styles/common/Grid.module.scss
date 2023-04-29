@@ -1,6 +1,13 @@
+.mainGrid {
+  margin-top: 50px;
+  padding: 50px;
+  max-width: 1000px;
+}
+
 .gridItem {
   display: flex;
   justify-content: center;
+  padding: 16px;
   .boxContent {
     display: flex;
     flex-direction: column;

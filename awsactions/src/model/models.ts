@@ -14,6 +14,7 @@ export interface Service {
 export interface ServiceStatement {
   action: string[];
   service: string;
+  arn: string;
 }
 
 export interface PolicyStatement {

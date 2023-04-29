@@ -1,5 +1,5 @@
 import { ServiceStatement, Service } from "@/model/models";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/components/SelectedService.module.scss";
 import SelectedType from "./SelectedType";
 import { TextField } from "@mui/material";
@@ -10,19 +10,30 @@ import broom from "../../public/icons/broom.svg";
 type ServiceProps = {
   actions: string[];
   service: Service;
+  defaultArn: string;
   addServiceAction: (serviceAction: ServiceStatement) => void;
   removeServiceAction: (serviceService: string) => void;
 };
 const SelectedService = ({
   service,
   actions,
+  defaultArn,
   addServiceAction,
   removeServiceAction,
 }: ServiceProps) => {
+  const [arn, setArn] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    setArn(defaultArn);
+  }, [actions, defaultArn]);
 
   const handleSearch = (event: any) => {
     setSearchQuery(event.target.value);
+  };
+
+  const handleArn = (event: any) => {
+    setArn(event.target.value);
   };
 
   const addAction = (action: string) => {
@@ -30,6 +41,7 @@ const SelectedService = ({
     addServiceAction({
       service: service.prefix,
       action: newActions,
+      arn,
     });
   };
 
@@ -38,6 +50,7 @@ const SelectedService = ({
     addServiceAction({
       service: service.prefix,
       action: newActions,
+      arn,
     });
   };
 
@@ -95,6 +108,16 @@ const SelectedService = ({
           prefix={service.prefix}
           addAction={addAction}
           removeAction={removeAction}
+        />
+      </div>
+      <div id="arn" className={styles.arn}>
+        <TextField
+          size="small"
+          label="ARN"
+          className={styles.arn}
+          value={arn}
+          sx={{ width: 300, background: "white" }}
+          onChange={handleArn}
         />
       </div>
       <div className={styles.buttonsSection}>

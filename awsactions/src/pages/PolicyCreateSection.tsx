@@ -1,5 +1,5 @@
 import { Button, Grid } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import { PolicyStatement, Service, ServiceStatement } from "@/model/models";
 import ServiceAccordion from "./ServiceAccordion";
 import styles from "../styles/PolicyCreateSection.module.scss";

@@ -112,6 +112,11 @@ const ServiceAccordion = ({
                   (ps) => ps.service === selectedService.prefix
                 )?.action ?? []
               }
+              defaultArn={
+                policyStatements.find(
+                  (ps) => ps.service === selectedService.prefix
+                )?.arn ?? "*"
+              }
               service={selectedService}
               addServiceAction={addServiceAction}
               removeServiceAction={removeServiceAction}
